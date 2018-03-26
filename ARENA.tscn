@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=1]
 [ext_resource path="res://addons/net.kivano.fsm/assets/ico2d.png" type="Texture" id=2]
+[ext_resource path="res://FSM/states/RELEASED/RELEASED.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FSM/states/RELEASED/RELEASED.gd" type="Script" id=4]
+[ext_resource path="res://FSM/states/PRESSED/PRESSED.tscn" type="PackedScene" id=5]
+[ext_resource path="res://FSM/states/PRESSED/PRESSED.gd" type="Script" id=6]
+[ext_resource path="res://FSM/transitions/OnHeroNear/OnHeroNear.tscn" type="PackedScene" id=7]
+[ext_resource path="res://FSM/transitions/OnHeroNear/OnHeroNear.gd" type="Script" id=8]
+[ext_resource path="res://FSM/transitions/OnPressDurationEnd/OnPressDurationEnd.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FSM/transitions/OnPressDurationEnd/OnPressDurationEnd.gd" type="Script" id=10]
 
 [node name="Node" type="Node" index="0"]
 
@@ -23,11 +31,40 @@ enableDebug = false
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
 GraphData = {
-
+"OnHeroNear": Vector2( 662, 192 ),
+"OnHeroNear_": Vector2( 503, 314 ),
+"OnPressDurationEnd": Vector2( 173, 197 ),
+"OnPressDurationEnd_": Vector2( 14, 279 ),
+"PRESSED": Vector2( 378, 302 ),
+"PRESSED_": Vector2( 225, 451 ),
+"RELEASED": Vector2( 386, 88 ),
+"RELEASED_": Vector2( 200, 138 )
 }
 
 [node name="States" type="Node2D" parent="FSM2D" index="0"]
 
+[node name="RELEASED" type="Node" parent="FSM2D/States" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+
+[node name="PRESSED" type="Node" parent="FSM2D/States" index="1" instance=ExtResource( 5 )]
+
+script = ExtResource( 6 )
+
 [node name="Transitions" type="Node2D" parent="FSM2D" index="1"]
+
+[node name="OnHeroNear" type="Node" parent="FSM2D/Transitions" index="0" instance=ExtResource( 7 )]
+
+script = ExtResource( 8 )
+path2SourceStates = [ NodePath(""), NodePath("../../States/RELEASED") ]
+path2TargetState = NodePath("../../States/PRESSED")
+intervalBetweenChecks = -1.0
+
+[node name="OnPressDurationEnd" type="Node" parent="FSM2D/Transitions" index="1" instance=ExtResource( 9 )]
+
+script = ExtResource( 10 )
+path2SourceStates = [ NodePath(""), NodePath("../../States/PRESSED") ]
+path2TargetState = NodePath("../../States/RELEASED")
+intervalBetweenChecks = -1.0
 
 
