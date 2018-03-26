@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=1]
+[ext_resource path="res://addons/net.kivano.fsm/assets/ico2d.png" type="Texture" id=2]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="FSM2D" type="Node2D" parent="." index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Create new:" ]
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+path2LogicRoot = NodePath("..")
+onlyActiveStateOnTheScene = false
+initManually = false
+updateMode = 1
+receiceSignalsOnly4ActiveStatesAndTransitions = true
+enableDebug = false
+"Initial state:" = ""
+"Create new:/Subdirectory for FSM nodes:" = "FSM"
+"Create new:/Create state with name:" = null
+"Create new:/Create transition with name:" = null
+GraphData = {
+
+}
+
+[node name="States" type="Node2D" parent="FSM2D" index="0"]
+
+[node name="Transitions" type="Node2D" parent="FSM2D" index="1"]
+
+
