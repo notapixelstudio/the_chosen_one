@@ -1,5 +1,5 @@
 class Character:
 	var features = {
-		'hair': 'long',
+		'hair': 'long_white',
 		'weapon': 'sword'
 	}
