@@ -10,7 +10,7 @@ source_file="res://addons/net.kivano.fsm/assets/white.png"
 source_md5="d560b82196c9f9aa2090ce2623bef19b"
 
 dest_files=[ "res://.import/white.png-00d996f8bfb950d04bd7d1b22b3fb417.stex" ]
-dest_md5="98284cd45f6b6433d4ce1361583a2386"
+dest_md5="2e6d81bedc45288c2c98455cff9510f9"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
