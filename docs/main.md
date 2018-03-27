@@ -66,13 +66,48 @@ character features -> monster hints
 	- long
 		- wrong
 			- ""
+			- ""
+			- "Such long hair and such a short life... what a pity!"
+			- "Are you an idiot? That haircut is way too impractical for a boss fight!"
 	- short
+		- wrong
+			- ""
+			- ""
+			- "The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. -- But wait... Prophecies are never wrong!"
 - hair_color
 	- yellow
-	- brown
+		- wrong
+			- "Poor creature... you remind me of a little, harmless canary."
+	- green
+		- wrong
+			- "Great! You arrived just in time for my new veggie diet!"
+	- pink
+		- wrong
+			- "I'll chew you like bubblegum!"
 	- black
+		- wrong
+			- "Mmm... Am I supposed to be scared by a tenebrous figure? I am a **monster**, remember?"
 	- white
+		- wrong
+			- "Poor little angel. I'll send you back to heaven in a minute."
 - weapon
+	- wrong
+		- "I get that the toy shop has cheaper prices, but still..."
+		- "Bring a serious weapon next time, ok? -- Oh, there's no next time for you. Dang."
 	- sword
+		- wrong
+			- "Being unoriginal will not save you, nor anyone else."
+			- "Oh, you like classic choices! Me too. I always eat humans with no fancy spices or sauce."
+			- "A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up..."
 	- dagger
+		- wrong
+			- "It's not like they say, you know? The size **does** matter!"
+			- "Sorry, no toothpicks allowed here."
+			- "Was a proper, bigger weapon too heavy to carry? Oh, I can totally relate."
 	- staff
+		- wrong
+			- "This is not a hike. This is a battle."
+			- "Afraid of sharp objects? Mee too."
+			- "Oh, I suppose the blacksmith was already closed..."
+			- "Even a putter would hurt me more than that wood you carry!"
+			- "Wrong place. The pool billiard house is two blocks south from here."
