@@ -15,6 +15,14 @@ The player is asked to create a character. This step sets the values for many di
 ## Arena
 The game checks if the features of the player match the features of the chosen one. Then it shows the Arena: The player is on the left side and the dragon is on the right. [At the top, a health bar shows the dragon's remaining health.] At the bottom of the screen, a Final Fantasy-style menu alternates with dialog boxes.
 
+- Player's turn
+	1. Choose either "Attack", "Item", "Magic" or "Run" (this will play a different animation, but it always have the same effect except for "Run", that essentially quits the battle and transitions directly to the Game Over screen)
+	2. Player animation
+	3. Dragon damage animation
+- Dragon's turn
+	- either a Monologue line (any key to continue, may be more than a single one. proceeding when the last line is displayed passes the turn back to the player)
+	- or an attack (6th turn)
+
 ### If the player is not the chosen one
 [The first battle or two, the dragon follows a pre-scripted routine to let the player believe the game can be won by fighting. The routine ends with the dragon revealing that it was an act, while its health is replenished.]
 
