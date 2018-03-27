@@ -39,8 +39,18 @@ Since the name is important, but also difficult to guess, we should provide a li
 generic lines
 - "Bwahahahaha! Fool!"
 - "You'll never defeat me!"
-- "I'll tear you into pieces!"
+- "I'll tear you into little pieces!"
 - "I'll crush you into smithereens!"
+- "You are just a tiny human..."
+- "How you dare to face me?"
+- "Courage and recklessness are two faces of the same medal."
+- "Stupid human!"
+- "Mmm... I am hungry."
+- "There's nothing you can do to win this fight!"
+- "You are hopeless, like the rest of humankind."
+- "Has your kingdom ran out of fighters?"
+- "Why are you even trying?"
+- "My power is boundless."
 - ...
 
 character features -> monster hints
