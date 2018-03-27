@@ -1,20 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/character/test.png" type="Texture" id=1]
+[ext_resource path="res://CharacterCreationRoom.gd" type="Script" id=1]
+[ext_resource path="res://character/CharacterPreview.tscn" type="PackedScene" id=2]
 
 [node name="CharacterCreationRoom" type="Node" index="0"]
 
-[node name="CharacterPreview" type="Node2D" parent="." index="0"]
+script = ExtResource( 1 )
 
-position = Vector2( 580, 225 )
-scale = Vector2( 3, 3 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
+[node name="CharacterPreview" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Sprite" type="Sprite" parent="CharacterPreview" index="0"]
-
-texture = ExtResource( 1 )
+position = Vector2( 610, 230 )
 
 

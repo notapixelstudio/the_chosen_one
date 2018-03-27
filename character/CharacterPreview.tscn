@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://character/CharacterPreview.gd" type="Script" id=1]
+[ext_resource path="res://assets/character/body.png" type="Texture" id=2]
+
+[node name="CharacterPreview" type="Node2D"]
+
+scale = Vector2( 3, 3 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="features" type="Node2D" parent="." index="1"]
+
+[node name="hair" type="Sprite" parent="features" index="0"]
+
+
