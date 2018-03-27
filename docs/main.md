@@ -29,42 +29,42 @@ Each monologue line is randomly picked from a pool. The pool contains a lot of g
 Since the name is important, but also difficult to guess, we should provide a list of names or a "random" generator for them to help the player choose one by following the dragon's hints.
 
 generic lines
-	"Bwahahahaha! Fool!"
-	"You'll never defeat me!"
-	"I'll tear you into pieces!"
-	"I'll crush you into smithereens!"
-	...
+- "Bwahahahaha! Fool!"
+- "You'll never defeat me!"
+- "I'll tear you into pieces!"
+- "I'll crush you into smithereens!"
+- ...
 
 character features -> monster hints
-	name (string, obtained by splitting the space in the "name" field)
-		wrong
-			"You are insignificant, human!"
-			"No one ever heard of you before! What were yout thinking when you came here to face me?"
-			"What was your name again..?"
-			"<name>... A ridiculous name for a ridiculous human!"
-			"(Singing) Hail the hero, hail <name>... It doesn't click. I believe it should rhyme with <chosen_one_name[-3:-1]>."
-			"A true hero's name should begin with <chosen_one_name[0]>"
-			"Fool! The name of The Chosen One should give a monster the shivers! For example: <chosen_one_name>! ...brrr. <name>! ...nope. Understood?"
-	family_name (see above)
-		wrong
-			"Your blood is worthless!"
-			"I will eat you, then I will eat all your family too!"
-			"Your house is insignificant."
-			"Ha! Only a noble with proper training could hope to hit me!"
-			"The <family_name>s fell in disgrace many years ago... And you poor thing are what's left of them. Nothing!"
-			"No song will ever tell the story of a <family_name>!"
-			"The prophecy was about a <chosen_one_family_name>, not a <family_name>, if I remember correctly..."
-	hair_type
-		long
-			wrong
-				""
-		short
-	hair_color
-		yellow
-		brown
-		black
-		white
-	weapon
-		sword
-		dagger
-		staff
+- name (string, obtained by splitting the space in the "name" field)
+	- wrong
+		- "You are insignificant, human!"
+		- "No one ever heard of you before! What were yout thinking when you came here to face me?"
+		- "What was your name again..?"
+		- "<name>... A ridiculous name for a ridiculous human!"
+		- "(Singing) Hail the hero, hail <name>... It doesn't click. I believe it should rhyme with <chosen_one_name[-3:-1]>."
+		- "A true hero's name should begin with <chosen_one_name[0]>"
+		- "Fool! The name of The Chosen One should give a monster the shivers! For example: <chosen_one_name>! ...brrr. <name>! ...nope. Understood?"
+- family_name (see above)
+	- wrong
+		- "Your blood is worthless!"
+		- "I will eat you, then I will eat all your family too!"
+		- "Your house is insignificant."
+		- "Ha! Only a noble with proper training could hope to hit me!"
+		- "The <family_name>s fell in disgrace many years ago... And you poor thing are what's left of them. Nothing!"
+		- "No song will ever tell the story of a <family_name>!"
+		- "The prophecy was about a <chosen_one_family_name>, not a <family_name>, if I remember correctly..."
+- hair_type
+	- long
+		- wrong
+			- ""
+	- short
+- hair_color
+	- yellow
+	- brown
+	- black
+	- white
+- weapon
+	- sword
+	- dagger
+	- staff
