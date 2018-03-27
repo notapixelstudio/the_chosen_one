@@ -3,7 +3,7 @@
 [ext_resource path="res://character/CharacterPreview.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/body.png" type="Texture" id=2]
 
-[node name="CharacterPreview" type="Node2D"]
+[node name="CharacterPreview" type="Node2D" index="0"]
 
 scale = Vector2( 3, 3 )
 script = ExtResource( 1 )
@@ -12,12 +12,13 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="body" type="Sprite" parent="." index="0"]
+[node name="weapon" type="Sprite" parent="." index="0"]
+
+[node name="body" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="features" type="Node2D" parent="." index="1"]
-
-[node name="hair" type="Sprite" parent="features" index="0"]
+[node name="hair" type="Sprite" parent="." index="2"]
 
 
