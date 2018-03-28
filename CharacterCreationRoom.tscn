@@ -14,10 +14,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -375.0
-margin_top = -458.0
-margin_right = 1237.0
-margin_bottom = 453.0
+margin_left = -84.0
+margin_top = -330.0
+margin_right = 1528.0
+margin_bottom = 581.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -25,12 +25,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 2 )
-expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="Character" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 665.045, 298.008 )
+position = Vector2( 665.045, 317.652 )
 
 
