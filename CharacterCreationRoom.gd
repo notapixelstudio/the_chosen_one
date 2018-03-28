@@ -9,6 +9,7 @@ var hair_i = 0
 
 const button_width = 120
 const button_height = 34
+const theme = preload("res://screens/theme.tres")
 
 func _ready():
 	# FIXME this should go to the game initialization script
@@ -30,7 +31,7 @@ func _ready():
 		j = 0
 		for value in feats[key]:
 			var button = Button.new()
-			button.set_theme(load("res://screens/theme.tres"))
+			button.set_theme(theme)
 			button.set_begin(Vector2(i*button_width,j*button_height))
 			button.set_end(Vector2((i+1)*button_width,(j+1)*button_height))
 			button.name = value
