@@ -23,8 +23,10 @@ func _ready():
 	var j = 0
 	
 	for key in feats:
-		var n = get_node(key)
+		var n = Node2D.new()
+		n.position = (Vector2(0,0))
 		n.name = key
+		add_child(n)
 		j = 0
 		for value in feats[key]:
 			var button = Button.new()
