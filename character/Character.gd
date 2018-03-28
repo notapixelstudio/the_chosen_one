@@ -1,13 +1,16 @@
-class Character:
-	const FEATURES = {
-		'hair': ['long_white', 'long_green', 'long_blue', 'short_white', 'short_green', 'short_blue'],
-		'weapon': ['sword', 'dagger', 'staff']
-	}
-	var features = {}
+extends Node2D
 
-	func _init():
-		randomize_features()
-		
-	func randomize_features():
-		for f in FEATURES:
-			features[f] = FEATURES[f][randi() % len(FEATURES[f])]
+var character
+
+func load_character(ch):
+	character = ch
+	redraw()
+	
+func redraw():
+	for feature in character.features:
+		var value = character.features[feature]
+		if value != null:
+			get_node(feature).set_texture(load('res://assets/character/'+feature+'_'+value+'.png'))
+		else:
+			get_node(feature).set_texture(null)
+			

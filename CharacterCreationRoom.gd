@@ -1,23 +1,12 @@
-	extends Node
-
-var Character
-var character
-
-# FIXME to be removed
-var hair_types = ['short', 'long']
-var hair_i = 0
+extends Node
 
 const button_width = 120
 const button_height = 34
+const theme = preload("res://screens/theme.tres")
 
 func _ready():
-	# FIXME this should go to the game initialization script
-	randomize()
-	Character = load('res://character/Character.gd').new().Character
-	character = Character.new()
-	$CharacterPreview.load_character(character)
-	var feats = character.FEATURES
-	var nodo_capelli = get_node("hair")
+	$Character.load_character(global.player_character_data)
+	var feats = global.player_character_data.FEATURES # FIXME this should be a static
 
 	var i = 0
 	var j = 0
@@ -30,7 +19,7 @@ func _ready():
 		j = 0
 		for value in feats[key]:
 			var button = Button.new()
-			button.set_theme(load("res://screens/theme.tres"))
+			button.set_theme(theme)
 			button.set_begin(Vector2(i*button_width,j*button_height))
 			button.set_end(Vector2((i+1)*button_width,(j+1)*button_height))
 			button.name = value
@@ -42,7 +31,7 @@ func _ready():
 		i+=1
 	
 func on_feature_selected(feature, value):
-	character.features[feature] = value
-	$CharacterPreview.update_preview()
+	global.player_character_data.features[feature] = value
+	$Character.redraw()
 	pass
 	
