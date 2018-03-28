@@ -20,7 +20,7 @@ func getLogicRoot(): return logicRoot; #access to logic root of FSM (usually fsm
 ######################################
 ####### Implement those below ########
 func transitionInit(inParam1=null, inParam2=null, inParam3=null, inParam4=null, inParam5=null): 
-	#you can optionally implement this to initialize transition on it's creation time 
+	#you can optionally implement this to initialize transition on its creation time 
 	pass
 
 func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null): 

@@ -1,23 +1,18 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
-[ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=3]
-[ext_resource path="res://addons/net.kivano.fsm/assets/ico2d.png" type="Texture" id=4]
-[ext_resource path="res://FSM/states/RELEASED/RELEASED.tscn" type="PackedScene" id=5]
-[ext_resource path="res://FSM/states/PRESSED/PRESSED.tscn" type="PackedScene" id=6]
-[ext_resource path="res://FSM/transitions/OnHeroNear/OnHeroNear.tscn" type="PackedScene" id=7]
-[ext_resource path="res://FSM/transitions/OnPressDurationEnd/OnPressDurationEnd.tscn" type="PackedScene" id=8]
-[ext_resource path="res://icon.png" type="Texture" id=9]
-[ext_resource path="res://character/Character.tscn" type="PackedScene" id=10]
-[ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=11]
-[ext_resource path="res://FSM/states/DragonTurn/DragonTurn.tscn" type="PackedScene" id=12]
-[ext_resource path="res://FSM/states/DragonTurn/DragonTurn.gd" type="Script" id=13]
-[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=14]
-[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.gd" type="Script" id=15]
-[ext_resource path="res://screens/theme.tres" type="Theme" id=16]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://character/Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=5]
+[ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=6]
+[ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://screens/theme.tres" type="Theme" id=8]
+[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FSM/transitions/EnemyDialog/EnemyDialog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://FSM/transitions/PlayerDialog/PlayerDialog.tscn" type="PackedScene" id=11]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -43,64 +38,17 @@ expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="FSM2D" type="Node2D" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
-script = ExtResource( 3 )
-_sections_unfolded = [ "Create new:" ]
-__meta__ = {
-"_editor_icon": ExtResource( 4 )
-}
-path2LogicRoot = NodePath("..")
-onlyActiveStateOnTheScene = false
-initManually = false
-updateMode = 1
-receiceSignalsOnly4ActiveStatesAndTransitions = true
-enableDebug = false
-"Initial state:" = ""
-"Create new:/Subdirectory for FSM nodes:" = "FSM"
-"Create new:/Create state with name:" = null
-"Create new:/Create transition with name:" = null
-GraphData = {
-"OnHeroNear": Vector2( 670, 185 ),
-"OnHeroNear_": Vector2( 670, 185 ),
-"OnPressDurationEnd": Vector2( 173, 197 ),
-"OnPressDurationEnd_": Vector2( 173, 197 ),
-"PRESSED": Vector2( 378, 302 ),
-"PRESSED_": Vector2( 378, 302 ),
-"RELEASED": Vector2( 386, 88 ),
-"RELEASED_": Vector2( 386, 88 )
-}
-
-[node name="States" type="Node2D" parent="FSM2D" index="0"]
-
-[node name="RELEASED" parent="FSM2D/States" index="0" instance=ExtResource( 5 )]
-
-[node name="PRESSED" parent="FSM2D/States" index="1" instance=ExtResource( 6 )]
-
-[node name="Transitions" type="Node2D" parent="FSM2D" index="1"]
-
-[node name="OnHeroNear" parent="FSM2D/Transitions" index="0" instance=ExtResource( 7 )]
-
-path2SourceStates = [ NodePath(""), NodePath("../../States/RELEASED") ]
-path2TargetState = NodePath("../../States/PRESSED")
-
-[node name="OnPressDurationEnd" parent="FSM2D/Transitions" index="1" instance=ExtResource( 8 )]
-
-path2SourceStates = [ NodePath(""), NodePath("../../States/PRESSED") ]
-path2TargetState = NodePath("../../States/RELEASED")
-
-[node name="Sprite" type="Sprite" parent="." index="2"]
-
-position = Vector2( 661.155, 126.625 )
+position = Vector2( 668.494, 111.946 )
 scale = Vector2( 3.85759, 3.33681 )
-texture = ExtResource( 9 )
+texture = ExtResource( 3 )
 
-[node name="Character" parent="." index="3" instance=ExtResource( 10 )]
+[node name="Character" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 129.063, 193.326 )
 
-[node name="Label" type="Label" parent="." index="4"]
+[node name="Label" type="Label" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -120,7 +68,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="FSMControl" type="Control" parent="." index="5"]
+[node name="FSMControl" type="Control" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -134,18 +82,18 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Create new:" ]
 __meta__ = {
-"_editor_icon": ExtResource( 11 )
+"_editor_icon": ExtResource( 6 )
 }
 path2LogicRoot = NodePath("..")
-onlyActiveStateOnTheScene = false
+onlyActiveStateOnTheScene = true
 initManually = false
 updateMode = 1
 receiceSignalsOnly4ActiveStatesAndTransitions = true
 enableDebug = false
-"Initial state:" = ""
+"Initial state:" = "EnemyTurn"
 "Create new:/Subdirectory for FSM nodes:" = "FSM"
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
@@ -153,7 +101,22 @@ GraphData = {
 "DragonTurn": Vector2( 323, 54 ),
 "DragonTurn_": Vector2( 323, 54 ),
 "DragonTurn__": Vector2( 323, 54 ),
+"EnemyDialog": Vector2( 595, 166 ),
+"EnemyDialog2": Vector2( 100, 239 ),
+"EnemyDialog2_": Vector2( 100, 239 ),
+"EnemyDialog2__": Vector2( 100, 239 ),
+"EnemyDialog_": Vector2( 595, 166 ),
+"EnemyDialog__": Vector2( 595, 166 ),
+"EnemyTurn": Vector2( 370, 59 ),
+"EnemyTurn_": Vector2( 370, 59 ),
+"EnemyTurn__": Vector2( 345, 278 ),
+"PlayerActionTurn": Vector2( 359, 327 ),
+"PlayerActionTurn_": Vector2( 359, 327 ),
+"PlayerActionTurn__": Vector2( 359, 327 ),
 "PlayerAttackTurn": Vector2( 320, 297 ),
+"PlayerDialog": Vector2( 159, 181 ),
+"PlayerDialog_": Vector2( 159, 181 ),
+"PlayerDialog__": Vector2( 159, 181 ),
 "PlayerTurn": Vector2( 329, 314 ),
 "PlayerTurn_": Vector2( 329, 314 ),
 "PlayerTurn__": Vector2( 329, 314 )
@@ -172,44 +135,45 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="DragonTurn" type="Node" parent="FSMControl/States" index="0" instance=ExtResource( 12 )]
+[node name="EnemyTurn" parent="FSMControl/States" index="0" instance=ExtResource( 7 )]
 
-script = ExtResource( 13 )
+[node name="DialogBox" type="RichTextLabel" parent="FSMControl/States/EnemyTurn" index="0"]
 
-[node name="DialogBox" type="RichTextLabel" parent="FSMControl/States/DragonTurn" index="0"]
-
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
 margin_top = 328.0
-margin_right = 48.0
-margin_bottom = 368.0
+margin_right = 808.0
+margin_bottom = 428.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-bbcode_enabled = false
-bbcode_text = ""
+theme = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "The dragon [b]TALKS[/b] TALKS!!"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
-tab_size = 4
-text = ""
+tab_size = 8
+text = "The dragon TALKS TALKS!!"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Theme" ]
 
-[node name="PlayerActionTurn" type="Node" parent="FSMControl/States" index="1" instance=ExtResource( 14 )]
-
-script = ExtResource( 15 )
+[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 9 )]
 
 [node name="actionbox" type="GridContainer" parent="FSMControl/States/PlayerActionTurn" index="0"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -227,7 +191,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 16 )
+theme = ExtResource( 8 )
 columns = 2
 _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme" ]
 
@@ -262,8 +226,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 390.0
-margin_right = 790.0
+margin_left = 384.0
+margin_right = 784.0
 margin_bottom = 60.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -313,9 +277,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 390.0
+margin_left = 384.0
 margin_top = 64.0
-margin_right = 790.0
+margin_right = 784.0
 margin_bottom = 124.0
 rect_min_size = Vector2( 400, 50 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -346,5 +310,77 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+
+[node name="EnemyDialog" parent="FSMControl/Transitions" index="0" instance=ExtResource( 10 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn"), NodePath("../../States/DragonTurn") ]
+path2TargetState = NodePath("../../States/PlayerActionTurn")
+
+[node name="DialogBoxTransition" type="RichTextLabel" parent="FSMControl/Transitions/EnemyDialog" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 328.0
+margin_right = 808.0
+margin_bottom = 428.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "The dragon finished to talk!!"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 8
+text = "The dragon finished to talk!!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Theme" ]
+
+[node name="PlayerDialog" parent="FSMControl/Transitions" index="1" instance=ExtResource( 11 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
+path2TargetState = NodePath("../../States/DragonTurn")
+
+[node name="DialogBoxTransition2" type="RichTextLabel" parent="FSMControl/Transitions/PlayerDialog" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 328.0
+margin_right = 808.0
+margin_bottom = 428.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "Now the player execute their action"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 8
+text = "Now the player execute their action"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Theme" ]
 
 
