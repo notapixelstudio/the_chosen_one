@@ -7,18 +7,40 @@ var character
 var hair_types = ['short', 'long']
 var hair_i = 0
 
+const button_width = 120
+const button_height = 34
+
 func _ready():
 	# FIXME this should go to the game initialization script
 	randomize()
-	
 	Character = load('res://character/Character.gd').new().Character
 	character = Character.new()
 	$CharacterPreview.load_character(character)
-	
+	var feats = character.FEATURES
+	var nodo_capelli = get_node("hair")
 
-func on_pressed(button):
-	print(button.get_name())
-	character.features.hair = hair_types[hair_i]
-	hair_i = (hair_i+1) % len(hair_types)
+	var i = 0
+	var j = 0
+	
+	for key in feats:
+		var n = get_node(key)
+		n.name = key
+		j = 0
+		for value in feats[key]:
+			var button = Button.new()
+			button.set_theme(load("res://screens/theme.tres"))
+			button.set_begin(Vector2(i*button_width,j*button_height))
+			button.set_end(Vector2((i+1)*button_width,(j+1)*button_height))
+			button.name = value
+			button.text = value.replace("_", " ")
+			n.add_child(button)
+			button.add_to_group(key)
+			button.connect("pressed", self, "on_feature_selected", [key,value])
+			j+=1
+		i+=1
+	
+func on_feature_selected(feature, value):
+	character.features[feature] = value
 	$CharacterPreview.update_preview()
-		
+	pass
+	
