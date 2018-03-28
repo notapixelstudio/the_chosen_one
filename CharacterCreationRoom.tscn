@@ -2,9 +2,9 @@
 
 [ext_resource path="res://CharacterCreationRoom.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
-[ext_resource path="res://character/CharacterPreview.tscn" type="PackedScene" id=3]
+[ext_resource path="res://character/Character.tscn" type="PackedScene" id=3]
 
-[node name="CharacterCreationRoom" type="Node"]
+[node name="CharacterCreationRoom" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -28,7 +28,7 @@ expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="CharacterPreview" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Character" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 680.045, 333.008 )
 
