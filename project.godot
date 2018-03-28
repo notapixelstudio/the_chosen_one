@@ -12,13 +12,12 @@ config_version=3
 
 config/name="The Chosen One"
 run/main_scene="res://CharacterCreationRoom.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/character/test.png"
 
 [display]
 
 window/size/width=800
 window/size/height=450
-window/size/resizable=false
 
 [editor_plugins]
 
