@@ -42,7 +42,7 @@ generic lines
 - "I'll tear you into little pieces!"
 - "I'll crush you into smithereens!"
 - "You are just a tiny human..."
-- "How you dare to face me?"
+- "How dare you to face **me**?"
 - "Courage and recklessness are two faces of the same medal."
 - "Stupid human!"
 - "Mmm... I am hungry."
@@ -125,3 +125,17 @@ character features -> monster hints
 			- "Oh, I suppose the blacksmith was already closed..."
 			- "Even a putter would hurt me more than that wood you carry!"
 			- "Wrong place. The pool billiard house is two blocks south from here."
+
+## Game structure
+
+1. load persistent data
+2. if there is no chosen one, secretly create a random one and persist it
+3. if there is no previous character, create a random one and persist it
+4. character creation -> each change persists
+5. arena -> comparison ("dragon's algorithm')
+6. execution of battle and monologue
+7. end of the match
+	1. if character is the chosen one, you win. then all persistent data is cleared
+	2. if the character is not the chosen one, you lose. (all persistent data stay persistent! restarting or reopening the game should have the same effect)
+
+## Dragon's algorithm
