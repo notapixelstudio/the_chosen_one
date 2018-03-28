@@ -128,13 +128,13 @@ character features -> monster hints
 
 ## Game structure
 
-0. load persistent data
-1. if there is no chosen one, secretly create a random one and persist it
-2. if there is no previous character, create a random one and persist it
-3. character creation -> each change persists
-4. arena -> comparison ("dragon's algorithm')
-5. execution of battle and monologue
-6. end of the match
+1. load persistent data
+2. if there is no chosen one, secretly create a random one and persist it
+3. if there is no previous character, create a random one and persist it
+4. character creation -> each change persists
+5. arena -> comparison ("dragon's algorithm')
+6. execution of battle and monologue
+7. end of the match
   1. if character is the chosen one, you win. then all persistent data is cleared
   2. if the character is not the chosen one, you lose. (all persistent data stay persistent! restarting or reopening the game should have the same effect)
 
