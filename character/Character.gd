@@ -1,6 +1,9 @@
 class Character:
 	const FEATURES = {
-		'hair': ['long_white', 'long_green', 'long_blue', 'short_white', 'short_green', 'short_blue'],
+		'hair': [
+			'long_white', 'long_black', 'long_green', 'long_blue', 'long_pink',
+			'short_white', 'short_black', 'short_green', 'short_blue', 'short_pink'
+		],
 		'weapon': ['sword', 'dagger', 'staff']
 	}
 	var features = {}
