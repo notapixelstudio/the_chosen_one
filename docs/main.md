@@ -42,7 +42,7 @@ generic lines
 - "I'll tear you into little pieces!"
 - "I'll crush you into smithereens!"
 - "You are just a tiny human..."
-- "How you dare to face me?"
+- "How dare you to face **me**?"
 - "Courage and recklessness are two faces of the same medal."
 - "Stupid human!"
 - "Mmm... I am hungry."
