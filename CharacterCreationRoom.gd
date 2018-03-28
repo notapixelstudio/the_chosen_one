@@ -1,4 +1,4 @@
-extends Node
+	extends Node
 
 var Character
 var character
@@ -15,9 +15,10 @@ func _ready():
 	character = Character.new()
 	$CharacterPreview.load_character(character)
 	
-func _input(event):
-	if event.is_action_pressed('ui_select'):
-		character.features.hair = hair_types[hair_i]
-		hair_i = (hair_i+1) % len(hair_types)
-		$CharacterPreview.update_preview()
+
+func on_pressed(button):
+	print(button.get_name())
+	character.features.hair = hair_types[hair_i]
+	hair_i = (hair_i+1) % len(hair_types)
+	$CharacterPreview.update_preview()
 		

@@ -10,7 +10,7 @@ source_file="res://addons/net.kivano.fsm/assets/small_transition_9path.png"
 source_md5="92e814709c39a2c05e89b565bcf6b7f5"
 
 dest_files=[ "res://.import/small_transition_9path.png-8ebf94ad6a087b9ee45187bb64e6359a.stex" ]
-dest_md5="e47986e1b2c4a77e9c6668057864fc6e"
+dest_md5="53d8383717b791a54eea233da62ca48e"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
