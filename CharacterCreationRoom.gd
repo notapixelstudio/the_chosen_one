@@ -1,11 +1,7 @@
 	extends Node
 
-var Character
-var character
-
-# FIXME to be removed
-var hair_types = ['short', 'long']
-var hair_i = 0
+var CharacterData
+var player_character_data
 
 const button_width = 120
 const button_height = 34
@@ -14,10 +10,10 @@ const theme = preload("res://screens/theme.tres")
 func _ready():
 	# FIXME this should go to the game initialization script
 	randomize()
-	Character = load('res://character/Character.gd').new().Character
-	character = Character.new()
-	$CharacterPreview.load_character(character)
-	var feats = character.FEATURES
+	CharacterData = load('res://character/CharacterData.gd').new().CharacterData
+	player_character_data = CharacterData.new()
+	$Character.load_character(player_character_data)
+	var feats = player_character_data.FEATURES
 	var nodo_capelli = get_node("hair")
 
 	var i = 0
@@ -43,7 +39,7 @@ func _ready():
 		i+=1
 	
 func on_feature_selected(feature, value):
-	character.features[feature] = value
-	$CharacterPreview.update_preview()
+	player_character_data.features[feature] = value
+	$Character.redraw()
 	pass
 	
