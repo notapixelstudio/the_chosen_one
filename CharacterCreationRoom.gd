@@ -1,20 +1,12 @@
-	extends Node
-
-var CharacterData
-var player_character_data
+extends Node
 
 const button_width = 120
 const button_height = 34
 const theme = preload("res://screens/theme.tres")
 
 func _ready():
-	# FIXME this should go to the game initialization script
-	randomize()
-	CharacterData = load('res://character/CharacterData.gd').new().CharacterData
-	player_character_data = CharacterData.new()
-	$Character.load_character(player_character_data)
-	var feats = player_character_data.FEATURES
-	var nodo_capelli = get_node("hair")
+	$Character.load_character(global.player_character_data)
+	var feats = global.player_character_data.FEATURES # FIXME this should be a static
 
 	var i = 0
 	var j = 0
@@ -39,7 +31,10 @@ func _ready():
 		i+=1
 	
 func on_feature_selected(feature, value):
-	player_character_data.features[feature] = value
+	global.player_character_data.set_feature(feature, value)
 	$Character.redraw()
 	pass
 	
+
+func _on_PlayButton_pressed():
+	get_tree().change_scene('res://Arena.tscn')
