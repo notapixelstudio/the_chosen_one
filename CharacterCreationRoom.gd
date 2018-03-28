@@ -35,3 +35,6 @@ func on_feature_selected(feature, value):
 	$Character.redraw()
 	pass
 	
+
+func _on_PlayButton_pressed():
+	get_tree().change_scene('res://Arena.tscn')
