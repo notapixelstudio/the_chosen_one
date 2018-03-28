@@ -10,7 +10,6 @@ func _ready():
 	
 	CharacterData = load('res://character/CharacterData.gd').new().CharacterData
 
-	# FIXME this should load from user:// persistent storage
 	player_character_data = CharacterData.new()
 	chosen_one_data = CharacterData.new()
 	
