@@ -14,9 +14,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1612.0
-margin_bottom = 911.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = -375.0
+margin_top = -458.0
+margin_right = 1237.0
+margin_bottom = 453.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -30,6 +31,6 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Character" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 680.045, 333.008 )
+position = Vector2( 665.045, 298.008 )
 
 
