@@ -135,7 +135,7 @@ character features -> monster hints
 4. arena -> comparison ("dragon's algorithm')
 5. execution of battle and monologue
 6. end of the match
-  a. if character is the chosen one, you win. then all persistent data is cleared
-  b. if the character is not the chosen one, you lose. (all persistent data stay persistent! restarting or reopening the game should have the same effect)
+  1. if character is the chosen one, you win. then all persistent data is cleared
+  2. if the character is not the chosen one, you lose. (all persistent data stay persistent! restarting or reopening the game should have the same effect)
 
 ## Dragon's algorithm
