@@ -140,4 +140,14 @@ character features -> monster hints
 
 ## Dragon's algorithm
 
+HINTS starts from 2 and increases by 2 each try [it should start higher for next games]
+TURNS = 6
+BLABBERING = TURNS - HINTS
 
+1. compute the diff between the player and the chosen one -- each wrong feature and its value are returned as a list
+2. pop BLABBERING random generic lines from the generic pool and put it into the script for the current battle (replenish the pool if empty)
+3. select HINTS random wrong features from the diff. for each feature:
+	1. pop the first (more obscure) line from that feature's pool and put it into the script for the current battle (replenish the pool if empty)
+4. randomize the script sequence
+5. execute the script
+6. destroy the script
