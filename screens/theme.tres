@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=2]
+[gd_resource type="Theme" load_steps=8 format=2]
 
 [ext_resource path="res://assets/dpcomic.ttf" type="DynamicFontData" id=1]
 
@@ -118,6 +118,14 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Shadow" ]
 
+[sub_resource type="ImageTexture" id=6]
+
+flags = 7
+storage = 0
+lossy_quality = 0.7
+flags = 7
+size = Vector2( 0, 0 )
+
 [sub_resource type="DynamicFont" id=5]
 
 size = 24
@@ -144,5 +152,6 @@ Button/styles/pressed = SubResource( 4 )
 Panel/styles/panel = SubResource( 1 )
 Panel/styles/panelf = null
 Panel/styles/panelnc = null
-_sections_unfolded = [ "Button", "Button/styles", "Panel", "Resource", "VScrollBar", "VScrollBar/icons", "VScrollBar/styles" ]
+TooltipPanel/icons/ToolTip = SubResource( 6 )
+_sections_unfolded = [ "Button", "Button/styles", "Panel", "Resource", "TooltipPanel", "VScrollBar", "VScrollBar/icons", "VScrollBar/styles" ]
 
