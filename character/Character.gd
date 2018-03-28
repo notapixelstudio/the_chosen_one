@@ -4,7 +4,7 @@ class Character:
 			'long_white', 'long_black', 'long_green', 'long_blue', 'long_pink',
 			'short_white', 'short_black', 'short_green', 'short_blue', 'short_pink'
 		],
-		'weapon': ['sword', 'dagger', 'staff']
+		'weapon': ['sword', 'dagger', 'staff', 'axe']
 	}
 	var features = {}
 
