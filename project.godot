@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="The Chosen One"
-run/main_scene="res://CharacterCreationRoom.tscn"
+run/main_scene="res://screens/splash_screen/splash_screen.tscn"
 config/icon="res://assets/character/test.png"
 
 [display]
