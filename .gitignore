@@ -13,4 +13,7 @@ export_presets.cfg
 .directory
 *~
 
-release
+release/*
+
+don't know if it is good or not
+#*.import
