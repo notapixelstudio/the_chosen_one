@@ -8,9 +8,17 @@ class CharacterData:
 	}
 	var features = {}
 
-	func _init():
-		randomize_features()
-		
+	func set_feature(feature, value):
+		# validation
+		if not(feature in features) or not(value in FEATURES[feature]):
+			return
+
+		features[feature] = value
+	
 	func randomize_features():
 		for f in FEATURES:
 			features[f] = FEATURES[f][randi() % len(FEATURES[f])]
+
+	func _init():
+		randomize_features()
+		

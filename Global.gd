@@ -5,6 +5,7 @@ var CharacterData
 var player_character_data
 var chosen_one_data
 
+
 func _ready():
 	randomize()
 	
