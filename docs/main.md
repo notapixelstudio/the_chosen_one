@@ -125,3 +125,17 @@ character features -> monster hints
 			- "Oh, I suppose the blacksmith was already closed..."
 			- "Even a putter would hurt me more than that wood you carry!"
 			- "Wrong place. The pool billiard house is two blocks south from here."
+
+## Game structure
+
+0. load persistent data
+1. if there is no chosen one, secretly create a random one and persist it
+2. if there is no previous character, create a random one and persist it
+3. character creation -> each change persists
+4. arena -> comparison ("dragon's algorithm')
+5. execution of battle and monologue
+6. end of the match
+  a. if character is the chosen one, you win. then all persistent data is cleared
+  b. if the character is not the chosen one, you lose. (all persistent data stay persistent! restarting or reopening the game should have the same effect)
+
+## Dragon's algorithm
