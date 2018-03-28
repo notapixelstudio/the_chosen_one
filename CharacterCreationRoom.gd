@@ -7,6 +7,9 @@ var character
 var hair_types = ['short', 'long']
 var hair_i = 0
 
+const button_width = 120
+const button_height = 34
+
 func _ready():
 	# FIXME this should go to the game initialization script
 	randomize()
@@ -18,6 +21,7 @@ func _ready():
 
 	var i = 0
 	var j = 0
+	
 	for key in feats:
 		var n = get_node(key)
 		n.name = key
@@ -25,16 +29,15 @@ func _ready():
 		for value in feats[key]:
 			var button = Button.new()
 			button.set_theme(load("res://screens/theme.tres"))
-			# TODO: MAtteo guarda queste posizioni
-			button.set_begin(Vector2(10,j+90))
-			button.set_end(Vector2(90,j+90))
-			button.rect_position = Vector2(j+i+90,i+j+100)
+			button.set_begin(Vector2(i*button_width,j*button_height))
+			button.set_end(Vector2((i+1)*button_width,(j+1)*button_height))
 			button.name = value
 			button.text = value.replace("_", " ")
 			n.add_child(button)
 			button.add_to_group(key)
 			button.connect("pressed", self, "on_feature_selected", [key,value])
 			j+=1
+		i+=1
 	
 func on_feature_selected(feature, value):
 	character.features[feature] = value
