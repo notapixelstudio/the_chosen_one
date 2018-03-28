@@ -8,6 +8,9 @@ var hair_types = ['short', 'long']
 var hair_i = 0
 
 func _ready():
+	# FIXME this should go to the game initialization script
+	randomize()
+	
 	Character = load('res://character/Character.gd').new().Character
 	character = Character.new()
 	$CharacterPreview.load_character(character)
