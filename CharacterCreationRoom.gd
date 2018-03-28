@@ -31,7 +31,7 @@ func _ready():
 		i+=1
 	
 func on_feature_selected(feature, value):
-	global.player_character_data.features[feature] = value
+	global.player_character_data.set_feature(feature, value)
 	$Character.redraw()
 	pass
 	
