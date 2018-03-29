@@ -74,6 +74,7 @@ class DragonScript:
 			]
 		}
 	}
+	var defeat_lines = []
 	var babbling_lines = []
 
 	var wrong_features
@@ -100,7 +101,7 @@ class DragonScript:
 
 	func read():
 		if facing_the_chosen_one:
-			return "Nuoo! Il ciosen uan!!" # FIXME
+			return next_defeat_line()
 		else:
 			if len(lines) == 0:
 				increase_hints(2)
@@ -116,11 +117,13 @@ class DragonScript:
 			var legible_value = value.replace('_',' ') 
 			return [
 				"You are not the sharpest tool in the shed, huh? Your " + legible_value + " " + feature + " won't do.",
-				"The Chosen One has no " + legible_value + " " + feature,
+				"The Chosen One has no " + legible_value + " " + feature + ". Understood?",
 				"Wrong " + feature + ". Got it? You are doomed.",
-				"Did you ever have the feeling of being controlled by a superior entity? What if that entity were a clueless ",
-				"Do you think before you act? I think you should try."
-			][randi() % 4]
+				"Did you ever have the feeling of being controlled by a superior entity? What if that entity were a clueless human like you?",
+				"Do you think before you act? I think you should try sometimes. It is an enlighting experience.",
+				"Why don't you try a different " + feature + "? Just for fun, I asked for no real reason.",
+				"There is no mention of a " + legible_value + " " + feature + " like yours in the Prophecy."
+			][randi() % 7]
 			
 		return hint_lines[feature][value].pop_front()
 
@@ -145,6 +148,20 @@ class DragonScript:
 			])
 
 		return babbling_lines.pop_front()
+
+	func next_defeat_line():
+		if len(defeat_lines) == 0:
+			defeat_lines = [
+				"You... you...",
+				"That's impossible...",
+				"That's not fair... my power...",
+				"The Prophecy was right...",
+				"I'm shaking, I'm shaking...",
+				"No...",
+				"NOOOOO!"
+			]
+
+		return defeat_lines.pop_front()
 
 	func get_lines(hints, babbling):
 		var lines = []
