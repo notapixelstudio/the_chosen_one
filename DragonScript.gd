@@ -120,7 +120,7 @@ class DragonScript:
 				"The Chosen One has no " + legible_value + " " + feature + ". Understood?",
 				"Wrong " + feature + ". Got it? You are doomed.",
 				"Did you ever have the feeling of being controlled by a superior entity? What if that entity were a clueless human like you?",
-				"Do you think before you act? I think you should try sometimes. It is an enlighting experience.",
+				"Do you ever think before you act? I think you should try sometimes. It is an enlighting experience.",
 				"Why don't you try a different " + feature + "? Just for fun, I asked for no real reason.",
 				"There is no mention of a " + legible_value + " " + feature + " like yours in the Prophecy."
 			][randi() % 7]
