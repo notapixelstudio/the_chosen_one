@@ -12,7 +12,7 @@
 [ext_resource path="res://FSM/transitions/EnemyDialog/EnemyDialog.tscn" type="PackedScene" id=10]
 [ext_resource path="res://FSM/transitions/PlayerDialog/PlayerDialog.tscn" type="PackedScene" id=11]
 
-[node name="Arena" type="Node"]
+[node name="Arena" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

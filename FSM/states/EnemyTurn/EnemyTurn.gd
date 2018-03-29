@@ -15,7 +15,6 @@ extends "res://addons/net.kivano.fsm/content/FSMState.gd";
 func getFSM(): return fsm; #defined in parent class
 func getLogicRoot(): return logicRoot; #defined in parent class 
 
-
 var dialog_box
 
 ##################################################################################
@@ -51,6 +50,18 @@ func exit(toState=null):
 ##################################################################################
 #########                         Public Methods                         #########
 ##################################################################################
+var tutor_part = 1
+
+func _on_next_up():
+	if $Animator.is_playing():
+		$Animator.seek($Animator.get_current_animation_length())
+	else:
+		if tutor_part < $Animator.get_animation_list().size() -1:
+			tutor_part += 1
+			$Animator.play($Animator.get_animation_list()[tutor_part])
+		else:
+			$Dialogue/Button.disabled = true
+			change_scene()
 
 ##################################################################################
 #########                         Inner Methods                          #########
