@@ -1,11 +1,10 @@
 class CharacterData:
 	const FEATURES = {
-		'hair': [
-			'long_white', 'long_black', 'long_green', 'long_blue', 'long_pink',
-			'short_white', 'short_black', 'short_green', 'short_blue', 'short_pink'
-		],
+		'haircut': ['short', 'long'],
+		'hair-color': ['white', 'black', 'green', 'blue', 'pink'],
 		'weapon': ['sword', 'dagger', 'staff', 'axe']
 	}
+	const COMBOS = {'hair': ['haircut', 'hair-color'], 'weapon': ['weapon']}
 	var features = {}
 
 	func _init():

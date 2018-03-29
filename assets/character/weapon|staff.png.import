@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/weapon_dagger.png-618ddfc3acc7a04c12945235f5f32b0f.stex"
+path="res://.import/weapon|staff.png-7b029b6f323fac7f43cf6212992efe3b.stex"
 
 [deps]
 
-source_file="res://assets/character/weapon_dagger.png"
-source_md5="2923d6e48998f164c97a160523cba56c"
+source_file="res://assets/character/weapon|staff.png"
+source_md5="93250f1d902fe939a88c715a4266bc08"
 
-dest_files=[ "res://.import/weapon_dagger.png-618ddfc3acc7a04c12945235f5f32b0f.stex" ]
-dest_md5="6459c258dd916ab2274913fbebb7715b"
+dest_files=[ "res://.import/weapon|staff.png-7b029b6f323fac7f43cf6212992efe3b.stex" ]
+dest_md5="4ee370eb45212f7cfd6a85131cd0279c"
 
 [params]
 

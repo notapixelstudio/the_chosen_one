@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/weapon_axe.png-adfa5e0c2828079152a8459fb052bb74.stex"
+path="res://.import/hair|short_blue.png-6a611c7d6c2ea0764c50faee1e934812.stex"
 
 [deps]
 
-source_file="res://assets/character/weapon_axe.png"
-source_md5="3fd354d7b2357b8366909d044e0a30c8"
+source_file="res://assets/character/hair|short_blue.png"
+source_md5="865e0da6142253f018ba2aa0f0dc32d7"
 
-dest_files=[ "res://.import/weapon_axe.png-adfa5e0c2828079152a8459fb052bb74.stex" ]
-dest_md5="d7703e146d224126a69b6c49f8a179ce"
+dest_files=[ "res://.import/hair|short_blue.png-6a611c7d6c2ea0764c50faee1e934812.stex" ]
+dest_md5="621d4d7f35d12ec4d293b46c5a8d51f1"
 
 [params]
 

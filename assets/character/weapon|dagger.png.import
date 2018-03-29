@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair_short_pink.png-952a97a3a187e6229fc9c727cd1f1ecd.stex"
+path="res://.import/weapon|dagger.png-bbab5f731be95faa60a9fd1f8f0f2392.stex"
 
 [deps]
 
-source_file="res://assets/character/hair_short_pink.png"
-source_md5="8f32e4d96c79faf523bc509d242725f1"
+source_file="res://assets/character/weapon|dagger.png"
+source_md5="2923d6e48998f164c97a160523cba56c"
 
-dest_files=[ "res://.import/hair_short_pink.png-952a97a3a187e6229fc9c727cd1f1ecd.stex" ]
-dest_md5="b59d4f5ece7f72fab0cd19e12f37467c"
+dest_files=[ "res://.import/weapon|dagger.png-bbab5f731be95faa60a9fd1f8f0f2392.stex" ]
+dest_md5="6459c258dd916ab2274913fbebb7715b"
 
 [params]
 

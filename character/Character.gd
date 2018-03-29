@@ -7,10 +7,10 @@ func load_character(ch):
 	redraw()
 	
 func redraw():
-	for feature in character.features:
-		var value = character.features[feature]
-		if value != null:
-			get_node(feature).set_texture(load('res://assets/character/'+feature+'_'+value+'.png'))
-		else:
-			get_node(feature).set_texture(null)
-			
+	for combo in character.COMBOS:
+		var combo_value = ''
+		for feature in character.COMBOS[combo]:
+			combo_value += character.features[feature] + '_'
+		combo_value = combo_value.substr(0, len(combo_value)-1) # remove trailing underscore
+		get_node(combo).set_texture(load('res://assets/character/'+combo+'|'+combo_value+'.png'))
+		

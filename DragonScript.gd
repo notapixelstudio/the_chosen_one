@@ -3,7 +3,7 @@ class DragonScript:
 		'weapon': {
 			'sword': [
 				'Being unoriginal will not save you, nor anyone else.',
-				'Oh, you like classic choices! Me too. I always eat humans with no fancy spices or sauce.',
+				'Oh, you like classic stuff! Me too. I always eat humans with no fancy spices or sauce.',
 				'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
 			],
 			'axe': [
@@ -22,55 +22,33 @@ class DragonScript:
 				"Was a proper, bigger weapon too heavy to carry? Oh, I can totally relate."
 			]
 		},
-		'hair': {
-			'short_white': [
+		'haircut': {
+			'short': [
+				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
+			],
+			'long': [
+				"Such long hair and such a short life... what a pity!",
+				"Are you an idiot? That haircut is way too impractical for a boss fight!"
+			]
+		},
+		'hair-color': {
+			'white': [
 				"Poor little angel. I'll send you back to heaven in a minute.",
 				"You are nothing but a sheep about to be prayed upon.",
-				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
+				"All of a sudden, I have a craving for cotton candy..."
 			],
-			'short_pink': [
-				"I'll chew you like bubblegum!",
-				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
+			'pink': [
+				"I'll chew you like bubblegum!"
 			],
-			'short_black': [
-				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?",
-				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
+			'black': [
+				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?"
 			],
-			'short_blue': [
+			'blue': [
 				"I feel like Gargamel...",
-				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you.",
-				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
+				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you."
 			],
-			'short_green': [
-				"Great! You arrived just in time for my new veggie diet!",
-				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
-			],
-			'long_white': [
-				"Poor little angel. I'll send you back to heaven in a minute.",
-				"Such long hair and such a short life... what a pity!",
-				"All of a sudden, I have a craving for cotton candy...",
-				"Are you an idiot? That haircut is way too impractical for a boss fight!"
-			],
-			'long_pink': [
-				"I'll chew you like bubblegum!",
-				"Such long hair and such a short life... what a pity!",
-				"Are you an idiot? That haircut is way too impractical for a boss fight!"
-			],
-			'long_black': [
-				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?",
-				"Such long hair and such a short life... what a pity!",
-				"Are you an idiot? That haircut is way too impractical for a boss fight!"
-			],
-			'long_blue': [
-				"I feel like Gargamel...",
-				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you.",
-				"Such long hair and such a short life... what a pity!",
-				"Are you an idiot? That haircut is way too impractical for a boss fight!"
-			],
-			'long_green': [
-				"Great! You arrived just in time for my new veggie diet!",
-				"Such long hair and such a short life... what a pity!",
-				"Are you an idiot? That haircut is way too impractical for a boss fight!"
+			'green': [
+				"Great! You arrived just in time for my new veggie diet!"
 			]
 		}
 	}
@@ -113,14 +91,16 @@ class DragonScript:
 			return null
 		
 		if len(hint_lines[feature][value]) == 0:
-			var legible_value = value.replace('_',' ') 
+			var readable_feature = feature.replace('-',' ')
+			var readable_value = value.replace('-',' ')
 			return [
-				"You are not the sharpest tool in the shed, huh? Your " + legible_value + " " + feature + " won't do.",
-				"The Chosen One has no " + legible_value + " " + feature,
-				"Wrong " + feature + ". Got it? You are doomed.",
-				"Did you ever have the feeling of being controlled by a superior entity? What if that entity were a clueless ",
-				"Do you think before you act? I think you should try."
-			][randi() % 4]
+				"You are not the sharpest tool in the shed, huh? Your " + readable_value + " " + readable_feature + " won't do.",
+				"The Chosen One has no " + readable_value + " " + readable_feature + ".",
+				"Wrong " + readable_feature + ". Got it? You are doomed.",
+				"Did you ever have the feeling of being controlled by a superior entity? What if that entity were a clueless nerd?",
+				"Do you think before you act? I think you should try. It is an enlighting experience.",
+				"Guess who is the Chosen One? Not you."
+			][randi() % 6]
 			
 		return hint_lines[feature][value].pop_front()
 
