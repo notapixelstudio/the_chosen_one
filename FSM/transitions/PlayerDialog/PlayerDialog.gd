@@ -33,7 +33,6 @@ func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=nul
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
 	return chosen_action;
 
-
 func _on_chosen_attack(action):
 	print(action + "PlayerDialog")
 	chosen_action=true
