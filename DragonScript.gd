@@ -96,7 +96,7 @@ class DragonScript:
 		facing_the_chosen_one = len(wrong_features) == 0
 
 	func get_wrong_feature():
-		return wrong_features[randi() % len(wrong_features)]
+		return wrong_features[randi() % wrong_features.size()]
 
 	func read():
 		if facing_the_chosen_one:
