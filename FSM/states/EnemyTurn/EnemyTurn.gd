@@ -8,14 +8,14 @@ extends "res://addons/net.kivano.fsm/content/FSMState.gd";
 #####  Variables (Constants, Export Variables, Node Vars, Normal variables)  #####
 ######################### var myvar setget myvar_set,myvar_get ###################
 
+var dialog_box
+
 ##################################################################################
 #########                       Getters and Setters                      #########
 ##################################################################################
 #you will want to use those
 func getFSM(): return fsm; #defined in parent class
 func getLogicRoot(): return logicRoot; #defined in parent class 
-
-var dialog_box
 
 ##################################################################################
 #########                 Implement those below ancestor                 #########

@@ -8,8 +8,6 @@ extends "res://addons/net.kivano.fsm/content/FSMState.gd";
 #####  Variables (Constants, Export Variables, Node Vars, Normal variables)  #####
 ######################### var myvar setget myvar_set,myvar_get ###################
 
-var action_box
-
 ##################################################################################
 #########                       Getters and Setters                      #########
 ##################################################################################
@@ -22,13 +20,10 @@ func getLogicRoot(): return logicRoot; #defined in parent class
 ##################################################################################
 #you can transmit parameters if fsm is initialized manually
 func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5=null): 
-	action_box =  get_node("actionbox")
 	pass
 
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
-	print(getLogicRoot().get_name() + " siamo nel player")
-	action_box.visible = true
 	pass
 
 #when updating state, paramx can be used only if updating fsm manually
@@ -37,7 +32,6 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 
 #when exiting state
 func exit(toState=null):
-	action_box.visible = false
 	pass
 
 ##################################################################################

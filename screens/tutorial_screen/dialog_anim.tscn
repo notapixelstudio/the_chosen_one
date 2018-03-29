@@ -46,10 +46,11 @@ tracks/2/keys = {
 "values": [ "heyo, this fox over there is rowan. he is now on his journey to become a bard." ]
 }
 
-[sub_resource type="GDScript" id=10]
+[sub_resource type="GDScript" id=2]
 
 script/source = "extends Panel
 onready var t = $Tween
+
 func start():
 	show()
 	t.interpolate_property(self, \"rect_position\", get_position(), Vector2(5, 328),
@@ -94,7 +95,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = SubResource( 10 )
+script = SubResource( 2 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Tween" type="Tween" parent="Dialogue" index="0"]
@@ -128,7 +129,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = ""
+text = "The Dragon TALKS!!"
 scroll_active = true
 scroll_following = false
 selection_enabled = false

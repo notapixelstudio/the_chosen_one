@@ -153,5 +153,5 @@ Panel/styles/panel = SubResource( 1 )
 Panel/styles/panelf = null
 Panel/styles/panelnc = null
 TooltipPanel/icons/ToolTip = SubResource( 6 )
-_sections_unfolded = [ "Button", "Resource", "TooltipPanel", "TooltipPanel/icons", "VScrollBar", "VScrollBar/icons", "VScrollBar/styles" ]
+_sections_unfolded = [ "Button", "Button/colors", "Button/styles", "Panel", "Resource", "TooltipPanel", "TooltipPanel/icons", "VScrollBar", "VScrollBar/icons", "VScrollBar/styles" ]
 
