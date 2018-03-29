@@ -11,6 +11,6 @@ func _ready():
 	
 	CharacterData = load('res://character/CharacterData.gd').new().CharacterData
 
-	player_character_data = CharacterData.new('user://player_character_data.json')
-	chosen_one_data = CharacterData.new('user://chosen_one_data.json')
+	player_character_data = CharacterData.new()
+	chosen_one_data = CharacterData.new()
 	
