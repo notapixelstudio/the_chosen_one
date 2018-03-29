@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://screens/basic_screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://screens/tutorial_screen/dialogAnim.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 
-resource_name = "tutorial_01"
+resource_name = "dialog_01"
 length = 2.0
 loop = false
 step = 0.1
@@ -46,230 +46,15 @@ tracks/2/keys = {
 "values": [ "heyo, this fox over there is rowan. he is now on his journey to become a bard." ]
 }
 
-[sub_resource type="Animation" id=5]
-
-resource_name = "tutorial_05"
-length = 9.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Dialogue/Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "it gets more trembly going to its bottom, and more bassy going to its top" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Dialogue/Label:percent_visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Dialogue/Button:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 8.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "skip", "next" ]
-}
-
-[sub_resource type="Animation" id=6]
-
-resource_name = "tutorial_06"
-length = 2.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Dialogue/Label:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Dialogue/Label:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "go ahead, try for your self, make some sounds" ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Dialogue/Button:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "skip", "next" ]
-}
-
-[sub_resource type="Animation" id=7]
-
-resource_name = "tutorial_07"
-length = 10.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Dialogue/Label:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Dialogue/Label:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "here rowan, pick your piccolo, go chase your dream." ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Dialogue/Button:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 5.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "skip", "next" ]
-}
-
-[sub_resource type="Animation" id=8]
-
-resource_name = "tutorial_08"
-length = 7.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Dialogue/Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "to help rowan learn the basics of music, you together with these birds will guide him" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Dialogue/Label:percent_visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Dialogue/Button:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 5.8 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "skip", "next" ]
-}
-
-[sub_resource type="Animation" id=9]
-
-resource_name = "tutorial_09"
-length = 4.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Dialogue/Label:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Dialogue/Label:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "now go ahead and help him learn some music!" ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Dialogue/Button:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 2.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "skip", "finish" ]
-}
-
 [sub_resource type="GDScript" id=10]
 
 script/source = "extends Panel
 onready var t = $Tween
 func start():
 	show()
-	t.interpolate_property(self, \"rect_position\", get_position(), Vector2(8, 328),
+	t.interpolate_property(self, \"rect_position\", get_position(), Vector2(5, 328),
 		1.0, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	t.interpolate_property(self, \"rect_size\", get_size(), Vector2(800, 100),
+	t.interpolate_property(self, \"rect_size\", get_size(), Vector2(780, 100),
 		1.0, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	t.start()
 	yield(t, \"tween_completed\")
@@ -280,20 +65,16 @@ func start():
 [node name="Tutorial" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-next_scene = "res://levels/level_01/level_01.tscn"
 
 [node name="Animator" parent="." index="0"]
 
-anims/tutorial_01 = SubResource( 1 )
-anims/tutorial_05 = SubResource( 5 )
-anims/tutorial_06 = SubResource( 6 )
-anims/tutorial_07 = SubResource( 7 )
-anims/tutorial_08 = SubResource( 8 )
-anims/tutorial_09 = SubResource( 9 )
+anims/dialog_01 = SubResource( 1 )
 
 [node name="ColorRect" parent="Transition" index="0"]
 
 visible = false
+margin_left = -1280.0
+margin_right = -256.0
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="Dialogue" type="Panel" parent="." index="2"]
@@ -347,7 +128,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "he even has a bard hat. but he lacks the skills"
+text = ""
 scroll_active = true
 scroll_following = false
 selection_enabled = false

@@ -22,7 +22,7 @@ var dialog_box
 ##################################################################################
 #you can transmit parameters if fsm is initialized manually
 func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5=null): 
-	dialog_box = get_node("DialogBox")
+	dialog_box = get_node("DialogScene")
 	pass
 
 #when entering state, usually you will want to reset internal state here somehow

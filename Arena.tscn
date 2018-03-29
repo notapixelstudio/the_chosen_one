@@ -7,9 +7,9 @@
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=5]
 [ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=6]
 [ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.tscn" type="PackedScene" id=7]
-[ext_resource path="res://screens/theme.tres" type="Theme" id=8]
-[ext_resource path="res://screens/tutorial_screen/dialog_anim.tscn" type="PackedScene" id=9]
-[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://screens/tutorial_screen/dialog_anim.tscn" type="PackedScene" id=8]
+[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://screens/theme.tres" type="Theme" id=10]
 [ext_resource path="res://FSM/transitions/EnemyDialog/EnemyDialog.tscn" type="PackedScene" id=11]
 [ext_resource path="res://FSM/transitions/PlayerDialog/PlayerDialog.tscn" type="PackedScene" id=12]
 
@@ -138,39 +138,12 @@ size_flags_vertical = 1
 
 [node name="EnemyTurn" parent="FSMControl/States" index="0" instance=ExtResource( 7 )]
 
-[node name="DialogBox" type="RichTextLabel" parent="FSMControl/States/EnemyTurn" index="0"]
+[node name="DialogScene" parent="FSMControl/States/EnemyTurn" index="0" instance=ExtResource( 8 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_top = 328.0
-margin_right = 808.0
-margin_bottom = 428.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 8 )
-bbcode_enabled = true
-bbcode_text = "The dragon [b]TALKS[/b] TALKS!!"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 8
-text = "The dragon TALKS TALKS!!"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Theme" ]
+visible = false
+next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
-[node name="Tutorial" parent="FSMControl/States/EnemyTurn" index="1" instance=ExtResource( 9 )]
-
-[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 10 )]
+[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 9 )]
 
 [node name="actionbox" type="GridContainer" parent="FSMControl/States/PlayerActionTurn" index="0"]
 
@@ -193,7 +166,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 8 )
+theme = ExtResource( 10 )
 columns = 2
 _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme" ]
 
@@ -335,7 +308,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 8 )
+theme = ExtResource( 10 )
 bbcode_enabled = true
 bbcode_text = "The dragon finished to talk!!"
 visible_characters = -1
@@ -371,7 +344,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 8 )
+theme = ExtResource( 10 )
 bbcode_enabled = true
 bbcode_text = "Now the player execute their action"
 visible_characters = -1
