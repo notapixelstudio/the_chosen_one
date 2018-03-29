@@ -38,6 +38,7 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 #when exiting state
 func exit(toState=null):
 	action_box.visible = false
+	action_box.disabled = true
 	pass
 
 ##################################################################################

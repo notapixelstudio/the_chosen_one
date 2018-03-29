@@ -36,3 +36,4 @@ func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=nul
 	
 func _on_dialog_ended():
 	dialog_ended=true
+
