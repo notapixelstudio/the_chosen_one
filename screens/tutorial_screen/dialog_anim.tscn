@@ -62,7 +62,7 @@ func start():
 	$Button.show()
 	$Button.grab_focus()"
 
-[node name="Tutorial" index="0" instance=ExtResource( 1 )]
+[node name="Tutorial" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
