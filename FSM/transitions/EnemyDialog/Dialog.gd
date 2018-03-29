@@ -28,6 +28,7 @@ func transitionInit(inParam1=null, inParam2=null, inParam3=null, inParam4=null, 
 func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null): 
 	#you can optionally implement this to reset transition when related state has been activated
 	dialog_ended = false
+	print("Dialog End PlayerTurn")
 	pass
 
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
