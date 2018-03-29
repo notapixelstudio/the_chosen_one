@@ -50,6 +50,20 @@ class DragonScript:
 			'green': [
 				"Great! You arrived just in time for my new veggie diet!"
 			]
+		},
+		'eyes': {
+			'blue': [
+				"Bleah femeref"
+			],
+			'green': [
+				"Bleah green"
+			],
+			'red': [
+				"Bleah red"
+			],
+			'four': [
+				"Bleah four"
+			]
 		}
 	}
 	var defeat_lines = []

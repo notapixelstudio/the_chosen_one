@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/body.png-e95fb1f234cc5b22ccf21f71baab9b74.stex"
+path="res://.import/eyes|four.png-1e9ff7706a1dc5b998a8fb82b107bb2a.stex"
 
 [deps]
 
-source_file="res://assets/character/body.png"
-source_md5="545e578876d07737a60a5ca7128443d6"
+source_file="res://assets/character/eyes|four.png"
+source_md5="e3f11d40b719f9206d14642fc0251e58"
 
-dest_files=[ "res://.import/body.png-e95fb1f234cc5b22ccf21f71baab9b74.stex" ]
-dest_md5="5c09565b6488934e8f8f7a980bebd49a"
+dest_files=[ "res://.import/eyes|four.png-1e9ff7706a1dc5b998a8fb82b107bb2a.stex" ]
+dest_md5="916303fec78e75efd8f0c32fac5d9e62"
 
 [params]
 
