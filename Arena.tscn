@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
@@ -10,8 +10,11 @@
 [ext_resource path="res://screens/tutorial_screen/dialog_anim.tscn" type="PackedScene" id=8]
 [ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=9]
 [ext_resource path="res://screens/theme.tres" type="Theme" id=10]
-[ext_resource path="res://FSM/transitions/EnemyDialog/EnemyDialog.tscn" type="PackedScene" id=11]
-[ext_resource path="res://FSM/transitions/PlayerDialog/PlayerDialog.tscn" type="PackedScene" id=12]
+[ext_resource path="res://actionbox.gd" type="Script" id=11]
+[ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.tscn" type="PackedScene" id=12]
+[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=13]
+[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=14]
+[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=15]
 
 [node name="Arena" type="Node" index="0"]
 
@@ -102,25 +105,42 @@ GraphData = {
 "DragonTurn": Vector2( 323, 54 ),
 "DragonTurn_": Vector2( 323, 54 ),
 "DragonTurn__": Vector2( 323, 54 ),
-"EnemyDialog": Vector2( 595, 166 ),
+"EndPlayerTurn": Vector2( 138, 48 ),
+"EndPlayerTurn_": Vector2( 138, 48 ),
+"EndPlayerTurn__": Vector2( 138, 48 ),
+"EndTurn": Vector2( 131, 53 ),
+"EndTurn_": Vector2( 131, 53 ),
+"EnemyDialog": Vector2( 582, 174 ),
 "EnemyDialog2": Vector2( 100, 239 ),
 "EnemyDialog2_": Vector2( 100, 239 ),
 "EnemyDialog2__": Vector2( 100, 239 ),
-"EnemyDialog_": Vector2( 595, 166 ),
-"EnemyDialog__": Vector2( 595, 166 ),
-"EnemyTurn": Vector2( 370, 59 ),
-"EnemyTurn_": Vector2( 370, 59 ),
-"EnemyTurn__": Vector2( 345, 278 ),
-"PlayerActionTurn": Vector2( 359, 327 ),
-"PlayerActionTurn_": Vector2( 359, 327 ),
-"PlayerActionTurn__": Vector2( 359, 327 ),
+"EnemyDialog_": Vector2( 582, 174 ),
+"EnemyDialog__": Vector2( 582, 174 ),
+"EnemyFinished": Vector2( 602, 194 ),
+"EnemyFinished_": Vector2( 602, 194 ),
+"EnemyFinished__": Vector2( 621, 198 ),
+"EnemyTurn": Vector2( 586, 44 ),
+"EnemyTurn_": Vector2( 586, 44 ),
+"EnemyTurn__": Vector2( 586, 44 ),
+"PlayerActionTurn": Vector2( 584, 352 ),
+"PlayerActionTurn_": Vector2( 584, 352 ),
+"PlayerActionTurn__": Vector2( 584, 352 ),
 "PlayerAttackTurn": Vector2( 320, 297 ),
-"PlayerDialog": Vector2( 159, 181 ),
-"PlayerDialog_": Vector2( 159, 181 ),
-"PlayerDialog__": Vector2( 159, 181 ),
+"PlayerDialog": Vector2( 110, 360 ),
+"PlayerDialogBox": Vector2( 116, 179 ),
+"PlayerDialogBox_": Vector2( 116, 179 ),
+"PlayerDialogBox__": Vector2( 116, 179 ),
+"PlayerDialog_": Vector2( 110, 360 ),
+"PlayerDialog__": Vector2( 116, 349 ),
+"PlayerEnd": Vector2( 117, 32 ),
+"PlayerEnd_": Vector2( 117, 32 ),
+"PlayerEnd__": Vector2( 117, 32 ),
 "PlayerTurn": Vector2( 329, 314 ),
 "PlayerTurn_": Vector2( 329, 314 ),
-"PlayerTurn__": Vector2( 329, 314 )
+"PlayerTurn__": Vector2( 329, 314 ),
+"ResolveAction": Vector2( 114, 352 ),
+"ResolveAction_": Vector2( 114, 352 ),
+"ResolveAction__": Vector2( 114, 352 )
 }
 
 [node name="States" type="Control" parent="FSMControl" index="0"]
@@ -145,9 +165,10 @@ next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
 [node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 9 )]
 
+editor/display_folded = true
+
 [node name="actionbox" type="GridContainer" parent="FSMControl/States/PlayerActionTurn" index="0"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -168,6 +189,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 10 )
 columns = 2
+script = ExtResource( 11 )
 _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme" ]
 
 [node name="Attack" type="Button" parent="FSMControl/States/PlayerActionTurn/actionbox" index="0"]
@@ -273,6 +295,12 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Theme", "custom_constants", "custom_fonts", "custom_styles" ]
 
+[node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 12 )]
+
+[node name="DialogScene" parent="FSMControl/States/PlayerDialogBox" index="0" instance=ExtResource( 8 )]
+
+visible = false
+
 [node name="Transitions" type="Control" parent="FSMControl" index="1"]
 
 anchor_left = 0.0
@@ -286,76 +314,19 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="EnemyDialog" parent="FSMControl/Transitions" index="0" instance=ExtResource( 11 )]
+[node name="EnemyFinished" parent="FSMControl/Transitions" index="0" instance=ExtResource( 13 )]
 
-path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn"), NodePath("../../States/DragonTurn") ]
+path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
 
-[node name="DialogBoxTransition" type="RichTextLabel" parent="FSMControl/Transitions/EnemyDialog" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_top = 328.0
-margin_right = 808.0
-margin_bottom = 428.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 10 )
-bbcode_enabled = true
-bbcode_text = "The dragon finished to talk!!"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 8
-text = "The dragon finished to talk!!"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Theme" ]
-
-[node name="PlayerDialog" parent="FSMControl/Transitions" index="1" instance=ExtResource( 12 )]
+[node name="ResolveAction" parent="FSMControl/Transitions" index="1" instance=ExtResource( 14 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
+path2TargetState = NodePath("../../States/PlayerDialogBox")
+
+[node name="PlayerEnd" parent="FSMControl/Transitions" index="2" instance=ExtResource( 15 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/EnemyTurn")
-
-[node name="DialogBoxTransition2" type="RichTextLabel" parent="FSMControl/Transitions/PlayerDialog" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_top = 328.0
-margin_right = 808.0
-margin_bottom = 428.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 10 )
-bbcode_enabled = true
-bbcode_text = "Now the player execute their action"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 8
-text = "Now the player execute their action"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Theme" ]
 
 

@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://FSM/transitions/EnemyDialog/Dialog.gd" type="Script" id=1]
+[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.gd" type="Script" id=1]
 
-
-[node name="PlayerDialog" type="Node"]
+[node name="ResolveAction" type="Node"]
 
 script = ExtResource( 1 )
 path2SourceStates = [ NodePath("") ]
