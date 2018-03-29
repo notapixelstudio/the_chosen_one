@@ -325,7 +325,7 @@ _sections_unfolded = [ "BBCode", "Theme" ]
 [node name="PlayerDialog" parent="FSMControl/Transitions" index="1" instance=ExtResource( 12 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
-path2TargetState = NodePath("../../States/DragonTurn")
+path2TargetState = NodePath("../../States/EnemyTurn")
 
 [node name="DialogBoxTransition2" type="RichTextLabel" parent="FSMControl/Transitions/PlayerDialog" index="0"]
 
