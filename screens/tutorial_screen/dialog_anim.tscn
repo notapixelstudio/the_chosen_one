@@ -50,6 +50,7 @@ tracks/2/keys = {
 
 script/source = "extends Panel
 onready var t = $Tween
+
 func start():
 	show()
 	t.interpolate_property(self, \"rect_position\", get_position(), Vector2(5, 328),
@@ -128,7 +129,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "The Dragon TALKS!!"
+text = "Someone here says something"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
