@@ -1,1 +1,3 @@
-# the_chosen_one
+# The Chosen One
+
+a game by notapixelstudio

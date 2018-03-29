@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.gd" type="Script" id=1]
+
+[node name="EnemyTurn" type="Node"]
+
+script = ExtResource( 1 )
+
+
