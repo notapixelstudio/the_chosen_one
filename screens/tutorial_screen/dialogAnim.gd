@@ -9,4 +9,4 @@ func _on_next_up():
 			$Animator.play($Animator.get_animation_list()[tutor_part])
 		else:
 			$Dialogue/Button.disabled = true
-			change_scene()
+			

@@ -15,16 +15,20 @@ extends "res://addons/net.kivano.fsm/content/FSMState.gd";
 func getFSM(): return fsm; #defined in parent class
 func getLogicRoot(): return logicRoot; #defined in parent class 
 
+var dialog_box
+
 ##################################################################################
 #########                 Implement those below ancestor                 #########
 ##################################################################################
 #you can transmit parameters if fsm is initialized manually
 func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5=null): 
-	pass
+	dialog_box = get_node("DialogScene")
+	global.dragon_script.update_hints(global.player_character_data.diff(global.chosen_one_data))
 
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
-	pass
+	dialog_box.visible = true
+	dialog_box.get_node('Dialogue/Label').text = global.dragon_script.read()
 
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
@@ -32,6 +36,7 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 
 #when exiting state
 func exit(toState=null):
+	dialog_box.visible = false
 	pass
 
 ##################################################################################
@@ -45,6 +50,18 @@ func exit(toState=null):
 ##################################################################################
 #########                         Public Methods                         #########
 ##################################################################################
+var tutor_part = 1
+
+func _on_next_up():
+	if $Animator.is_playing():
+		$Animator.seek($Animator.get_current_animation_length())
+	else:
+		if tutor_part < $Animator.get_animation_list().size() -1:
+			tutor_part += 1
+			$Animator.play($Animator.get_animation_list()[tutor_part])
+		else:
+			$Dialogue/Button.disabled = true
+			change_scene()
 
 ##################################################################################
 #########                         Inner Methods                          #########
