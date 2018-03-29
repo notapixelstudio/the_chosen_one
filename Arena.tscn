@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
@@ -8,11 +8,12 @@
 [ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=6]
 [ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://screens/theme.tres" type="Theme" id=8]
-[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=9]
-[ext_resource path="res://FSM/transitions/EnemyDialog/EnemyDialog.tscn" type="PackedScene" id=10]
-[ext_resource path="res://FSM/transitions/PlayerDialog/PlayerDialog.tscn" type="PackedScene" id=11]
+[ext_resource path="res://screens/tutorial_screen/dialog_anim.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://FSM/transitions/EnemyDialog/EnemyDialog.tscn" type="PackedScene" id=11]
+[ext_resource path="res://FSM/transitions/PlayerDialog/PlayerDialog.tscn" type="PackedScene" id=12]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -139,7 +140,6 @@ size_flags_vertical = 1
 
 [node name="DialogBox" type="RichTextLabel" parent="FSMControl/States/EnemyTurn" index="0"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -166,9 +166,11 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Theme" ]
+_sections_unfolded = [ "BBCode", "Rect", "Theme" ]
 
-[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 9 )]
+[node name="Tutorial" parent="FSMControl/States/EnemyTurn" index="1" instance=ExtResource( 9 )]
+
+[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 10 )]
 
 [node name="actionbox" type="GridContainer" parent="FSMControl/States/PlayerActionTurn" index="0"]
 
@@ -311,7 +313,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="EnemyDialog" parent="FSMControl/Transitions" index="0" instance=ExtResource( 10 )]
+[node name="EnemyDialog" parent="FSMControl/Transitions" index="0" instance=ExtResource( 11 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn"), NodePath("../../States/DragonTurn") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
@@ -347,7 +349,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Theme" ]
 
-[node name="PlayerDialog" parent="FSMControl/Transitions" index="1" instance=ExtResource( 11 )]
+[node name="PlayerDialog" parent="FSMControl/Transitions" index="1" instance=ExtResource( 12 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
 path2TargetState = NodePath("../../States/DragonTurn")
