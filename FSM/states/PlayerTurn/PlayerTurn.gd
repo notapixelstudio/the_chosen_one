@@ -27,7 +27,7 @@ func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5
 
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
-	print(getLogicRoot().get_name() + " siamo nel player")
+	print(getLogicRoot().get_name() + ": Player Action")
 	action_box.visible = true
 	pass
 
@@ -38,7 +38,6 @@ func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param
 #when exiting state
 func exit(toState=null):
 	action_box.visible = false
-	action_box.disabled = true
 	pass
 
 ##################################################################################

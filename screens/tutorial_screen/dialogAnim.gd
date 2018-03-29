@@ -3,7 +3,7 @@ var tutor_part = 1
 signal dialog_ended
 
 func _ready():
-	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/EnemyDialog"), "_on_dialog_ended")
+	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/EnemyFinished"), "_on_dialog_ended")
 
 func _on_next_up():
 	if $Animator.is_playing():
