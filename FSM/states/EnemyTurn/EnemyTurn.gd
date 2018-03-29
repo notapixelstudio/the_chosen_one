@@ -23,7 +23,7 @@ var dialog_box
 #you can transmit parameters if fsm is initialized manually
 func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5=null): 
 	dialog_box = get_node("DialogScene")
-	pass
+	global.dragon_script.update_hints(global.player_character_data.diff(global.chosen_one_data))
 
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
