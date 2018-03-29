@@ -7,45 +7,70 @@ class DragonScript:
 				'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
 			],
 			'axe': [
-				'Axe bleah'
+				"Did you stole that thing from a dead dwarf? It will be useless to you too..."
 			],
 			'staff': [
-				'Staff bleah'
+				"This is not a hike. This is a battle.",
+				"Afraid of sharp objects? Mee too.",
+				"Oh, I suppose the blacksmith was already closed...",
+				"Even a putter would hurt me more than that wood you carry!",
+				"Wrong place. The pool billiard house is two blocks south from here."
 			],
 			'dagger': [
-				'Dagger bleah'
+				"It's not like they say, you know? Size does matter!",
+				"Sorry, no toothpicks allowed here.",
+				"Was a proper, bigger weapon too heavy to carry? Oh, I can totally relate."
 			]
 		},
 		'hair': {
 			'short_white': [
-				'short_white bleah'
+				"Poor little angel. I'll send you back to heaven in a minute.",
+				"You are nothing but a sheep about to be prayed upon.",
+				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'short_pink': [
-				'short_pink bleah'
+				"I'll chew you like bubblegum!",
+				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'short_black': [
-				'short_black bleah'
+				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?",
+				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'short_blue': [
-				'short_blue bleah'
+				"I feel like Gargamel...",
+				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you.",
+				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'short_green': [
-				'short_green bleah'
+				"Great! You arrived just in time for my new veggie diet!",
+				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'long_white': [
-				'long_white bleah'
+				"Poor little angel. I'll send you back to heaven in a minute.",
+				"Such long hair and such a short life... what a pity!",
+				"All of a sudden, I have a craving for cotton candy...",
+				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			],
 			'long_pink': [
-				'long_pink bleah'
+				"I'll chew you like bubblegum!",
+				"Such long hair and such a short life... what a pity!",
+				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			],
 			'long_black': [
-				'long_black bleah'
+				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?",
+				"Such long hair and such a short life... what a pity!",
+				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			],
 			'long_blue': [
-				'long_blue bleah'
+				"I feel like Gargamel...",
+				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you.",
+				"Such long hair and such a short life... what a pity!",
+				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			],
 			'long_green': [
-				'long_green bleah'
+				"Great! You arrived just in time for my new veggie diet!",
+				"Such long hair and such a short life... what a pity!",
+				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			]
 		}
 	}
@@ -88,7 +113,14 @@ class DragonScript:
 			return null
 		
 		if len(hint_lines[feature][value]) == 0:
-			return "You are not the sharpest tool in the shed, huh? Your " + value + " " + feature + " won't do."
+			var legible_value = value.replace('_',' ') 
+			return [
+				"You are not the sharpest tool in the shed, huh? Your " + legible_value + " " + feature + " won't do.",
+				"The Chosen One has no " + legible_value + " " + feature,
+				"Wrong " + feature + ". Got it? You are doomed.",
+				"Did you ever have the feeling of being controlled by a superior entity? What if that entity were a clueless ",
+				"Do you think before you act? I think you should try."
+			][randi() % 4]
 			
 		return hint_lines[feature][value].pop_front()
 
@@ -102,13 +134,14 @@ class DragonScript:
 				"You are just a tiny human...",
 				"How dare you to face me?",
 				"Courage and recklessness are two faces of the same medal.",
-				"Stupid human!",
+				"Stupid, stupid human!",
 				"Mmm... I am hungry.",
 				"There's nothing you can do to win this fight!",
 				"You are hopeless, like the rest of humankind.",
 				"Has your kingdom ran out of actual fighters?",
 				"Why are you even trying?",
-				"My power is boundless."
+				"My power is boundless.",
+				"Ahh, fresh meat!"
 			])
 
 		return babbling_lines.pop_front()
