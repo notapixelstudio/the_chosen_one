@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
@@ -9,13 +9,14 @@
 [ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://screens/tutorial_screen/dialog_anim.tscn" type="PackedScene" id=8]
 [ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=9]
-[ext_resource path="res://screens/theme.tres" type="Theme" id=10]
-[ext_resource path="res://actionbox.gd" type="Script" id=11]
-[ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.tscn" type="PackedScene" id=12]
+[ext_resource path="res://actionbox.tscn" type="PackedScene" id=10]
+[ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.tscn" type="PackedScene" id=11]
+[ext_resource path="res://FSM/states/GameOver/GameOver.tscn" type="PackedScene" id=12]
 [ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=13]
 [ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=14]
 [ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=15]
 [ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=16]
+[ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=17]
 
 [node name="Arena" type="Node"]
 
@@ -73,7 +74,7 @@ __meta__ = {
 "_editor_icon": ExtResource( 6 )
 }
 path2LogicRoot = NodePath("..")
-onlyActiveStateOnTheScene = false
+onlyActiveStateOnTheScene = true
 initManually = false
 updateMode = 1
 receiceSignalsOnly4ActiveStatesAndTransitions = true
@@ -89,6 +90,8 @@ GraphData = {
 "EnemyTurn": Vector2( 267, 103 ),
 "EnemyTurn_": Vector2( 267, 103 ),
 "EnemyTurn__": Vector2( 267, 103 ),
+"GameOver": Vector2( 595, 27 ),
+"GameOver_": Vector2( 595, 27 ),
 "PlayerActionTurn": Vector2( 583, 323 ),
 "PlayerActionTurn_": Vector2( 583, 323 ),
 "PlayerActionTurn__": Vector2( 607, 313 ),
@@ -101,6 +104,8 @@ GraphData = {
 "ResolveAction": Vector2( 611, 458 ),
 "ResolveAction_": Vector2( 611, 458 ),
 "ResolveAction__": Vector2( 611, 458 ),
+"TurnsOver": Vector2( 269, 10 ),
+"TurnsOver_": Vector2( 269, 10 ),
 "UselessAction": Vector2( 367, 315 ),
 "UselessAction_": Vector2( 367, 315 ),
 "UselessAction__": Vector2( 371, 239 )
@@ -121,6 +126,8 @@ size_flags_vertical = 1
 
 [node name="EnemyTurn" parent="FSMControl/States" index="0" instance=ExtResource( 7 )]
 
+editor/display_folded = true
+
 [node name="DialogScene" parent="FSMControl/States/EnemyTurn" index="0" instance=ExtResource( 8 )]
 
 visible = false
@@ -128,141 +135,15 @@ next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
 [node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 9 )]
 
-editor/display_folded = true
+[node name="actionbox" parent="FSMControl/States/PlayerActionTurn" index="0" instance=ExtResource( 10 )]
 
-[node name="actionbox" type="GridContainer" parent="FSMControl/States/PlayerActionTurn" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 4.0
-margin_top = 319.0
-margin_right = 808.0
-margin_bottom = 453.0
-rect_min_size = Vector2( 800, 120 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-hint_tooltip = "wdsasadassda ds adsadas da gsfadddsa"
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 10 )
-columns = 2
-script = ExtResource( 11 )
-_sections_unfolded = [ "Hint", "Rect", "Textures", "Theme" ]
-
-[node name="Attack" type="Button" parent="FSMControl/States/PlayerActionTurn/actionbox" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 380.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 380, 60 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "ATTACK"
-flat = false
-align = 1
-_sections_unfolded = [ "Hint", "Rect" ]
-
-[node name="Magic" type="Button" parent="FSMControl/States/PlayerActionTurn/actionbox" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 384.0
-margin_right = 784.0
-margin_bottom = 60.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "MAGIC"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Item" type="Button" parent="FSMControl/States/PlayerActionTurn/actionbox" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 64.0
-margin_right = 380.0
-margin_bottom = 124.0
-rect_min_size = Vector2( 200, 60 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "ITEM"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Run" type="Button" parent="FSMControl/States/PlayerActionTurn/actionbox" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 384.0
-margin_top = 64.0
-margin_right = 784.0
-margin_bottom = 124.0
-rect_min_size = Vector2( 400, 50 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "RUN"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "Theme", "custom_constants", "custom_fonts", "custom_styles" ]
-
-[node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 12 )]
+[node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 11 )]
 
 [node name="DialogScene" parent="FSMControl/States/PlayerDialogBox" index="0" instance=ExtResource( 8 )]
 
 visible = false
+
+[node name="GameOver" parent="FSMControl/States" index="3" instance=ExtResource( 12 )]
 
 [node name="Transitions" type="Control" parent="FSMControl" index="1"]
 
@@ -296,5 +177,10 @@ path2TargetState = NodePath("../../States/EnemyTurn")
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
+
+[node name="TurnsOver" parent="FSMControl/Transitions" index="4" instance=ExtResource( 17 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
+path2TargetState = NodePath("../../States/GameOver")
 
 
