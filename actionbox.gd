@@ -1,4 +1,4 @@
-extends GridContainer
+extends Container
 var chosen_action 
 signal action_chosen(c_action)
 

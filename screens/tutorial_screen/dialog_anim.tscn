@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://screens/basic_screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://screens/tutorial_screen/dialogAnim.gd" type="Script" id=2]
+[ext_resource path="res://screens/theme.tres" type="Theme" id=3]
 
 [sub_resource type="Animation" id=2]
 
@@ -89,6 +90,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+theme = ExtResource( 3 )
 bbcode_enabled = false
 bbcode_text = ""
 visible_characters = 0
@@ -99,8 +101,8 @@ text = "Someone here says something. Smart, clever or whatever. Does not matter.
 scroll_active = true
 scroll_following = false
 selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+override_selected_font_color = true
+_sections_unfolded = [ "Grow Direction", "Margin", "Theme", "custom_colors", "custom_constants", "custom_styles" ]
 
 [node name="Button" type="Button" parent="Dialogue" index="2"]
 
