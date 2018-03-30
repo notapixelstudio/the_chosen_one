@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fsm.svg-8a2b60b38d31c26d893333ea60e8f91f.stex"
+path="res://.import/you_won.jpg-98a76a70bfb759c71a36e3789c1635f1.stex"
 
 [deps]
 
-source_file="res://addons/net.kivano.fsm/assets/fsm.svg"
-source_md5="cdbb4fe4bcb38c925b38a4da61a55d20"
+source_file="res://assets/you_won.jpg"
+source_md5="692aaa6029c5d57feb54d28ce9377b44"
 
-dest_files=[ "res://.import/fsm.svg-8a2b60b38d31c26d893333ea60e8f91f.stex" ]
-dest_md5="524a8f87232e4096d4b5fa076b52f867"
+dest_files=[ "res://.import/you_won.jpg-98a76a70bfb759c71a36e3789c1635f1.stex" ]
+dest_md5="eaa1d9f0e315c4c8d141a6b64547f644"
 
 [params]
 
