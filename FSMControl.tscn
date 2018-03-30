@@ -1,0 +1,274 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=1]
+[ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=2]
+[ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.gd" type="Script" id=4]
+[ext_resource path="res://screens/tutorial_screen/dialog_anim.tscn" type="PackedScene" id=5]
+[ext_resource path="res://screens/theme.tres" type="Theme" id=6]
+[ext_resource path="res://screens/tutorial_screen/dialogAnim.gd" type="Script" id=7]
+[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.tscn" type="PackedScene" id=8]
+[ext_resource path="res://FSM/states/PlayerTurn/PlayerTurn.gd" type="Script" id=9]
+[ext_resource path="res://actionbox.gd" type="Script" id=10]
+[ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.tscn" type="PackedScene" id=11]
+[ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.gd" type="Script" id=12]
+[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=13]
+[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.gd" type="Script" id=14]
+[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=15]
+[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.gd" type="Script" id=16]
+[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=17]
+[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.gd" type="Script" id=18]
+
+[node name="FSMControl" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Create new:" ]
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+
+[node name="States" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="EnemyTurn" type="Node" parent="States" index="0" instance=ExtResource( 3 )]
+
+script = ExtResource( 4 )
+
+[node name="DialogScene" type="Control" parent="States/EnemyTurn" index="0" instance=ExtResource( 5 )]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
+script = ExtResource( 7 )
+_sections_unfolded = [ "Theme" ]
+next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
+
+[node name="PlayerActionTurn" type="Node" parent="States" index="1" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+script = ExtResource( 9 )
+
+[node name="actionbox" type="GridContainer" parent="States/PlayerActionTurn" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_top = 319.0
+margin_right = 808.0
+margin_bottom = 453.0
+rect_min_size = Vector2( 800, 120 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "wdsasadassda ds adsadas da gsfadddsa"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
+columns = 2
+script = ExtResource( 10 )
+_sections_unfolded = [ "Hint", "Rect", "Textures", "Theme" ]
+
+[node name="Attack" type="Button" parent="States/PlayerActionTurn/actionbox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 380.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 380, 60 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "ATTACK"
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Rect" ]
+
+[node name="Magic" type="Button" parent="States/PlayerActionTurn/actionbox" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 784.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "MAGIC"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Item" type="Button" parent="States/PlayerActionTurn/actionbox" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 380.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 200, 60 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "ITEM"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Run" type="Button" parent="States/PlayerActionTurn/actionbox" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 784.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 400, 50 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "RUN"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "Theme", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="PlayerDialogBox" type="Node" parent="States" index="2" instance=ExtResource( 11 )]
+
+script = ExtResource( 12 )
+
+[node name="DialogScene" type="Control" parent="States/PlayerDialogBox" index="0" instance=ExtResource( 5 )]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
+script = ExtResource( 7 )
+_sections_unfolded = [ "Theme" ]
+next_scene = null
+
+[node name="Transitions" type="Control" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="EnemyFinished" type="Node" parent="Transitions" index="0" instance=ExtResource( 13 )]
+
+script = ExtResource( 14 )
+path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
+path2TargetState = NodePath("../../States/PlayerActionTurn")
+intervalBetweenChecks = -1.0
+
+[node name="ResolveAction" type="Node" parent="Transitions" index="1" instance=ExtResource( 15 )]
+
+script = ExtResource( 16 )
+path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
+path2TargetState = NodePath("../../States/PlayerDialogBox")
+intervalBetweenChecks = -1.0
+
+[node name="PlayerEnd" type="Node" parent="Transitions" index="2" instance=ExtResource( 17 )]
+
+script = ExtResource( 18 )
+path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
+path2TargetState = NodePath("../../States/EnemyTurn")
+intervalBetweenChecks = -1.0
+
+[connection signal="transition_finished" from="States/EnemyTurn/DialogScene" to="States/EnemyTurn/DialogScene/Dialogue" method="start"]
+
+[connection signal="transition_finished" from="States/PlayerDialogBox/DialogScene" to="States/PlayerDialogBox/DialogScene/Dialogue" method="start"]
+
+
