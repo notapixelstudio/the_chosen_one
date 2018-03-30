@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
@@ -12,12 +12,16 @@
 [ext_resource path="res://screens/theme.tres" type="Theme" id=10]
 [ext_resource path="res://actionbox.gd" type="Script" id=11]
 [ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.tscn" type="PackedScene" id=12]
-[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=13]
-[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=14]
-[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=15]
-[ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=16]
+[ext_resource path="res://FSM/states/GameOver/GameOver.tscn" type="PackedScene" id=13]
+[ext_resource path="res://FSM/states/GameOver/GameOver.gd" type="Script" id=14]
+[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=15]
+[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=16]
+[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=17]
+[ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=18]
+[ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=19]
+[ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.gd" type="Script" id=20]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -89,6 +93,7 @@ GraphData = {
 "EnemyTurn": Vector2( 267, 103 ),
 "EnemyTurn_": Vector2( 267, 103 ),
 "EnemyTurn__": Vector2( 267, 103 ),
+"GameOver": Vector2( 595, 27 ),
 "PlayerActionTurn": Vector2( 583, 323 ),
 "PlayerActionTurn_": Vector2( 583, 323 ),
 "PlayerActionTurn__": Vector2( 607, 313 ),
@@ -101,6 +106,7 @@ GraphData = {
 "ResolveAction": Vector2( 611, 458 ),
 "ResolveAction_": Vector2( 611, 458 ),
 "ResolveAction__": Vector2( 611, 458 ),
+"TurnsOver": Vector2( 269, 10 ),
 "UselessAction": Vector2( 367, 315 ),
 "UselessAction_": Vector2( 367, 315 ),
 "UselessAction__": Vector2( 371, 239 )
@@ -264,6 +270,10 @@ _sections_unfolded = [ "Rect", "Theme", "custom_constants", "custom_fonts", "cus
 
 visible = false
 
+[node name="GameOver" type="Node" parent="FSMControl/States" index="3" instance=ExtResource( 13 )]
+
+script = ExtResource( 14 )
+
 [node name="Transitions" type="Control" parent="FSMControl" index="1"]
 
 anchor_left = 0.0
@@ -277,24 +287,31 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="EnemyFinished" parent="FSMControl/Transitions" index="0" instance=ExtResource( 13 )]
+[node name="EnemyFinished" parent="FSMControl/Transitions" index="0" instance=ExtResource( 15 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
 
-[node name="ResolveAction" parent="FSMControl/Transitions" index="1" instance=ExtResource( 14 )]
+[node name="ResolveAction" parent="FSMControl/Transitions" index="1" instance=ExtResource( 16 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
 path2TargetState = NodePath("../../States/PlayerDialogBox")
 
-[node name="PlayerEnd" parent="FSMControl/Transitions" index="2" instance=ExtResource( 15 )]
+[node name="PlayerEnd" parent="FSMControl/Transitions" index="2" instance=ExtResource( 17 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/EnemyTurn")
 
-[node name="UselessAction" parent="FSMControl/Transitions" index="3" instance=ExtResource( 16 )]
+[node name="UselessAction" parent="FSMControl/Transitions" index="3" instance=ExtResource( 18 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
+
+[node name="TurnsOver" type="Node" parent="FSMControl/Transitions" index="4" instance=ExtResource( 19 )]
+
+script = ExtResource( 20 )
+path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
+path2TargetState = NodePath("../../States/GameOver")
+intervalBetweenChecks = -1.0
 
 
