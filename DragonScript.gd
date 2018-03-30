@@ -35,10 +35,16 @@ class DragonScript:
 			'white': [
 				"Poor little angel. I'll send you back to heaven in a minute.",
 				"You are nothing but a sheep about to be prayed upon.",
-				"All of a sudden, I have a craving for cotton candy..."
+				"All of a sudden, I have a craving for cotton candy...",
+				"Life's a bleach, isn't it?",
+				"Having white hair apparently is not enough to make a human wiser..."
 			],
 			'pink': [
-				"I'll chew you like bubblegum!"
+				"I'll chew you like bubblegum!",
+				"What a cute, sweet, little human! You'll make a fine plushie.",
+				"Maybe if you rolled an eighteen at strength instead of cuteness...",
+				"Wait... Where did you buy that flamingo hat?",
+				""
 			],
 			'black': [
 				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?"
@@ -53,7 +59,8 @@ class DragonScript:
 		},
 		'eyes': {
 			'blue': [
-				"Bleah femeref"
+				"Too much spice, huh?",
+				"Never heard of a Femeref hero. Maybe because there aren't."
 			],
 			'green': [
 				"Bleah green"
@@ -62,7 +69,8 @@ class DragonScript:
 				"Bleah red"
 			],
 			'four': [
-				"Bleah four"
+				"Those glasses make you look fat.",
+				"I don't hit humans with glasses. Or do I?"
 			]
 		}
 	}
