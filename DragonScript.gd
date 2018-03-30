@@ -60,7 +60,7 @@ class DragonScript:
 		'eyes': {
 			'blue': [
 				"Too much spice, huh?",
-				"Never heard of a Femeref hero. Maybe because there aren't."
+				"Never heard of a Fremen hero. Maybe because there aren't any."
 			],
 			'green': [
 				"Bleah green"
@@ -74,17 +74,34 @@ class DragonScript:
 			]
 		},
 		'house': {
-			'valenstone': [
-				"army"
+			'Valenstone': [
+				"This will be your last battle.",
+				"Where's the rest of the army? Did they left you all alone?",
+				"Aren't you curious to see what happens when a metal armor reaches a gazillion degrees?",
+				"Silly humans, always trying to wage war at one another. What a waste of food.",
+				"Aren't you a little short to be a Valenstone?"
 			],
-			'golddagger': [
-				"rich"
+			'Golddagger': [
+				"Say goodbye to your precious little life.",
+				"Why didn't you hire some mercenaries to help you?",
+				"You can't buy me. I'm not one of those treasure-hoarder dragons.",
+				"Did you remember to make a will? Watching your family fighting over your riches would break my heart.",
+				"I hope you did pay your debts. Aren't Golddaggers known for that?"
 			],
-			'hollistar': [
-				"religion"
+			'Hollistar': [
+				"Say your prayers, little one.",
+				"Maybe if you believe it very hard, I'll disappear.",
+				"Your gods can't save you. Fun fact: they don't exist.",
+				"Your faith means nothing. The Prophecy is the only truth.",
+				"Hollistars are said to be tough... to chew. Too bad for me, I have to eat something after all."
 			],
-			'weedlepuff': [
-				"hippie"
+			'Weedlepuff': [
+				"How can you be sure that I'm really here and I'm not just some kind of hallucination?",
+				"Do you happen to know a good druid? My stash is empty...",
+				"Wouldn't it be better if all you hippies went looking for a job? Besides killing dragons, of course.",
+				"You make me wonder wether I should eat you or light you up and smoke you...",
+				"I'm a living thing you know? What makes you the right to save the trees and kill the dragons?",
+				"If only Weedlepuffs weren't so busy caring for literally every single leaf on the kingdom... they could even defeat a dragon. Maybe."
 			]
 		}
 	}

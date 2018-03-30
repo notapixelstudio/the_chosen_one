@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/house|golddagger.png-ef6d5080a7f7fd767b699e90808a08a6.stex"
+path="res://.import/house|Golddagger.png-3dc638584acb081d42b37d59a2e03309.stex"
 
 [deps]
 
-source_file="res://assets/character/house|golddagger.png"
+source_file="res://assets/character/house|Golddagger.png"
 source_md5="a2fb9c8f250920ed76c59080a08066f5"
 
-dest_files=[ "res://.import/house|golddagger.png-ef6d5080a7f7fd767b699e90808a08a6.stex" ]
+dest_files=[ "res://.import/house|Golddagger.png-3dc638584acb081d42b37d59a2e03309.stex" ]
 dest_md5="d15c4e5d37dd0f426153d8f3ba3c179f"
 
 [params]
