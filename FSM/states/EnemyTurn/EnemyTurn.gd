@@ -23,13 +23,16 @@ func getLogicRoot(): return logicRoot; #defined in parent class
 #you can transmit parameters if fsm is initialized manually
 func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5=null): 
 	dialog_box = $DialogScene
+	logicRoot.current_turn = 0
 	global.dragon_script.update_hints(global.player_character_data.diff(global.chosen_one_data))
 
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
 	dialog_box.visible = true
 	dialog_box.get_node('Dialogue/Label').text = 'DRAGON: ' + global.dragon_script.read()
-
+	logicRoot.current_turn += 1
+	print("Turn # "+ str(logicRoot.current_turn))
+	
 #when updating state, paramx can be used only if updating fsm manually
 func update(deltaTime, param0=null, param1=null, param2=null, param3=null, param4=null):
 	pass
