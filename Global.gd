@@ -9,7 +9,7 @@ var chosen_one_data
 var dragon_script
 var player_script
 
-const WRONG_FEATURES = 2
+const WRONG_FEATURES = 3
 
 func _ready():
 	randomize()
@@ -18,8 +18,13 @@ func _ready():
 	DragonScript = load('res://DragonScript.gd').new().DragonScript
 	PlayerScript = load('res://PlayerScript.gd').new().PlayerScript
 
+	reset()
+
+func reset():
 	chosen_one_data = CharacterData.new()
 
+	print(chosen_one_data.features)
+	
 	# this is to avoid starting the game with the chosen one by chanche
 	# at least WRONG_FEATURES features have to be wrong
 	while player_character_data == null or player_character_data.diff(chosen_one_data).size() < WRONG_FEATURES:
