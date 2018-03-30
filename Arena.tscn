@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/Red_Dragon.png" type="Texture" id=3]
 [ext_resource path="res://character/Character.tscn" type="PackedScene" id=4]
 [ext_resource path="res://FSMControl.tscn" type="PackedScene" id=5]
 
@@ -34,9 +34,9 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 668.494, 111.946 )
-scale = Vector2( 3.85759, 3.33681 )
+position = Vector2( 771.258, 110.34 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Character" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -73,8 +73,8 @@ GraphData = {
 "PlayerActionTurn_": Vector2( 607, 313 ),
 "PlayerDialogBox": Vector2( 145, 467 ),
 "PlayerDialogBox_": Vector2( 145, 467 ),
-"PlayerEnd": Vector2( 200, 286 ),
-"PlayerEnd_": Vector2( 200, 286 ),
+"PlayerEnd": Vector2( 168, 273 ),
+"PlayerEnd_": Vector2( 168, 273 ),
 "ResolveAction": Vector2( 611, 458 ),
 "ResolveAction_": Vector2( 611, 458 )
 }

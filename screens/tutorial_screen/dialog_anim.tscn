@@ -59,7 +59,6 @@ func start():
 		1.0, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	t.start()
 	yield(t, \"tween_completed\")
-	$\"../Animator\".play(\"tutorial_01\")
 	$Button.show()
 	$Button.grab_focus()"
 
@@ -70,6 +69,10 @@ script = ExtResource( 2 )
 [node name="Animator" parent="." index="0"]
 
 anims/dialog_01 = SubResource( 1 )
+
+[node name="Transition" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="ColorRect" parent="Transition" index="0"]
 
