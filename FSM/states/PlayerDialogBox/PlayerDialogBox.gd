@@ -25,7 +25,7 @@ func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
 	print("The player chose an action")
-	$DialogScene/Dialogue/Label.text = "The PLAYER talks, or the action is executed"
+	$DialogScene/Dialogue/Label.text = global.player_script.text
 	$DialogScene.visible = true
 
 #when updating state, paramx can be used only if updating fsm manually

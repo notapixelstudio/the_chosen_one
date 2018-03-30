@@ -39,4 +39,4 @@ func _on_chosen_attack(action):
 	match action.to_lower():
 		"attack": global_mine.player_script.useful_action = true
 		_       : global_mine.player_script.useful_action = false
-	
+	global_mine.player_script.act(action)

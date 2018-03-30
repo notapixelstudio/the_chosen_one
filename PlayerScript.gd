@@ -5,10 +5,34 @@ class PlayerScript:
 	var useful_action = true
 	var chosen_action
 	var turns
+	var text = ""
 
 	func _init(turns):
 		self.turns = turns
-
+	
+	func act(action):
+		var action_lower = action.to_lower()
+		if action_lower =="attack":
+			useful_action = true
+			chosen_action = "attack"
+			text = "I'MMA DOING ATTACK" # you can call a func
+		elif action_lower=="magic":	
+			useful_action = true
+			chosen_action = "magic"
+			text = "bidibi bodibi bo" # you can call a func
+		elif action_lower == "item":
+			useful_action = false
+			chosen_action = "item"
+			text = "You don't have any item" # you can call a func
+		elif action_lower == "run":
+			useful_action = false
+			chosen_action = "run"
+			text = "Fly, You fools" # you can call a func
+		else:
+			text = "This should never happen!" # you can call a func
+	
+	func read():
+		pass
 	func attack():
 		pass
 
