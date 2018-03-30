@@ -30,4 +30,4 @@ func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null):
 
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
-	return logicRoot.current_turn == logicRoot.MAX_TURNS and not logicRoot.chosen_one
+	return logicRoot.current_turn == logicRoot.MAX_TURNS and not logicRoot.is_the_chosen_one

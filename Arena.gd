@@ -11,4 +11,4 @@ func _ready():
 	$Character.load_character(global.player_character_data)
 	is_the_chosen_one = global.player_character_data.diff(global.chosen_one_data).size() == 0
 	# TODO: Cancellare questa riga! :D
-	print("Are you the chosen one?" + is_the_chosen_one)
+	print("Are you the chosen one?" + str(is_the_chosen_one))

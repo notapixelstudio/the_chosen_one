@@ -20,7 +20,7 @@ func getLogicRoot(): return logicRoot; #defined in parent class
 ##################################################################################
 #you can transmit parameters if fsm is initialized manually
 func stateInit(inParam1=null,inParam2=null,inParam3=null,inParam4=null, inParam5=null): 
-	pass
+	$Character.load_character(global.player_character_data)
 
 #when entering state, usually you will want to reset internal state here somehow
 func enter(fromStateID=null, fromTransitionID=null, inArg0=null,inArg1=null, inArg2=null):
