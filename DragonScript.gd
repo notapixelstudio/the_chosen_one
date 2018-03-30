@@ -72,6 +72,20 @@ class DragonScript:
 				"Those glasses make you look fat.",
 				"I don't hit humans with glasses. Or do I?"
 			]
+		},
+		'house': {
+			'valenstone': [
+				"army"
+			],
+			'golddagger': [
+				"rich"
+			],
+			'hollistar': [
+				"religion"
+			],
+			'weedlepuff': [
+				"hippie"
+			]
 		}
 	}
 	var defeat_lines = []

@@ -19,8 +19,10 @@ __meta__ = {
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="hair" type="Sprite" parent="." index="2"]
+[node name="house" type="Sprite" parent="." index="2"]
 
-[node name="eyes" type="Sprite" parent="." index="3"]
+[node name="hair" type="Sprite" parent="." index="3"]
+
+[node name="eyes" type="Sprite" parent="." index="4"]
 
 

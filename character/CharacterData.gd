@@ -3,9 +3,10 @@ class CharacterData:
 		'haircut': ['short', 'long'],
 		'hair-color': ['white', 'black', 'green', 'blue', 'pink'],
 		'eyes': ['blue', 'green', 'red', 'four'],
-		'weapon': ['sword', 'dagger', 'staff', 'axe']
+		'weapon': ['sword', 'dagger', 'staff', 'axe'],
+		'house': ['valenstone', 'golddagger', 'hollistar', 'weedlepuff']
 	}
-	const COMBOS = {'hair': ['haircut', 'hair-color'], 'weapon': ['weapon'], 'eyes': ['eyes']}
+	const COMBOS = {'hair': ['haircut', 'hair-color'], 'weapon': ['weapon'], 'eyes': ['eyes'], 'house': ['house']}
 	var features = {}
 
 	func _init():
