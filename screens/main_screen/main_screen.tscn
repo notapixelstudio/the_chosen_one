@@ -21,9 +21,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -124.0
+margin_left = -123.0
 margin_top = -341.0
-margin_right = 1876.0
+margin_right = 1877.0
 margin_bottom = 585.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -41,10 +41,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 277.0
-margin_top = 254.0
-margin_right = 479.0
-margin_bottom = 298.0
+margin_left = 292.0
+margin_top = 290.0
+margin_right = 494.0
+margin_bottom = 334.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -66,10 +66,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 278.0
-margin_top = 320.0
-margin_right = 480.0
-margin_bottom = 364.0
+margin_left = 293.0
+margin_top = 356.0
+margin_right = 495.0
+margin_bottom = 400.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -87,8 +87,37 @@ align = 1
 
 [node name="GameTitle" type="Sprite" parent="." index="5"]
 
-position = Vector2( 376.28, 70.4366 )
+position = Vector2( 391.28, 70.4366 )
 texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 171.0
+margin_top = 139.0
+margin_right = 649.0
+margin_bottom = 255.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "The Prophecy foretells the coming of a hero that would defeat the Dragon once and for all. Are you ready to embrace your destiny? Are you... the Chosen One?"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "The Prophecy foretells the coming of a hero that would defeat the Dragon once and for all. Are you ready to embrace your destiny? Are you... the Chosen One?"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Anchor", "BBCode", "Grow Direction" ]
 
 [connection signal="button_up" from="Start" to="." method="change_scene"]
 
