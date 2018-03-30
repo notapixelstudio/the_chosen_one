@@ -10,11 +10,10 @@ func _ready():
 
 func _on_next_up():
 	if $Animator.is_playing():
-		$Animator.seek($Animator.get_current_animation_length())
+		$Animator.seek($Animator.get_current_animation_length(), true)
 	else:
-		if tutor_part < $Animator.get_animation_list().size() -1:
-			tutor_part = (tutor_part + 1)%$Animator.get_animation_list().size()
-			$Animator.play($Animator.get_animation_list()[tutor_part])
-		else:
-			emit_signal("dialog_ended")
+		$Animator.play("dialog")
+		$Animator.seek(0.0, true)
+		print("signal")
+		emit_signal("dialog_ended")
 			
