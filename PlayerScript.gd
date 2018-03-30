@@ -7,38 +7,59 @@ class PlayerScript:
 	var turns
 	var text = ""
 
+	var attack_lines = [
+		"You try to move towards the dragon, but you are paralyzed by fear..."
+	]
+	var magic_lines = [
+		"You wave your hands into the air and... nothing happens.",
+		"You focus your mind on your inner energy. Then you get distracted by a butterfly.",
+		"You travel back your magic training class... which you never took.",
+		"You start moving your hands to tap into your mana reserves... but they are empty. You are screwed."
+	]
+	var item_lines = [
+		"You haven't collected any item yet...",
+		"...and continuing to click here would never help you collecting any item.",
+		"You frantically search your pockets, and finally you find... a button."
+	]
+	var run_lines = [
+		"You refuse to run away! Not beacuse of courage, your legs are shaking..."
+	]
+
 	func _init(turns):
 		self.turns = turns
 	
 	func act(action):
-		var action_lower = action.to_lower()
-		if action_lower =="attack":
-			useful_action = true
-			chosen_action = "attack"
-			text = "I'MMA DOING ATTACK" # you can call a func
-		elif action_lower=="magic":	
-			useful_action = true
-			chosen_action = "magic"
-			text = "bidibi bodibi bo" # you can call a func
-		elif action_lower == "item":
-			useful_action = false
-			chosen_action = "item"
-			text = "You don't have any item" # you can call a func
-		elif action_lower == "run":
-			useful_action = false
-			chosen_action = "run"
-			text = "Fly, You fools" # you can call a func
-		else:
-			text = "This should never happen!" # you can call a func
+		chosen_action = action.to_lower()
+		if not(chosen_action in ['attack', 'magic', 'item', 'run']):
+			text = "This should never happen!"
+			return
+		
+		call(chosen_action)
 	
-	func read():
-		pass
 	func attack():
-		pass
+		useful_action = true
+		if len(attack_lines) == 0:
+			text = "There's always someone stronger than you. In your case, everyone."
+		else:
+			text = attack_lines.pop_front()
 
 	func magic():
-		pass
+		useful_action = true
+		if len(magic_lines) == 0:
+			text = "It seems that you are a muggle, after all."
+		else:
+			text = magic_lines.pop_front()
+
 	func item():
-		pass
+		useful_action = true
+		if len(item_lines) == 0:
+			text = "You can select 'item' as many times as you want, nothing is going to happen!"
+		else:
+			text = item_lines.pop_front()
+
 	func run():
-		pass
+		useful_action = true
+		if len(run_lines) == 0:
+			text = "You can run as many times as you want, nothing is going to happen!"
+		else:
+			text = run_lines.pop_front()
