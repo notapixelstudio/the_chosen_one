@@ -12,7 +12,7 @@
 [ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=10]
 [ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=11]
 
-[node name="FSMControl" type="Control" index="0"]
+[node name="FSMControl" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -43,23 +43,23 @@ enableDebug = false
 "Create new:/Create transition with name:" = null
 GraphData = {
 "EnemyFinished": Vector2( 566, 185 ),
-"EnemyFinished_": Vector2( 532, 205 ),
-"EnemyFinished__": Vector2( 532, 205 ),
+"EnemyFinished_": Vector2( 566, 185 ),
+"EnemyFinished__": Vector2( 566, 185 ),
 "EnemyTurn": Vector2( 561, 75 ),
-"EnemyTurn_": Vector2( 253, 167 ),
-"EnemyTurn__": Vector2( -9, 27 ),
+"EnemyTurn_": Vector2( 561, 75 ),
+"EnemyTurn__": Vector2( 561, 75 ),
 "PlayerActionTurn": Vector2( 575, 403 ),
-"PlayerActionTurn_": Vector2( 572, 294 ),
-"PlayerActionTurn__": Vector2( -9, 27 ),
+"PlayerActionTurn_": Vector2( 575, 403 ),
+"PlayerActionTurn__": Vector2( 575, 403 ),
 "PlayerDialogBox": Vector2( 158, 207 ),
-"PlayerDialogBox_": Vector2( 448, 85 ),
-"PlayerDialogBox__": Vector2( 448, 85 ),
+"PlayerDialogBox_": Vector2( 158, 207 ),
+"PlayerDialogBox__": Vector2( 158, 207 ),
 "PlayerEnd": Vector2( 148, 87 ),
-"PlayerEnd_": Vector2( 361, 424 ),
-"PlayerEnd__": Vector2( 361, 424 ),
+"PlayerEnd_": Vector2( 148, 87 ),
+"PlayerEnd__": Vector2( 148, 87 ),
 "ResolveAction": Vector2( 129, 410 ),
-"ResolveAction_": Vector2( 429, 327 ),
-"ResolveAction__": Vector2( 429, 327 )
+"ResolveAction_": Vector2( 129, 410 ),
+"ResolveAction__": Vector2( 129, 410 )
 }
 
 [node name="States" type="Control" parent="." index="0"]
