@@ -19,7 +19,7 @@
 [ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=17]
 [ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=18]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -75,7 +75,7 @@ __meta__ = {
 "_editor_icon": ExtResource( 6 )
 }
 path2LogicRoot = NodePath("..")
-onlyActiveStateOnTheScene = false
+onlyActiveStateOnTheScene = true
 initManually = false
 updateMode = 1
 receiceSignalsOnly4ActiveStatesAndTransitions = true
@@ -92,6 +92,7 @@ GraphData = {
 "EnemyTurn_": Vector2( 267, 103 ),
 "EnemyTurn__": Vector2( 267, 103 ),
 "GameOver": Vector2( 595, 27 ),
+"GameOver_": Vector2( 595, 27 ),
 "PlayerActionTurn": Vector2( 583, 323 ),
 "PlayerActionTurn_": Vector2( 583, 323 ),
 "PlayerActionTurn__": Vector2( 607, 313 ),
@@ -105,6 +106,7 @@ GraphData = {
 "ResolveAction_": Vector2( 611, 458 ),
 "ResolveAction__": Vector2( 611, 458 ),
 "TurnsOver": Vector2( 269, 10 ),
+"TurnsOver_": Vector2( 269, 10 ),
 "UselessAction": Vector2( 367, 315 ),
 "UselessAction_": Vector2( 367, 315 ),
 "UselessAction__": Vector2( 371, 239 )
@@ -124,6 +126,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 
 [node name="EnemyTurn" parent="FSMControl/States" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
 
 [node name="DialogScene" parent="FSMControl/States/EnemyTurn" index="0" instance=ExtResource( 8 )]
 

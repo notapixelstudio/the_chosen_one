@@ -9,11 +9,12 @@ func _ready():
 	$Animator.play($Animator.get_animation_list()[tutor_part])
 
 func _on_next_up():
-	if tutor_part < $Animator.get_animation_list().size() -1:
-		tutor_part += 1
-		print(tutor_part)
-		$Animator.play($Animator.get_animation_list()[tutor_part])
+	if $Animator.is_playing():
+		$Animator.seek($Animator.get_current_animation_length())
 	else:
-		#$Dialogue/Button.disabled = true
-		emit_signal("dialog_ended")
+		if tutor_part < $Animator.get_animation_list().size() -1:
+			tutor_part = (tutor_part + 1)%$Animator.get_animation_list().size()
+			$Animator.play($Animator.get_animation_list()[tutor_part])
+		else:
+			emit_signal("dialog_ended")
 			

@@ -11,6 +11,7 @@ extends "res://addons/net.kivano.fsm/content/FSMTransition.gd";
 ##################################################################################
 #####  Variables (Constants, Export Variables, Node Vars, Normal variables)  #####
 ######################### var myvar setget myvar_set,myvar_get ###################
+var current_turn
 
 ######################################
 ####### Getters
@@ -25,8 +26,8 @@ func transitionInit(inParam1=null, inParam2=null, inParam3=null, inParam4=null, 
 
 func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null): 
 	#you can optionally implement this to reset transition when related state has been activated
-	pass
+	print("are you serious")
 
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
-	return false;
+	return logicRoot.current_turn == logicRoot.MAX_TURNS
