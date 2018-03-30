@@ -6,6 +6,7 @@ class PlayerScript:
 	var chosen_action
 	var turns
 	var text = ""
+	var chosen_one = false
 
 	var attack_lines = [
 		"You try to move towards the dragon, but you are paralyzed by fear...",
@@ -41,8 +42,24 @@ class PlayerScript:
 		"You finally manage to start running! ...in circles."
 	]
 
+	var chosen_attack_lines = [
+		"You barely move your weapon, yet The Dragon is seriously wounded."
+	]
+	var chosen_magic_lines = [
+		"You just try a simple spell, but a lightning bolt comes out instead and strikes The Dragon."
+	]
+	var chosen_item_lines = [
+		"You throw a rock at The Dragon. It appears that The Dragon is allergic to the specific mineral combination in it."
+	]
+	var chosen_run_lines = [
+		"You take a step back. This triggers a trap that hits The Dragon."
+	]
+
 	func _init(turns):
 		self.turns = turns
+
+	func update_hints(diff):
+		chosen_one = diff.size() == 0
 	
 	func act(action):
 		chosen_action = action.to_lower()
@@ -50,7 +67,10 @@ class PlayerScript:
 			text = "This should never happen!"
 			return
 		
-		call(chosen_action)
+		if chosen_one:
+			call('chosen_one_' + chosen_action)
+		else:
+			call(chosen_action)
 	
 	func attack():
 		useful_action = true
@@ -79,3 +99,32 @@ class PlayerScript:
 			text = "You learn that running away from problems is not a real solution. Especially if you can't run."
 		else:
 			text = run_lines.pop_front()
+
+
+	func chosen_one_attack():
+		useful_action = true
+		if len(chosen_attack_lines) == 0:
+			text = "Whatever you do, The Dragon is hit."
+		else:
+			text = chosen_attack_lines.pop_front()
+
+	func chosen_one_magic():
+		useful_action = true
+		if len(chosen_magic_lines) == 0:
+			text = "Whatever you imagine to conjure, it appears and attacks The Dragon."
+		else:
+			text = chosen_magic_lines.pop_front()
+
+	func chosen_one_item():
+		useful_action = true
+		if len(chosen_item_lines) == 0:
+			text = "Whatever you search for helping you against The Dragon, you find it in your pockets."
+		else:
+			text = chosen_item_lines.pop_front()
+
+	func chosen_one_run():
+		useful_action = true
+		if len(chosen_run_lines) == 0:
+			text = "Whatever reason you had to run away from The Dragon, it vanished."
+		else:
+			text = chosen_run_lines.pop_front()
