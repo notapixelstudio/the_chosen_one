@@ -43,13 +43,19 @@ class PlayerScript:
 	]
 
 	var chosen_attack_lines = [
-		"You barely move your weapon, yet The Dragon is seriously wounded."
+		"Your first hit pierce through The Dragon's scales like butter.",
+		"You barely move your weapon, yet The Dragon is seriously wounded.",
+		"You just think about attacking The Dragon, and a wound appears.",
+		"You point your weapon at The Dragon. Its HP bar starts to slowly drain...",
+		"You decide to spare The Dragon instead. This still hurts it in some mysterious way."
 	]
 	var chosen_magic_lines = [
+		"You conjure a small fireball, but somehow it manages to burn the left eye of The Dragon.",
+		"You cast a tiny freeze ray, but somehow you manage to freeze the right eye of The Dragon",
 		"You just try a simple spell, but a lightning bolt comes out instead and strikes The Dragon."
 	]
 	var chosen_item_lines = [
-		"You throw a rock at The Dragon. It appears that The Dragon is allergic to the specific mineral combination in it."
+		"You throw a rock at The Dragon. It appears that The Dragon is allergic to the specific combination of minerals in it."
 	]
 	var chosen_run_lines = [
 		"You take a step back. This triggers a trap that hits The Dragon."
