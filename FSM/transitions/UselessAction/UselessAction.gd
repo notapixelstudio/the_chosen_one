@@ -11,7 +11,8 @@ extends "res://addons/net.kivano.fsm/content/FSMTransition.gd";
 ##################################################################################
 #####  Variables (Constants, Export Variables, Node Vars, Normal variables)  #####
 ######################### var myvar setget myvar_set,myvar_get ###################
-
+onready var global_mine = get_node("/root/global");
+var dialog_ended 
 ######################################
 ####### Getters
 func getFSM(): return fsm; #access to owner FSM, defined in parent class
@@ -26,8 +27,13 @@ func transitionInit(inParam1=null, inParam2=null, inParam3=null, inParam4=null, 
 func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null): 
 	#you can optionally implement this to reset transition when related state has been activated
 	print("simple transition")
-	pass
+	# this is the get_node from the global
+	dialog_ended = false
 
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
-	return false;
+	return dialog_ended and not global_mine.player_script.useful_action
+
+func _on_dialog_ended():
+	dialog_ended = true
+	print("transition Player useless")

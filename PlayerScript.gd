@@ -2,7 +2,7 @@ class PlayerScript:
 
 	# if useless_attack is set to true, we come back to the PlayerAction selection state
 	# if is set to false, it will be DragonTurn
-	var useless_action = true
+	var useful_action = true
 	var chosen_action
 	var turns
 

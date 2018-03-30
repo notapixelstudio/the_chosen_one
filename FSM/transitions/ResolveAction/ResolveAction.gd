@@ -12,6 +12,7 @@ extends "res://addons/net.kivano.fsm/content/FSMTransition.gd";
 #####  Variables (Constants, Export Variables, Node Vars, Normal variables)  #####
 ######################### var myvar setget myvar_set,myvar_get ###################
 var chosen_action = false
+onready var global_mine = get_node("/root/global");
 ######################################
 ####### Getters
 func getFSM(): return fsm; #access to owner FSM, defined in parent class
@@ -34,3 +35,8 @@ func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=nul
 func _on_chosen_attack(action):
 	print("The action made was: "+ action)
 	chosen_action = true
+	# match the chosen action with the usefulness, run might be useful
+	match action.to_lower():
+		"attack": global_mine.player_script.useful_action = true
+		_       : global_mine.player_script.useful_action = false
+	
