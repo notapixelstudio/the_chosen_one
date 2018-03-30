@@ -13,7 +13,7 @@ class PlayerScript:
 		"Your weapon is slipping from your soaked hands...",
 		"You hit nothing but air. Not that you aimed at anything first...",
 		"You just can't fight that huge Dragon...",
-		"You blame the Prophecy that took you here, while you continue to slice away the void."
+		"You blame the Prophecy that took you here, while you continue to slice away the void.",
 		"Your attacks have no effect. You start to wonder if you were not the Chosen One after all."
 	]
 	var magic_lines = [
