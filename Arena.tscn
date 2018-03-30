@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/Red_Dragon.png" type="Texture" id=3]
 [ext_resource path="res://character/Character.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=5]
 [ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=6]
@@ -44,9 +44,9 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 668.494, 111.946 )
-scale = Vector2( 3.85759, 3.33681 )
+position = Vector2( 779.891, 121.734 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Character" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -118,11 +118,11 @@ GraphData = {
 "EnemyDialog__": Vector2( 582, 174 ),
 "EnemyFinished": Vector2( 602, 194 ),
 "EnemyFinished_": Vector2( 602, 194 ),
-"EnemyFinished__": Vector2( 621, 198 ),
+"EnemyFinished__": Vector2( 602, 194 ),
 "EnemyTurn": Vector2( 586, 44 ),
 "EnemyTurn_": Vector2( 586, 44 ),
 "EnemyTurn__": Vector2( 586, 44 ),
-"PlayerActionTurn": Vector2( 584, 352 ),
+"PlayerActionTurn": Vector2( 543, 336 ),
 "PlayerActionTurn_": Vector2( 584, 352 ),
 "PlayerActionTurn__": Vector2( 584, 352 ),
 "PlayerAttackTurn": Vector2( 320, 297 ),
@@ -140,7 +140,10 @@ GraphData = {
 "PlayerTurn__": Vector2( 329, 314 ),
 "ResolveAction": Vector2( 114, 352 ),
 "ResolveAction_": Vector2( 114, 352 ),
-"ResolveAction__": Vector2( 114, 352 )
+"ResolveAction__": Vector2( 114, 352 ),
+"uselessAction": Vector2( 369, 178 ),
+"uselessAction_": Vector2( 369, 178 ),
+"uselessAction__": Vector2( 369, 178 )
 }
 
 [node name="States" type="Control" parent="FSMControl" index="0"]
@@ -164,8 +167,6 @@ visible = false
 next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
 [node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 9 )]
-
-editor/display_folded = true
 
 [node name="actionbox" type="GridContainer" parent="FSMControl/States/PlayerActionTurn" index="0"]
 
@@ -320,9 +321,6 @@ path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
 
 [node name="ResolveAction" parent="FSMControl/Transitions" index="1" instance=ExtResource( 14 )]
-
-path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
-path2TargetState = NodePath("../../States/PlayerDialogBox")
 
 [node name="PlayerEnd" parent="FSMControl/Transitions" index="2" instance=ExtResource( 15 )]
 

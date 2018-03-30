@@ -5,8 +5,5 @@
 [node name="ResolveAction" type="Node"]
 
 script = ExtResource( 1 )
-path2SourceStates = [ NodePath("") ]
-path2TargetState = null
-intervalBetweenChecks = -1.0
 
 

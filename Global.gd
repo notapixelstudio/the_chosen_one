@@ -2,10 +2,12 @@ extends Node
 
 var CharacterData
 var DragonScript
+var PlayerScript
 
 var player_character_data
 var chosen_one_data
 var dragon_script
+var player_script
 
 const WRONG_FEATURES = 2
 
@@ -14,6 +16,7 @@ func _ready():
 	
 	CharacterData = load('res://character/CharacterData.gd').new().CharacterData
 	DragonScript = load('res://DragonScript.gd').new().DragonScript
+	PlayerScript = load('res://PlayerScript.gd').new().PlayerScript
 
 	chosen_one_data = CharacterData.new()
 	
@@ -23,4 +26,5 @@ func _ready():
 		player_character_data = CharacterData.new()
 
 	dragon_script = DragonScript.new(6)
+	player_script = PlayerScript.new(6)
 	
