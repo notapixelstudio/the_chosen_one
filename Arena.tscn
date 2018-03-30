@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/Red_Dragon.png" type="Texture" id=3]
 [ext_resource path="res://character/Character.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=5]
 [ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=6]
@@ -15,6 +15,7 @@
 [ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=13]
 [ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=14]
 [ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=15]
+[ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=16]
 
 [node name="Arena" type="Node" index="0"]
 
@@ -44,9 +45,9 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 668.494, 111.946 )
-scale = Vector2( 3.85759, 3.33681 )
+position = Vector2( 771.258, 110.34 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Character" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -92,55 +93,37 @@ __meta__ = {
 "_editor_icon": ExtResource( 6 )
 }
 path2LogicRoot = NodePath("..")
-onlyActiveStateOnTheScene = true
+onlyActiveStateOnTheScene = false
 initManually = false
 updateMode = 1
 receiceSignalsOnly4ActiveStatesAndTransitions = true
 enableDebug = false
-"Initial state:" = "EnemyTurn"
+"Initial state:" = ""
 "Create new:/Subdirectory for FSM nodes:" = "FSM"
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
 GraphData = {
-"DragonTurn": Vector2( 323, 54 ),
-"DragonTurn_": Vector2( 323, 54 ),
-"DragonTurn__": Vector2( 323, 54 ),
-"EndPlayerTurn": Vector2( 138, 48 ),
-"EndPlayerTurn_": Vector2( 138, 48 ),
-"EndPlayerTurn__": Vector2( 138, 48 ),
-"EndTurn": Vector2( 131, 53 ),
-"EndTurn_": Vector2( 131, 53 ),
-"EnemyDialog": Vector2( 582, 174 ),
-"EnemyDialog2": Vector2( 100, 239 ),
-"EnemyDialog2_": Vector2( 100, 239 ),
-"EnemyDialog2__": Vector2( 100, 239 ),
-"EnemyDialog_": Vector2( 582, 174 ),
-"EnemyDialog__": Vector2( 582, 174 ),
-"EnemyFinished": Vector2( 602, 194 ),
-"EnemyFinished_": Vector2( 602, 194 ),
-"EnemyFinished__": Vector2( 621, 198 ),
-"EnemyTurn": Vector2( 586, 44 ),
-"EnemyTurn_": Vector2( 586, 44 ),
-"EnemyTurn__": Vector2( 586, 44 ),
-"PlayerActionTurn": Vector2( 584, 352 ),
-"PlayerActionTurn_": Vector2( 584, 352 ),
-"PlayerActionTurn__": Vector2( 584, 352 ),
-"PlayerAttackTurn": Vector2( 320, 297 ),
-"PlayerDialog": Vector2( 110, 360 ),
-"PlayerDialogBox": Vector2( 116, 179 ),
-"PlayerDialogBox_": Vector2( 116, 179 ),
-"PlayerDialogBox__": Vector2( 116, 179 ),
-"PlayerDialog_": Vector2( 110, 360 ),
-"PlayerDialog__": Vector2( 116, 349 ),
-"PlayerEnd": Vector2( 117, 32 ),
-"PlayerEnd_": Vector2( 117, 32 ),
-"PlayerEnd__": Vector2( 117, 32 ),
-"PlayerTurn": Vector2( 329, 314 ),
-"PlayerTurn_": Vector2( 329, 314 ),
-"PlayerTurn__": Vector2( 329, 314 ),
-"ResolveAction": Vector2( 114, 352 ),
-"ResolveAction_": Vector2( 114, 352 ),
-"ResolveAction__": Vector2( 114, 352 )
+"EnemyFinished": Vector2( 594, 122 ),
+"EnemyFinished_": Vector2( 594, 122 ),
+"EnemyFinished__": Vector2( 594, 122 ),
+"EnemyTurn": Vector2( 267, 103 ),
+"EnemyTurn_": Vector2( 267, 103 ),
+"EnemyTurn__": Vector2( 267, 103 ),
+"PlayerActionTurn": Vector2( 583, 323 ),
+"PlayerActionTurn_": Vector2( 583, 323 ),
+"PlayerActionTurn__": Vector2( 607, 313 ),
+"PlayerDialogBox": Vector2( 186, 447 ),
+"PlayerDialogBox_": Vector2( 186, 447 ),
+"PlayerDialogBox__": Vector2( 186, 447 ),
+"PlayerEnd": Vector2( 168, 273 ),
+"PlayerEnd_": Vector2( 168, 273 ),
+"PlayerEnd__": Vector2( 168, 273 ),
+"ResolveAction": Vector2( 611, 458 ),
+"ResolveAction_": Vector2( 611, 458 ),
+"ResolveAction__": Vector2( 611, 458 ),
+"UselessAction": Vector2( 367, 315 ),
+"UselessAction_": Vector2( 367, 315 ),
+"UselessAction__": Vector2( 371, 239 )
 }
 
 [node name="States" type="Control" parent="FSMControl" index="0"]
@@ -328,5 +311,10 @@ path2TargetState = NodePath("../../States/PlayerDialogBox")
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/EnemyTurn")
+
+[node name="UselessAction" parent="FSMControl/Transitions" index="3" instance=ExtResource( 16 )]
+
+path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
+path2TargetState = NodePath("../../States/PlayerActionTurn")
 
 
