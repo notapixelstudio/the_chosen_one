@@ -148,7 +148,6 @@ next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
 [node name="actionbox" parent="FSMControl/States/PlayerActionTurn" index="0" instance=ExtResource( 11 )]
 
-hint_tooltip = ""
 _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme", "Visibility" ]
 
 [node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 12 )]
