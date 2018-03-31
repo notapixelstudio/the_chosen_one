@@ -5,7 +5,7 @@
 [ext_resource path="res://screens/YouWonScene.gd" type="Script" id=3]
 [ext_resource path="res://screens/theme.tres" type="Theme" id=4]
 [ext_resource path="res://character/Character.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/you_won.jpg" type="Texture" id=6]
+[ext_resource path="res://assets/youwon.png" type="Texture" id=6]
 
 [node name="YouWon" type="Node" index="0"]
 
@@ -17,8 +17,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1021.0
-margin_bottom = 596.0
+margin_left = -59.0
+margin_top = -62.0
+margin_right = 962.0
+margin_bottom = 534.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -59,13 +61,18 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
+[node name="ColorRect" parent="YouWonScreen/Transition" index="0"]
+
+visible = false
+
 [node name="Character" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 370.402, 351.157 )
 
 [node name="TheChosenOneMeme" type="Sprite" parent="." index="3"]
 
-position = Vector2( 438.662, 130.823 )
+position = Vector2( 396.779, 148.984 )
+scale = Vector2( 1.19426, 1.2291 )
 texture = ExtResource( 6 )
 
 
