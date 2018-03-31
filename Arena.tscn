@@ -21,7 +21,7 @@
 [ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=19]
 [ext_resource path="res://FSM/transitions/TheChosenOne/TheChosenOne.tscn" type="PackedScene" id=20]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -33,10 +33,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -15.0
-margin_top = -449.0
-margin_right = 1596.0
-margin_bottom = 447.0
+margin_left = -2.0
+margin_top = -130.0
+margin_right = 1609.0
+margin_bottom = 766.0
+rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -44,6 +45,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -148,6 +150,7 @@ next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
 [node name="actionbox" parent="FSMControl/States/PlayerActionTurn" index="0" instance=ExtResource( 11 )]
 
+hint_tooltip = ""
 _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme", "Visibility" ]
 
 [node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 12 )]
