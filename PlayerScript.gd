@@ -47,18 +47,28 @@ class PlayerScript:
 		"You barely move your weapon, yet The Dragon is seriously wounded.",
 		"You just think about attacking The Dragon, and a wound appears.",
 		"You point your weapon at The Dragon. Its HP bar starts to slowly drain...",
-		"You decide to spare The Dragon instead. This still hurts it in some mysterious way."
+		"You put down your weapon and hit The Dragon with your little finger. This causes more damage to The Dragon than all the previous attacks combined."
 	]
 	var chosen_magic_lines = [
+		"You just try a simple spell, but a lightning bolt comes out instead and strikes The Dragon.",
 		"You conjure a small fireball, but somehow it manages to burn the left eye of The Dragon.",
 		"You cast a tiny freeze ray, but somehow you manage to freeze the right eye of The Dragon",
-		"You just try a simple spell, but a lightning bolt comes out instead and strikes The Dragon."
+		"You start to whistle and the melody unlocks a long-forgotten arcane spell that hits The Dragon badly.",
+		"You wiggle your hips and shake your hands. This summons a giant octopus that crushed The Dragon with its tentacles."
 	]
 	var chosen_item_lines = [
-		"You throw a rock at The Dragon. It appears that The Dragon is allergic to the specific combination of minerals in it."
+		"You throw a rock at The Dragon. It appears that The Dragon is allergic to the specific combination of minerals in it.",
+		"You forgot you were carrying a legendary, dragon-killing spear all along. The Dragon is not pleased.",
+		"You rummage into your pockets and this somehow translates into messing up The Dragon's limbs.",
+		"You find a cheat code that halves The Dragon's HP.",
+		"You find an AK-47 in your inventory. Despite the anachronism, it helps against The Dragon."
 	]
 	var chosen_run_lines = [
-		"You take a step back. This triggers a trap that hits The Dragon."
+		"You take a step back. This triggers a trap that hits The Dragon.",
+		"You decide to leave The Dragon alone for a moment. This still hurts it in a mysterious way.",
+		"You hesitate for a moment, but the sight of The Dragon fills you with determination.",
+		"You just can't run away anymore from The Dragon.",
+		"Your resolve is rock solid: You can do it. You can defeat The Dragon."
 	]
 
 	func _init(turns):
@@ -131,6 +141,6 @@ class PlayerScript:
 	func chosen_one_run():
 		useful_action = true
 		if len(chosen_run_lines) == 0:
-			text = "Whatever reason you had to run away from The Dragon, it vanished."
+			text = "Whatever reason you had for running away from The Dragon, it vanished."
 		else:
 			text = chosen_run_lines.pop_front()
