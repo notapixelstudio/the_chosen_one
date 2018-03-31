@@ -28,11 +28,11 @@ class PlayerScript:
 	]
 	var item_lines = [
 		"You haven't collected any item yet...",
-		"...and continuing to click here would never help you collecting any item.",
 		"You inspect your backpack... Where's your backpack!?",
 		"You frantically search your pockets, and finally you find... a button.",
 		"You press I to bring up the inventory... nothing happens.",
-		"You recall to have packed a mighty artifact... but you must have left it in your other pants."
+		"You recall to have packed a mighty artifact... but you must have left it in your other pants.",
+		"You continue to click here, but that would never help you collecting any item."
 	]
 	var run_lines = [
 		"You refuse to run away! Not beacuse of courage, but because your legs are shaking...",

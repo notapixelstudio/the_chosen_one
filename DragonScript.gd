@@ -2,8 +2,8 @@ class DragonScript:
 	var hint_lines = {
 		'weapon': {
 			'sword': [
-				'Being unoriginal will not save you, nor anyone else.',
-				'Oh, you like classic stuff! Me too. I always eat humans with no fancy spices or sauce.',
+				'Being unoriginal when choosing your weapon will not save you, nor anyone else.',
+				'Oh, you like to pick classic stuff! Me too. I always eat humans with no fancy spices or sauce.',
 				'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
 			],
 			'axe': [
@@ -19,22 +19,22 @@ class DragonScript:
 				"Wrong place. The pool billiard house is two blocks south from here."
 			],
 			'dagger': [
-				"It's not like they say, you know? Size does matter!",
+				"It's not like they say, you know? Size does matter! Especially for a weapon.",
 				"Sorry, no toothpicks allowed here.",
 				"Was a proper, bigger weapon too heavy to carry? Oh, I can totally relate."
 			]
 		},
 		'haircut': {
 			'short': [
-				"Humans should not send their children to fight dragons...",
 				"Do you cut your hair by yourself? With a knife?",
+				"Humans should not send their children to fight dragons... Oh, it's just your haircut? Sorry.",
 				"Want to save money on shampoo and conditioner? Smart move. Better than showing up here, at the very least.",
 				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'long': [
+				"Such long hair and such a short life... what a pity!",
 				"Oooh, imagine the burning smell you'll do when I light you up!",
 				"Be careful not to trip onto yourself...",
-				"Such long hair and such a short life... what a pity!",
 				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			]
 		},
@@ -53,12 +53,12 @@ class DragonScript:
 				"Wait... Where did you buy that flamingo hat?"
 			],
 			'black': [
+				"Mmm... Am I supposed to be scared by your tenebrous hair? I am a monster, remember?",
 				"Did you fall into a puddle of ink?",
-				"How many crows did you kill to make that hat?",
-				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?"
+				"How many crows did you kill to make that hat?"
 			],
 			'blue': [
-				"I feel like Gargamel...",
+				"Your hair make me feel like Gargamel...",
 				"Everyone has the blues sometimes... Always, in your particular case.",
 				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you."
 			],
@@ -71,8 +71,8 @@ class DragonScript:
 		},
 		'eyes': {
 			'blue': [
-				"No one knows what it's like behind your eyes, right?",
 				"Your sapphire eyes don't scare me. Nothing can.",
+				"No one knows what it's like behind your eyes, right?",
 				"Too much spice, huh?",
 				"No one ever told you that you have baby eyes?"
 			],
@@ -98,13 +98,13 @@ class DragonScript:
 		'house': {
 			'Valenstone': [
 				"This will be your last battle, Valenstone.",
-				"Where's the rest of the Valenstone army? Did they left you all alone?",
+				"Where's the rest of the Valenstone army? Did they left you all alone? Even a thousand of you would stand no chance.",
 				"Aren't you curious to see what happens when a metal armor reaches a gazillion degrees?",
 				"Silly humans, always trying to wage war at one another. What a waste of food.",
 				"Aren't you a little short to be a Valenstone?"
 			],
 			'Golddagger': [
-				"Say goodbye to your precious little life.",
+				"Say goodbye to your precious little life, Golddagger.",
 				"Why didn't you hire some mercenaries to help you?",
 				"You can't buy me, Golddagger. I'm not one of those treasure-hoarder dragons.",
 				"Did you remember to make a will? Watching your family fighting over your riches would break my heart.",
@@ -118,7 +118,8 @@ class DragonScript:
 				"Hollistars are said to be tough... to chew. But I have good teeth, fortunately. For me. Not for you."
 			],
 			'Weedlepuff': [
-				"How can you be sure that I'm really here and I'm not just some kind of hallucination?",
+				"Ha! What makes you think a Weedlepuff could be a hero? A Weedlepuff!?",
+				"How can you be sure that I'm really here and I'm not just some kind of hallucination caused by herbs?",
 				"Do you happen to know a good Weedlepuff druid? My stash is empty...",
 				"Wouldn't it be better if all you hippies went looking for a job? Besides trying to kill dragons, of course.",
 				"You make me wonder wether I should eat you or light you up and smoke you...",
@@ -221,15 +222,15 @@ class DragonScript:
 	func get_lines(hints, babbling):
 		var lines = []
 
-		for i in range(hints):
-			lines.append('hint_line')
-
 		for i in range(babbling):
 			lines.append('babbling_line')
 
+		for i in range(hints):
+			lines.append('hint_line')
+
 		# this should stay here beacuse we don't want to shuffle
 		# hint lines, becaue they follow a progression
-		lines = shuffleList(lines) 
+		#lines = shuffleList(lines) 
 			
 		for i in range(len(lines)):
 			if lines[i] == 'hint_line':
