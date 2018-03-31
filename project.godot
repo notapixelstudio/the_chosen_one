@@ -17,6 +17,8 @@ config/icon="res://assets/character/test.png"
 [autoload]
 
 global="*res://Global.tscn"
+bgm_battle="*res://BGMBattle.tscn"
+bgm_creation="*res://BGMCreateCharacter.tscn"
 
 [display]
 

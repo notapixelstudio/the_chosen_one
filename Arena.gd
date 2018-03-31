@@ -5,6 +5,10 @@ const MAX_TURNS = 6
 var is_the_chosen_one = false
 
 func _ready():
+	if bgm_creation.is_playing():
+		bgm_creation.stop()
+	if !bgm_battle.is_playing():
+		bgm_battle.play()
 	# It seems that EnemyTurn State, it is faster than this ready
 	# this means that the current_turn will be initialized in EnemyTurn
 	# current_turn = 0

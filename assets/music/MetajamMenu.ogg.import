@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MetajamMenu.ogg-2f2aad96f0a8df7e21bbdfefa62d19b2.oggstr"
+
+[deps]
+
+source_file="res://assets/music/MetajamMenu.ogg"
+source_md5="aec8adf03e989197c70afe8b98fa9f12"
+
+dest_files=[ "res://.import/MetajamMenu.ogg-2f2aad96f0a8df7e21bbdfefa62d19b2.oggstr" ]
+dest_md5="5d38f630ce778359490a49b45484874b"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MetajamBattle12.ogg-1b0e1bed57d891200de255647f54b91a.oggstr"
+
+[deps]
+
+source_file="res://assets/music/MetajamBattle12.ogg"
+source_md5="ea3731980179fe6bfe1ceec3da060b0d"
+
+dest_files=[ "res://.import/MetajamBattle12.ogg-1b0e1bed57d891200de255647f54b91a.oggstr" ]
+dest_md5="8746fb00970e43ce3b26741f064a5139"
+
+[params]
+
+loop=true
+loop_offset=0
