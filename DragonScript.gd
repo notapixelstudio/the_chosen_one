@@ -7,7 +7,9 @@ class DragonScript:
 				'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
 			],
 			'axe': [
-				"Did you stole that thing from a dead dwarf? It will be useless to you too..."
+				"Did you stole that thing from a dead dwarf? It will be useless to you too...",
+				"Double-edged weapons can backfire, you know? They are double edged, after all.",
+				"Careful with that axe, human..."
 			],
 			'staff': [
 				"This is not a hike. This is a battle.",
@@ -69,14 +71,14 @@ class DragonScript:
 		},
 		'eyes': {
 			'blue': [
-				"Never heard of a Fremen hero. Maybe because there aren't any.",
 				"No one knows what it's like behind your eyes, right?",
+				"Your sapphire eyes don't scare me. Nothing can.",
 				"Too much spice, huh?",
 				"No one ever told you that you have baby eyes?"
 			],
 			'green': [
-				"You remind me of a Shakespearean monster of jealousy...",
 				"It's a real pity... I have to incinerate that pair of emeralds of yours.",
+				"You remind me of a Shakespearean monster of jealousy...",
 				"I'll take your green eyes and make a necklace with them."
 			],
 			'red': [
@@ -95,8 +97,8 @@ class DragonScript:
 		},
 		'house': {
 			'Valenstone': [
-				"This will be your last battle.",
-				"Where's the rest of the army? Did they left you all alone?",
+				"This will be your last battle, Valenstone.",
+				"Where's the rest of the Valenstone army? Did they left you all alone?",
 				"Aren't you curious to see what happens when a metal armor reaches a gazillion degrees?",
 				"Silly humans, always trying to wage war at one another. What a waste of food.",
 				"Aren't you a little short to be a Valenstone?"
@@ -104,23 +106,23 @@ class DragonScript:
 			'Golddagger': [
 				"Say goodbye to your precious little life.",
 				"Why didn't you hire some mercenaries to help you?",
-				"You can't buy me. I'm not one of those treasure-hoarder dragons.",
+				"You can't buy me, Golddagger. I'm not one of those treasure-hoarder dragons.",
 				"Did you remember to make a will? Watching your family fighting over your riches would break my heart.",
 				"I hope you did pay your debts before coming here to die. Aren't Golddaggers known for that?"
 			],
 			'Hollistar': [
-				"Say your prayers to the stars, little one.",
-				"Maybe if you believe it very hard, I'll disappear.",
+				"Say your prayers to the holy stars, little one.",
+				"Maybe if you believe it very hard like you do with your gods in the sky, I'll disappear.",
 				"Your gods can't save you. Fun fact: they don't exist.",
-				"Your faith in the starcross means nothing. The Prophecy is the only truth.",
+				"Your faith in the holy stars means nothing. The Prophecy is the only truth.",
 				"Hollistars are said to be tough... to chew. But I have good teeth, fortunately. For me. Not for you."
 			],
 			'Weedlepuff': [
 				"How can you be sure that I'm really here and I'm not just some kind of hallucination?",
-				"Do you happen to know a good druid? My stash is empty...",
+				"Do you happen to know a good Weedlepuff druid? My stash is empty...",
 				"Wouldn't it be better if all you hippies went looking for a job? Besides trying to kill dragons, of course.",
 				"You make me wonder wether I should eat you or light you up and smoke you...",
-				"I'm a living thing you know? What makes you the right to save the trees and kill the dragons?",
+				"I'm a living thing you know? What makes you Weedlepuffs the right to save the trees and kill the dragons?",
 				"If only Weedlepuffs weren't so busy caring for literally every single leaf on the kingdom... they could even defeat a dragon. Joking."
 			]
 		}
@@ -155,7 +157,7 @@ class DragonScript:
 			return next_defeat_line()
 		else:
 			if len(lines) == 0:
-				increase_hints(2)
+				increase_hints(4)
 				lines = get_lines(hints, turns-hints)
 			
 			return lines.pop_front()
