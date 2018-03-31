@@ -86,7 +86,7 @@ class DragonScript:
 			],
 			'four': [
 				"How many fingers are these?",
-				"Hey! I'm here! ...are you sure you can see me? Bwahaha!"
+				"Hey! I'm here! ...are you sure you can see me? Bwahaha!",
 				"Oh, the intellectual type! Let's see if you can outsmart me.",
 				"Those glasses make you look fat.",
 				"I don't hit humans with glasses. Or do I?"
