@@ -7,6 +7,7 @@ func _ready():
 	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/PlayerEnd"), "_on_dialog_ended")
 	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/UselessAction"), "_on_dialog_ended")
 	$Animator.play($Animator.get_animation_list()[tutor_part])
+	$Dialogue/Label.add_color_override("font_color", Color(0,0,0,1))
 
 func _on_next_up():
 	if $Animator.is_playing():
