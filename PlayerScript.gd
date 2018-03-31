@@ -10,7 +10,7 @@ class PlayerScript:
 
 	var attack_lines = [
 		"You try to move towards the dragon, but you are paralyzed by fear...",
-		"You hit yourself in confusion.",
+		"You hurt yourself in your confusion.",
 		"Your weapon is slipping from your soaked hands...",
 		"You hit nothing but air. Not that you aimed at anything first...",
 		"You just can't fight that huge Dragon...",
