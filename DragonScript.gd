@@ -79,7 +79,8 @@ class DragonScript:
 				"It's a real pity... I have to incinerate that pair of emeralds of yours."
 			],
 			'red': [
-				"Your burning gaze is nothing compared to my incendiary blow."
+				"Your burning gaze is nothing compared to my incendiary blow.",
+				"If you stare too much at the fire, your red eyes will melt. Wanna try?"
 			],
 			'four': [
 				"Those glasses make you look fat.",
@@ -99,22 +100,22 @@ class DragonScript:
 				"Why didn't you hire some mercenaries to help you?",
 				"You can't buy me. I'm not one of those treasure-hoarder dragons.",
 				"Did you remember to make a will? Watching your family fighting over your riches would break my heart.",
-				"I hope you did pay your debts. Aren't Golddaggers known for that?"
+				"I hope you did pay your debts before coming here to die. Aren't Golddaggers known for that?"
 			],
 			'Hollistar': [
-				"Say your prayers, little one.",
+				"Say your prayers to the stars, little one.",
 				"Maybe if you believe it very hard, I'll disappear.",
 				"Your gods can't save you. Fun fact: they don't exist.",
-				"Your faith means nothing. The Prophecy is the only truth.",
-				"Hollistars are said to be tough... to chew. Too bad for me, I have to eat something after all."
+				"Your faith in the starcross means nothing. The Prophecy is the only truth.",
+				"Hollistars are said to be tough... to chew. But I have good teeth, fortunately. For me. Not for you."
 			],
 			'Weedlepuff': [
 				"How can you be sure that I'm really here and I'm not just some kind of hallucination?",
 				"Do you happen to know a good druid? My stash is empty...",
-				"Wouldn't it be better if all you hippies went looking for a job? Besides killing dragons, of course.",
+				"Wouldn't it be better if all you hippies went looking for a job? Besides trying to kill dragons, of course.",
 				"You make me wonder wether I should eat you or light you up and smoke you...",
 				"I'm a living thing you know? What makes you the right to save the trees and kill the dragons?",
-				"If only Weedlepuffs weren't so busy caring for literally every single leaf on the kingdom... they could even defeat a dragon. Maybe."
+				"If only Weedlepuffs weren't so busy caring for literally every single leaf on the kingdom... they could even defeat a dragon. Joking."
 			]
 		}
 	}
@@ -184,7 +185,7 @@ class DragonScript:
 				"How dare you to face me?",
 				"Courage and recklessness are two faces of the same medal.",
 				"Stupid, stupid human!",
-				"Mmm... I am hungry.",
+				"Yummy.. I am hungry.",
 				"There's nothing you can do to win this fight!",
 				"You are hopeless, like the rest of humankind.",
 				"Has your kingdom ran out of actual fighters?",
