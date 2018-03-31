@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/you_won.jpg-98a76a70bfb759c71a36e3789c1635f1.stex"
+path="res://.import/youwon.png-5036008d2160931491127d32232d42bd.stex"
 
 [deps]
 
-source_file="res://assets/you_won.jpg"
-source_md5="692aaa6029c5d57feb54d28ce9377b44"
+source_file="res://assets/youwon.png"
+source_md5="db362f571e4703e85ab1935cd61c6fd6"
 
-dest_files=[ "res://.import/you_won.jpg-98a76a70bfb759c71a36e3789c1635f1.stex" ]
-dest_md5="eaa1d9f0e315c4c8d141a6b64547f644"
+dest_files=[ "res://.import/youwon.png-5036008d2160931491127d32232d42bd.stex" ]
+dest_md5="4975674c4da4f97355bd43b99a421782"
 
 [params]
 
