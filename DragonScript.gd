@@ -81,7 +81,7 @@ class DragonScript:
 			],
 			'red': [
 				"Your burning gaze is nothing compared to my incendiary blow.",
-				"If you stare too much at the fire, your red eyes will melt. Wanna try?"
+				"If you stare too much at the fire, your red eyes will melt. Wanna try?",
 				"Did you just have an all-nighter?",
 				"I'll take your red eyes and make a bracelet with them."
 			],
