@@ -80,6 +80,7 @@ class DragonScript:
 				"I'll take your green eyes and make a necklace with them."
 			],
 			'red': [
+				"Did you just have an all-nighter?",
 				"Your burning gaze is nothing compared to my incendiary blow.",
 				"I'll take your red eyes and make a bracelet with them."
 			],
