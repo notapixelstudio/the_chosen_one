@@ -76,12 +76,17 @@ class DragonScript:
 			],
 			'green': [
 				"You remind me of a Shakespearean monster of jealousy...",
-				"It's a real pity... I have to incinerate that pair of emeralds of yours."
+				"It's a real pity... I have to incinerate that pair of emeralds of yours.",
+				"I'll take your green eyes and make a necklace with them."
 			],
 			'red': [
-				"Your burning gaze is nothing compared to my incendiary blow."
+				"Your burning gaze is nothing compared to my incendiary blow.",
+				"I'll take your red eyes and make a bracelet with them."
 			],
 			'four': [
+				"How many fingers are these?",
+				"Hey! I'm here! ...are you sure you can see me? Bwahaha!"
+				"Oh, the intellectual type! Let's see if you can outsmart me.",
 				"Those glasses make you look fat.",
 				"I don't hit humans with glasses. Or do I?"
 			]
