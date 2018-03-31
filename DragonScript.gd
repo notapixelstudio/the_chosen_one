@@ -2,7 +2,7 @@ class DragonScript:
 	var hint_lines = {
 		'weapon': {
 			'sword': [
-				'Being unoriginal when choosing your weapon will not save you, nor anyone else.',
+				'Being unoriginal will not save you, nor anyone else.',
 				'Oh, you like to pick classic stuff! Me too. I always eat humans with no fancy spices or sauce.',
 				'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
 			],
