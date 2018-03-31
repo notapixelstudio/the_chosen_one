@@ -77,7 +77,7 @@ class DragonScript:
 				"No one ever told you that you have baby eyes?"
 			],
 			'green': [
-				"It's a real pity... I have to incinerate that pair of emeralds of yours.",
+				"It's a real pity... But I have to incinerate that pair of emeralds of yours.",
 				"You remind me of a Shakespearean monster of jealousy...",
 				"I'll take your green eyes and make a necklace with them."
 			],
@@ -88,9 +88,9 @@ class DragonScript:
 				"I'll take your red eyes and make a bracelet with them."
 			],
 			'four': [
+				"Oh, the intellectual type! Let's see if you can outsmart me.",
 				"How many fingers are these?",
 				"Hey! I'm here! ...are you sure you can see me? Bwahaha!",
-				"Oh, the intellectual type! Let's see if you can outsmart me.",
 				"Those glasses make you look fat.",
 				"I don't hit humans with glasses. Or do I?"
 			]
