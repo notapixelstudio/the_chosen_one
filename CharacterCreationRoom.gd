@@ -1,6 +1,6 @@
 extends Node
 
-const button_width = 120
+const button_width = 160
 const button_height = 34
 const theme = preload("res://screens/theme.tres")
 
@@ -16,12 +16,20 @@ func _ready():
 		n.position = (Vector2(0,0))
 		n.name = key
 		add_child(n)
+
+		var label = Label.new()
+		label.text = key.replace('-',' ').to_upper()
+		label.set_theme(theme)
+		label.set_begin(Vector2(i*button_width+25,5))
+		label.set_end(Vector2((i+1)*button_width+25,button_height+5))
+		n.add_child(label)
+
 		j = 0
 		for value in feats[key]:
 			var button = Button.new()
 			button.set_theme(theme)
-			button.set_begin(Vector2(i*button_width,j*button_height))
-			button.set_end(Vector2((i+1)*button_width,(j+1)*button_height))
+			button.set_begin(Vector2(i*button_width,j*button_height+40))
+			button.set_end(Vector2((i+1)*button_width,(j+1)*button_height+40))
 			button.name = value
 			button.text = value.replace("_", " ")
 			n.add_child(button)
