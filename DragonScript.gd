@@ -24,9 +24,14 @@ class DragonScript:
 		},
 		'haircut': {
 			'short': [
+				"Humans should not send their children to fight dragons...",
+				"Do you cut your hair by yourself? With a knife?",
+				"Want to save money on shampoo and conditioner? Smart move. Better than showing up here, at the very least.",
 				"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'long': [
+				"Oooh, imagine the burning smell you'll do when I light you up!",
+				"Be careful not to trip onto yourself...",
 				"Such long hair and such a short life... what a pity!",
 				"Are you an idiot? That haircut is way too impractical for a boss fight!"
 			]
@@ -34,39 +39,47 @@ class DragonScript:
 		'hair-color': {
 			'white': [
 				"Poor little angel. I'll send you back to heaven in a minute.",
+				"Life's a bleach, isn't it?",
 				"You are nothing but a sheep about to be prayed upon.",
 				"All of a sudden, I have a craving for cotton candy...",
-				"Life's a bleach, isn't it?",
 				"Having white hair apparently is not enough to make a human wiser..."
 			],
 			'pink': [
 				"I'll chew you like bubblegum!",
 				"What a cute, sweet, little human! You'll make a fine plushie.",
 				"Maybe if you rolled an eighteen at strength instead of cuteness...",
-				"Wait... Where did you buy that flamingo hat?",
-				""
+				"Wait... Where did you buy that flamingo hat?"
 			],
 			'black': [
+				"Did you fall into a puddle of ink?",
+				"How many crows did you kill to make that hat?",
 				"Mmm... Am I supposed to be scared by a tenebrous figure? I am a monster, remember?"
 			],
 			'blue': [
 				"I feel like Gargamel...",
+				"Everyone has the blues sometimes... Always, in your particular case.",
 				"Roses are red, humans are blue / I just can't eat flowers, so I will eat you."
 			],
 			'green': [
-				"Great! You arrived just in time for my new veggie diet!"
+				"Great! You arrived just in time for my new veggie diet!",
+				"Oh, for a moment I took you for a tree.",
+				"Are you planning to start photosynthesizing?",
+				"If I water you, will you grow taller?"
 			]
 		},
 		'eyes': {
 			'blue': [
+				"Never heard of a Fremen hero. Maybe because there aren't any.",
+				"No one knows what it's like behind your eyes, right?",
 				"Too much spice, huh?",
-				"Never heard of a Fremen hero. Maybe because there aren't any."
+				"No one ever told you that you have baby eyes?"
 			],
 			'green': [
-				"Bleah green"
+				"You remind me of a Shakespearean monster of jealousy...",
+				"It's a real pity... I have to incinerate that pair of emeralds of yours."
 			],
 			'red': [
-				"Bleah red"
+				"Your burning gaze is nothing compared to my incendiary blow."
 			],
 			'four': [
 				"Those glasses make you look fat.",
