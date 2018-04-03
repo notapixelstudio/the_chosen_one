@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/house|Hollistar.png-afbb40ed5ee2fa36067c341a3924bed1.stex"
+path="res://.import/eyes$blue.png-3ab4f3ba2b9cb78a2947b500f39f8171.stex"
 
 [deps]
 
-source_file="res://assets/character/house|Hollistar.png"
-source_md5="4b75173bbc46b6d35a16a5c5110486f8"
+source_file="res://assets/character/eyes$blue.png"
+source_md5="dc924c3910644a4223f67ce098b6b0ae"
 
-dest_files=[ "res://.import/house|Hollistar.png-afbb40ed5ee2fa36067c341a3924bed1.stex" ]
-dest_md5="3dcf6b7a5b6b3afdebe9b15f24f1debc"
+dest_files=[ "res://.import/eyes$blue.png-3ab4f3ba2b9cb78a2947b500f39f8171.stex" ]
+dest_md5="7afcc87302d7f0aa500761ac423aa851"
 
 [params]
 

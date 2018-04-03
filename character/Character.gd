@@ -12,5 +12,5 @@ func redraw():
 		for feature in character.COMBOS[combo]:
 			combo_value += character.features[feature] + '_'
 		combo_value = combo_value.substr(0, len(combo_value)-1) # remove trailing underscore
-		get_node(combo).set_texture(load('res://assets/character/'+combo+'|'+combo_value+'.png'))
+		get_node(combo).set_texture(load('res://assets/character/'+combo+'$'+combo_value+'.png'))
 		

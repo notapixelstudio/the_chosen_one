@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair|short_green.png-576d83036f3d4684776d55098abbe716.stex"
+path="res://.import/house$Weedlepuff.png-b9a3296e8cdc493d16405340d75c81dd.stex"
 
 [deps]
 
-source_file="res://assets/character/hair|short_green.png"
-source_md5="fc1e785e239143e00486b8dcd47ebece"
+source_file="res://assets/character/house$Weedlepuff.png"
+source_md5="a347b856d4a0b421efc66faddc6db94c"
 
-dest_files=[ "res://.import/hair|short_green.png-576d83036f3d4684776d55098abbe716.stex" ]
-dest_md5="9bed94837bdbeb110a95b4312e879e39"
+dest_files=[ "res://.import/house$Weedlepuff.png-b9a3296e8cdc493d16405340d75c81dd.stex" ]
+dest_md5="cb82cfffb47d336f56de04c14c79fa6b"
 
 [params]
 

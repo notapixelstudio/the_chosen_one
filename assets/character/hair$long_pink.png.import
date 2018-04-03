@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/weapon|staff.png-7b029b6f323fac7f43cf6212992efe3b.stex"
+path="res://.import/hair$long_pink.png-c50a396e066bb93173f622eec8ef3e9b.stex"
 
 [deps]
 
-source_file="res://assets/character/weapon|staff.png"
-source_md5="93250f1d902fe939a88c715a4266bc08"
+source_file="res://assets/character/hair$long_pink.png"
+source_md5="359ef622954d510f91eff04072a92aa2"
 
-dest_files=[ "res://.import/weapon|staff.png-7b029b6f323fac7f43cf6212992efe3b.stex" ]
-dest_md5="4ee370eb45212f7cfd6a85131cd0279c"
+dest_files=[ "res://.import/hair$long_pink.png-c50a396e066bb93173f622eec8ef3e9b.stex" ]
+dest_md5="b3a0c45ccea5d6c6aafec49e1a614777"
 
 [params]
 

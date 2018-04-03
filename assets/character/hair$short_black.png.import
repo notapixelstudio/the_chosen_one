@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eyes|blue.png-95e60a5ae59e5c5270f55181bdf67cc2.stex"
+path="res://.import/hair$short_black.png-00a95b5c9e89fa7a6961e8bd0f2fa770.stex"
 
 [deps]
 
-source_file="res://assets/character/eyes|blue.png"
-source_md5="dc924c3910644a4223f67ce098b6b0ae"
+source_file="res://assets/character/hair$short_black.png"
+source_md5="8af4145d70f9c7614d2e7caa70652c53"
 
-dest_files=[ "res://.import/eyes|blue.png-95e60a5ae59e5c5270f55181bdf67cc2.stex" ]
-dest_md5="7afcc87302d7f0aa500761ac423aa851"
+dest_files=[ "res://.import/hair$short_black.png-00a95b5c9e89fa7a6961e8bd0f2fa770.stex" ]
+dest_md5="744f9d805acc74e78d34e422a89f99fc"
 
 [params]
 
