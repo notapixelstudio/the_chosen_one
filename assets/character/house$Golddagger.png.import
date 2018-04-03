@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair|short_pink.png-5b7ea8bc505444fbfe05707f5449d35d.stex"
+path="res://.import/house$Golddagger.png-f426eacee6b13443c5ef0085524db522.stex"
 
 [deps]
 
-source_file="res://assets/character/hair|short_pink.png"
-source_md5="8f32e4d96c79faf523bc509d242725f1"
+source_file="res://assets/character/house$Golddagger.png"
+source_md5="a2fb9c8f250920ed76c59080a08066f5"
 
-dest_files=[ "res://.import/hair|short_pink.png-5b7ea8bc505444fbfe05707f5449d35d.stex" ]
-dest_md5="b59d4f5ece7f72fab0cd19e12f37467c"
+dest_files=[ "res://.import/house$Golddagger.png-f426eacee6b13443c5ef0085524db522.stex" ]
+dest_md5="d15c4e5d37dd0f426153d8f3ba3c179f"
 
 [params]
 
