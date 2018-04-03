@@ -158,7 +158,7 @@ class DragonScript:
 			return next_defeat_line()
 		else:
 			if len(lines) == 0:
-				increase_hints(4)
+				increase_hints(6) # this has the effect of removing all blabbling lines altogether
 				lines = get_lines(hints, turns-hints)
 			
 			return lines.pop_front()
