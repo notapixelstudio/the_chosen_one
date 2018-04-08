@@ -24,9 +24,18 @@ class CharacterData:
 			features[f] = FEATURES[f][randi() % len(FEATURES[f])]
 
 	func diff(chosen_one):
-		var wrong_features = []
+		var diff_result = {
+			'wrong': [],
+			'correct': [],
+			'same': false
+		}
+
 		for feature in FEATURES:
 			if features[feature] != chosen_one.features[feature]:
-				wrong_features.append({'feature': feature, 'value': features[feature]})
+				diff_result['wrong'].append({'feature': feature, 'value': features[feature]})
+			else:
+				diff_result['correct'].append({'feature': feature, 'value': features[feature]})
 
-		return wrong_features
+		diff_result['same'] = len(diff_result['wrong']) == 0
+		
+		return diff_result

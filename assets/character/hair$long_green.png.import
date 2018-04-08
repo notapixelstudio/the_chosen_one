@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair|long_blue.png-b5163e010d867db0714947fd42db3e9b.stex"
+path="res://.import/hair$long_green.png-66369280d785c37995648f5f1bafce1d.stex"
 
 [deps]
 
-source_file="res://assets/character/hair|long_blue.png"
-source_md5="a797479f0e240e4e188c82a73c22e099"
+source_file="res://assets/character/hair$long_green.png"
+source_md5="d8499d2c8e9198d065034755d1db9954"
 
-dest_files=[ "res://.import/hair|long_blue.png-b5163e010d867db0714947fd42db3e9b.stex" ]
-dest_md5="b9468cfacda8cb7166f8994441090dc6"
+dest_files=[ "res://.import/hair$long_green.png-66369280d785c37995648f5f1bafce1d.stex" ]
+dest_md5="d77b5cdcb541a1310b78ad39a2272214"
 
 [params]
 

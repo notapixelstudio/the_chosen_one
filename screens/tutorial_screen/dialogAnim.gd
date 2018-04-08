@@ -3,6 +3,8 @@ var tutor_part = 0
 signal dialog_ended
 
 func _ready():
+	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/TurnsOver"), "_on_dialog_ended")
+	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/TheChosenOne"), "_on_dialog_ended")
 	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/EnemyFinished"), "_on_dialog_ended")
 	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/PlayerEnd"), "_on_dialog_ended")
 	connect("dialog_ended", get_node("/root/Arena/FSMControl/Transitions/UselessAction"), "_on_dialog_ended")
@@ -15,6 +17,5 @@ func _on_next_up():
 	else:
 		$Animator.play("dialog")
 		$Animator.seek(0.0, true)
-		print("signal")
 		emit_signal("dialog_ended")
 			

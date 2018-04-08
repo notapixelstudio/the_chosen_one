@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eyes|green.png-87d5e68f541605379637c7ef000efd91.stex"
+path="res://.import/hair$short_green.png-673c6809d32036021d4e02a423dd71dd.stex"
 
 [deps]
 
-source_file="res://assets/character/eyes|green.png"
-source_md5="0f2017bdb42a5d303c27c4da7f1acf4b"
+source_file="res://assets/character/hair$short_green.png"
+source_md5="fc1e785e239143e00486b8dcd47ebece"
 
-dest_files=[ "res://.import/eyes|green.png-87d5e68f541605379637c7ef000efd91.stex" ]
-dest_md5="02f5600d4452b84a130db17370f41a21"
+dest_files=[ "res://.import/hair$short_green.png-673c6809d32036021d4e02a423dd71dd.stex" ]
+dest_md5="9bed94837bdbeb110a95b4312e879e39"
 
 [params]
 
