@@ -10,6 +10,7 @@ var dragon_script
 var player_script
 
 const WRONG_FEATURES = 3
+var turns
 
 func _ready():
 	randomize()
@@ -17,6 +18,9 @@ func _ready():
 	CharacterData = load('res://character/CharacterData.gd').new().CharacterData
 	DragonScript = load('res://DragonScript.gd').new().DragonScript
 	PlayerScript = load('res://PlayerScript.gd').new().PlayerScript
+
+	# the Dragon gives one hint for each feature every round
+	turns = CharacterData.FEATURES.size()
 
 	reset()
 
@@ -30,6 +34,6 @@ func reset():
 	while player_character_data == null or player_character_data.diff(chosen_one_data).size() < WRONG_FEATURES:
 		player_character_data = CharacterData.new()
 
-	dragon_script = DragonScript.new(6)
-	player_script = PlayerScript.new(6)
+	dragon_script = DragonScript.new(turns)
+	player_script = PlayerScript.new(turns)
 	

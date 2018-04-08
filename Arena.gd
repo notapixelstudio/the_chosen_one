@@ -1,10 +1,12 @@
 extends Node
 
 var current_turn
-const MAX_TURNS = 6
+var turns
 var is_the_chosen_one = false
 
 func _ready():
+	turns = global.turns
+	
 	if bgm_creation.is_playing():
 		bgm_creation.stop()
 	if !bgm_battle.is_playing():

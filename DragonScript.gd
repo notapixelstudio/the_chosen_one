@@ -129,37 +129,36 @@ class DragonScript:
 		}
 	}
 	var defeat_lines = []
-	var babbling_lines = []
 
 	var wrong_features
+	var wrong_features_dict
 	var facing_the_chosen_one
 
 	var turns
-	var hints = 0
 
 	var lines = []
+
+	var CharacterData = load('res://character/CharacterData.gd').new().CharacterData
 	
 	func _init(turns):
 		self.turns = turns
 
-	func increase_hints(amount):
-		hints = min(hints + amount, turns)
-
 	func update_hints(wrong_features):
 		self.wrong_features = wrong_features
 
-		facing_the_chosen_one = len(wrong_features) == 0
+		# index the features for direct access
+		self.wrong_features_dict = {}
+		for feature in wrong_features:
+			self.wrong_features_dict[feature['feature']] = feature['value']
 
-	func get_wrong_feature():
-		return wrong_features[randi() % wrong_features.size()]
+		facing_the_chosen_one = len(wrong_features) == 0
 
 	func read():
 		if facing_the_chosen_one:
 			return next_defeat_line()
 		else:
 			if len(lines) == 0:
-				increase_hints(6) # this has the effect of removing all blabbling lines altogether
-				lines = get_lines(hints, turns-hints)
+				lines = get_lines(turns)
 			
 			return lines.pop_front()
 
@@ -183,28 +182,6 @@ class DragonScript:
 			
 		return hint_lines[feature][value].pop_front()
 
-	func next_babbling_line():
-		if len(babbling_lines) == 0:
-			babbling_lines = shuffleList([
-				"Bwahahahaha! Fool!",
-				"You'll never defeat me!",
-				"I'll tear you into little pieces!",
-				"I'll crush you into smithereens!",
-				"You are just a tiny human...",
-				"How dare you to face me?",
-				"Courage and recklessness are two faces of the same medal.",
-				"Stupid, stupid human!",
-				"Yummy.. I am hungry.",
-				"There's nothing you can do to win this fight!",
-				"You are hopeless, like the rest of humankind.",
-				"Has your kingdom ran out of actual fighters?",
-				"Why are you even trying?",
-				"My power is boundless.",
-				"Ahh, fresh meat!"
-			])
-
-		return babbling_lines.pop_front()
-
 	func next_defeat_line():
 		if len(defeat_lines) == 0:
 			defeat_lines = [
@@ -219,25 +196,15 @@ class DragonScript:
 
 		return defeat_lines.pop_front()
 
-	func get_lines(hints, babbling):
+	func get_lines(amount):
 		var lines = []
 
-		for i in range(babbling):
-			lines.append('babbling_line')
-
-		for i in range(hints):
-			lines.append('hint_line')
-
-		# this should stay here beacuse we don't want to shuffle
-		# hint lines, becaue they follow a progression
-		#lines = shuffleList(lines) 
-			
-		for i in range(len(lines)):
-			if lines[i] == 'hint_line':
-				var wrong_feature = get_wrong_feature()
-				lines[i] = next_hint_line(wrong_feature['feature'], wrong_feature['value'])
+		for feature in CharacterData.FEATURES.keys():
+			if feature in wrong_features_dict:
+				print(feature)
+				lines.append(next_hint_line(feature, wrong_features_dict[feature]))
 			else:
-				lines[i] = next_babbling_line()
+				lines.append('Good choice. ' + feature + ' is correct.')
 
 		return lines
 
