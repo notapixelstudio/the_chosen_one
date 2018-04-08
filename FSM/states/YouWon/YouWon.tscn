@@ -32,7 +32,7 @@ color = Color( 0, 0, 0, 1 )
 [node name="YouWonScreen" parent="." index="1" instance=ExtResource( 2 )]
 
 script = ExtResource( 3 )
-next_scene = "res://CharacterCreationRoom.tscn"
+next_scene = "res://screens/Setup.tscn"
 
 [node name="Button" type="Button" parent="YouWonScreen" index="1"]
 

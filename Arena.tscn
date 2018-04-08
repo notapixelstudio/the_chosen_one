@@ -340,44 +340,56 @@ initManually = false
 updateMode = 1
 receiceSignalsOnly4ActiveStatesAndTransitions = true
 enableDebug = false
-"Initial state:" = ""
+"Initial state:" = "EnemyTurn"
 "Create new:/Subdirectory for FSM nodes:" = "FSM"
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
 GraphData = {
-"EnemyFinished": Vector2( 594, 122 ),
-"EnemyFinished_": Vector2( 594, 122 ),
-"EnemyFinished__": Vector2( 594, 122 ),
-"EnemyTurn": Vector2( 267, 103 ),
-"EnemyTurn_": Vector2( 267, 103 ),
-"EnemyTurn__": Vector2( 267, 103 ),
-"GameOver": Vector2( 595, 27 ),
-"GameOver_": Vector2( 595, 27 ),
-"GameOver__": Vector2( 595, 27 ),
-"PlayerActionTurn": Vector2( 583, 323 ),
-"PlayerActionTurn_": Vector2( 583, 323 ),
-"PlayerActionTurn__": Vector2( 583, 323 ),
-"PlayerDialogBox": Vector2( 186, 447 ),
-"PlayerDialogBox_": Vector2( 186, 447 ),
-"PlayerDialogBox__": Vector2( 186, 447 ),
-"PlayerEnd": Vector2( 168, 273 ),
-"PlayerEnd_": Vector2( 168, 273 ),
-"PlayerEnd__": Vector2( 168, 273 ),
-"ResolveAction": Vector2( 611, 458 ),
-"ResolveAction_": Vector2( 611, 458 ),
-"ResolveAction__": Vector2( 611, 458 ),
-"TheChosenOne": Vector2( 51, 87 ),
-"TheChosenOne_": Vector2( 51, 87 ),
-"TheChosenOne__": Vector2( 51, 87 ),
-"TurnsOver": Vector2( 269, 10 ),
-"TurnsOver_": Vector2( 269, 10 ),
-"TurnsOver__": Vector2( 269, 10 ),
-"UselessAction": Vector2( 367, 315 ),
-"UselessAction_": Vector2( 367, 315 ),
-"UselessAction__": Vector2( 367, 315 ),
-"YouWon": Vector2( 50, 191 ),
-"YouWon_": Vector2( 50, 191 ),
-"YouWon__": Vector2( 50, 191 )
+"EnemyFinished": Vector2( 1157, 102 ),
+"EnemyFinished_": Vector2( 1157, 102 ),
+"EnemyFinished__": Vector2( 1157, 102 ),
+"EnemyTurn": Vector2( 864, 156 ),
+"EnemyTurn_": Vector2( 864, 156 ),
+"EnemyTurn__": Vector2( 864, 156 ),
+"GameOver": Vector2( 432, 39 ),
+"GameOver_": Vector2( 432, 39 ),
+"GameOver__": Vector2( 432, 39 ),
+"Null": Vector2( 306, 238 ),
+"Null_": Vector2( 306, 238 ),
+"Null__": Vector2( 306, 238 ),
+"PlayerActionTurn": Vector2( 1146, 264 ),
+"PlayerActionTurn_": Vector2( 1146, 264 ),
+"PlayerActionTurn__": Vector2( 1146, 264 ),
+"PlayerDialogBox": Vector2( 865, 498 ),
+"PlayerDialogBox_": Vector2( 865, 498 ),
+"PlayerDialogBox__": Vector2( 865, 498 ),
+"PlayerEnd": Vector2( 862, 321 ),
+"PlayerEnd_": Vector2( 862, 321 ),
+"PlayerEnd__": Vector2( 862, 321 ),
+"ResolveAction": Vector2( 1166, 509 ),
+"ResolveAction_": Vector2( 1166, 509 ),
+"ResolveAction__": Vector2( 1166, 509 ),
+"Restart": Vector2( 206, 284 ),
+"Restart_": Vector2( 206, 284 ),
+"Restart__": Vector2( 206, 284 ),
+"Setup": Vector2( 433, 288 ),
+"Setup_": Vector2( 433, 288 ),
+"Setup__": Vector2( 433, 288 ),
+"StartTransition": Vector2( 548, 163 ),
+"StartTransition_": Vector2( 548, 163 ),
+"StartTransition__": Vector2( 548, 163 ),
+"TheChosenOne": Vector2( 653, 425 ),
+"TheChosenOne_": Vector2( 653, 425 ),
+"TheChosenOne__": Vector2( 653, 425 ),
+"TurnsOver": Vector2( 693, 38 ),
+"TurnsOver_": Vector2( 693, 38 ),
+"TurnsOver__": Vector2( 693, 38 ),
+"UselessAction": Vector2( 1064, 418 ),
+"UselessAction_": Vector2( 1064, 418 ),
+"UselessAction__": Vector2( 1064, 418 ),
+"YouWon": Vector2( 362, 433 ),
+"YouWon_": Vector2( 362, 433 ),
+"YouWon__": Vector2( 362, 433 )
 }
 
 [node name="States" type="Control" parent="FSMControl" index="0"]
@@ -395,21 +407,21 @@ size_flags_vertical = 1
 
 [node name="EnemyTurn" parent="FSMControl/States" index="0" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-
 [node name="DialogScene" parent="FSMControl/States/EnemyTurn" index="0" instance=ExtResource( 9 )]
-
-visible = false
-next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
 
 [node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 10 )]
 
+editor/display_folded = true
+
 [node name="actionbox" parent="FSMControl/States/PlayerActionTurn" index="0" instance=ExtResource( 11 )]
 
+visible = false
 hint_tooltip = ""
 _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme", "Visibility" ]
 
 [node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 12 )]
+
+editor/display_folded = true
 
 [node name="DialogScene" parent="FSMControl/States/PlayerDialogBox" index="0" instance=ExtResource( 9 )]
 
