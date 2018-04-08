@@ -345,7 +345,10 @@ class DragonScript:
 				"NOOOOO!"
 			]
 
-		return defeat_lines.pop_front()
+		return {
+			'mood': 'worried',
+			'line': defeat_lines.pop_front()
+		}
 
 	func get_lines(amount):
 		var lines = []
@@ -354,13 +357,19 @@ class DragonScript:
 			var feature_name = feature['feature']
 			var value = character_features_dict[feature['feature']]
 
-			lines.append('Good choice. ' + value + ' ' + feature_name + ' is correct.')
+			lines.append({
+				'mood': 'worried',
+				'line': 'Good choice. ' + value + ' ' + feature_name + ' is correct.'
+			})
 
 		for feature in diff['wrong']:
 			var feature_name = feature['feature']
 			var value = character_features_dict[feature['feature']]
 
-			lines.append(next_negative_line(feature_name, value))
+			lines.append({
+				'mood': 'mocking',
+				'line': next_negative_line(feature_name, value)
+			})
 			
 		return shuffleList(lines)
 
