@@ -274,7 +274,6 @@ class DragonScript:
 
 	func update_hints(diff):
 		self.diff = diff
-		print(diff)
 
 		# index the features for direct access
 		self.character_features_dict = {}
@@ -363,7 +362,7 @@ class DragonScript:
 
 			lines.append(next_negative_line(feature_name, value))
 			
-		return lines
+		return shuffleList(lines)
 
 	# from https://godotengine.org/qa/2547/how-to-randomize-a-list-array
 	func shuffleList(list):

@@ -27,7 +27,7 @@ func _ready():
 func reset():
 	chosen_one_data = CharacterData.new()
 
-	#print(chosen_one_data.features)
+	print(chosen_one_data.features)
 	
 	# this is to avoid starting the game with the chosen one by chanche
 	# at least WRONG_FEATURES features have to be wrong
