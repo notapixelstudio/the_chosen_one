@@ -1,10 +1,10 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://screens/basic_screen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Background.png" type="Texture" id=3]
-[ext_resource path="res://assets/Red_Dragon.png" type="Texture" id=4]
-[ext_resource path="res://character/Character.tscn" type="PackedScene" id=5]
+[ext_resource path="res://character/Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Red_Dragon.png" type="Texture" id=5]
 [ext_resource path="res://addons/net.kivano.fsm/content/fsm.gd" type="Script" id=6]
 [ext_resource path="res://addons/net.kivano.fsm/assets/icoControl.png" type="Texture" id=7]
 [ext_resource path="res://FSM/states/EnemyTurn/EnemyTurn.tscn" type="PackedScene" id=8]
@@ -21,7 +21,165 @@
 [ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=19]
 [ext_resource path="res://FSM/transitions/TheChosenOne/TheChosenOne.tscn" type="PackedScene" id=20]
 
-[node name="Arena" type="Node"]
+[sub_resource type="Gradient" id=2]
+
+offsets = PoolRealArray( 0, 0.239075, 0.48329, 0.606684, 0.994859 )
+colors = PoolColorArray( 1, 0.762097, 0.483871, 0.6, 0.992188, 0.375404, 0.00533434, 0.50502, 0.923301, 0.144214, 0.0203667, 0.36, 0.0703125, 0.0339441, 0.0281628, 0.41502, 0, 0, 0, 0.33 )
+
+[sub_resource type="GradientTexture" id=3]
+
+flags = 4
+gradient = SubResource( 2 )
+width = 2048
+
+[sub_resource type="Curve" id=4]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.119629 ), 0.0, 0.0, 0, 0, Vector2( 0.128738, 0.212402 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+
+flags = 4
+width = 2048
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 2
+emission_box_extents = Vector3( 6, 6, 1 )
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 15.0
+flatness = 0.0
+gravity = Vector3( 0, 20, 0 )
+initial_velocity = 40.0
+initial_velocity_random = 0.33
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 10.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 45.0
+angle_random = 0.0
+scale = 40.0
+scale_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Scale", "Spread" ]
+
+[sub_resource type="ParticlesMaterial" id=6]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 2
+emission_box_extents = Vector3( 6, 6, 1 )
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 20, 0 )
+initial_velocity = 40.0
+initial_velocity_random = 0.33
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 10.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 45.0
+angle_random = 0.0
+scale = 30.0
+scale_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Scale", "Spread" ]
+
+[sub_resource type="Gradient" id=8]
+
+offsets = PoolRealArray( 0, 0.159383, 0.321337, 0.627249, 0.938303, 0.994859 )
+colors = PoolColorArray( 1, 1, 1, 0.6, 1, 0.328125, 0, 0.588602, 0.992188, 0.375404, 0.00533434, 0.50502, 0.923301, 0.0203667, 0.0203667, 0.18502, 0.0703125, 0.0339441, 0.0281628, 0.13502, 0, 0, 0, 0.33 )
+
+[sub_resource type="GradientTexture" id=9]
+
+flags = 4
+gradient = SubResource( 8 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=7]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 2
+emission_box_extents = Vector3( 6, 6, 1 )
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 15.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.33
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 10.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 25.0
+angle_random = 0.0
+scale = 80.0
+scale_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 9 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Scale", "Spread" ]
+
+[node name="Arena" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -49,15 +207,113 @@ expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="Sprite" type="Sprite" parent="." index="2"]
-
-position = Vector2( 771.258, 110.34 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Character" parent="." index="3" instance=ExtResource( 5 )]
+[node name="Character" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 129.063, 193.326 )
+
+[node name="Dragon" type="Sprite" parent="." index="3"]
+
+position = Vector2( 771.258, 110.34 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fire_2" type="Particles2D" parent="Dragon" index="0"]
+
+position = Vector2( -220, 10 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+emitting = false
+amount = 60
+lifetime = 3.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 1 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform", "Visibility" ]
+
+[node name="Fire_3" type="Particles2D" parent="Dragon" index="1"]
+
+position = Vector2( -220, 10 )
+rotation = -1.5708
+emitting = false
+amount = 60
+lifetime = 3.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 1 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform", "Visibility" ]
+
+[node name="Fire_4" type="Particles2D" parent="Dragon" index="2"]
+
+position = Vector2( -220, 10 )
+rotation = -1.5708
+scale = Vector2( 1.2, 1.2 )
+emitting = false
+amount = 400
+lifetime = 3.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 6 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform", "Visibility" ]
+
+[node name="Fire_5" type="Particles2D" parent="Dragon" index="3"]
+
+position = Vector2( -220, 10 )
+rotation = -3.49066
+emitting = false
+amount = 600
+lifetime = 2.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 7 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform", "Visibility" ]
 
 [node name="FSMControl" type="Control" parent="." index="4"]
 
