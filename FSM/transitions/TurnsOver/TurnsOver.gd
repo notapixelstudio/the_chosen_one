@@ -11,7 +11,7 @@ extends "res://addons/net.kivano.fsm/content/FSMTransition.gd";
 ##################################################################################
 #####  Variables (Constants, Export Variables, Node Vars, Normal variables)  #####
 ######################### var myvar setget myvar_set,myvar_get ###################
-var current_turn
+var dialog_end = false
 
 ######################################
 ####### Getters
@@ -26,8 +26,12 @@ func transitionInit(inParam1=null, inParam2=null, inParam3=null, inParam4=null, 
 
 func prepare(inNewStateID, inArg0 = null, inArg1 = null, inArg2 = null): 
 	#you can optionally implement this to reset transition when related state has been activated
-	pass
+	dialog_end = false
 
 func transitionCondition(inDeltaTime, inParam0=null, inParam1=null, inParam2=null, inParam3=null, inParam4=null): 
 	#YOU MUST IMPLEMENT TRANSITION CONDITION CHECK HERE: Return true/false
-	return logicRoot.current_turn == logicRoot.MAX_TURNS and not logicRoot.is_the_chosen_one
+	return dialog_end and logicRoot.current_turn == logicRoot.MAX_TURNS and not logicRoot.is_the_chosen_one
+
+func _on_dialog_ended():
+	dialog_end = true
+	print("transition Enemy last turn")
