@@ -37,7 +37,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.939255 ) ]
 }
 
-[node name="GameOver" type="Node" index="0"]
+[node name="GameOver" type="Node"]
 
 script = ExtResource( 1 )
 
