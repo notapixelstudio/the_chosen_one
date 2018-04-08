@@ -7,9 +7,8 @@ class DragonScript:
 				'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
 			],
 			'axe': [
-				"Did you stole that thing from a dead dwarf? It will be useless to you too...",
-				"Double-edged weapons can backfire, you know? They are double edged, after all.",
-				"Careful with that axe, human..."
+				"Did you steal that thing from a dead dwarf? It will be useless to you too...",
+				"Double-edged weapons can backfire, you know? They are double edged, after all."
 			],
 			'staff': [
 				"This is not a hike. This is a battle.",
@@ -131,36 +130,35 @@ class DragonScript:
 	var positive_lines = {
 		'weapon': {
 			'sword': [
-				#'Being unoriginal will not save you, nor anyone else.',
-				#'Oh, you like to pick classic stuff! Me too. I always eat humans with no fancy spices or sauce.',
-				#'A sword! How unexpected! Us dragons are so unfamiliar with the concept of heroes with swords that we are always caught by surprise when they show up...'
+				"Oh no, that's my Achille's heel... I'll burn you before you can even use it!",
+				"Did you steal that... weapon... from the Chosen One..? You think that thing alone would give you a chance..?",
+				"Put that sword away! Put it away or..."
 			],
 			'axe': [
-				#"Did you stole that thing from a dead dwarf? It will be useless to you too...",
-				#"Double-edged weapons can backfire, you know? They are double edged, after all.",
-				#"Careful with that axe, human..."
+				"Uwah! Dwarven stuff always scares me! You will die for this!",
+				"Careful with that axe, human... Don't come near me!",
+				"That... is the legendary Dwarven Axe of The Chosen One! I should kill you before he shows up and take it to kill me..."
 			],
 			'staff': [
-				#"This is not a hike. This is a battle.",
-				#"Afraid of sharp objects? Mee too.",
-				#"Oh, I suppose the blacksmith was already closed...",
-				#"Even a putter would hurt me more than that wood you carry!",
-				#"Wrong place. The pool billiard house is two blocks south from here."
+				"There's something in you that bothers me... I'll turn you in a shish kebab as soon as my fire is hot enough.",
+				"That thing you carry seems ancient and powerful... Like The Prophecy itself. It's better to kill you right now before it powers up.",
+				"I'm allergic to wood! How did you know it? I'll never let you touch me with that..!"
 			],
 			'dagger': [
-				#"It's not like they say, you know? Size does matter! Especially for a weapon.",
-				#"Sorry, no toothpicks allowed here.",
-				#"Was a proper, bigger weapon too heavy to carry? Oh, I can totally relate."
+				"Oh no... I remember something like that in The Prophecy... but it was in more capable hands.",
+				"Damn! Your dagger is just about the right size to avoid my swordproof scales. Luckily for me, my firebreath is a ranged attack."
 			]
 		},
 		'haircut': {
 			'short': [
+				"You look like one of those heroic kids... Just like The Chosen One. But you will die right here."
 				#"Do you cut your hair by yourself? With a knife?",
 				#"Humans should not send their children to fight dragons... Oh, it's just your haircut? Sorry.",
 				#"Want to save money on shampoo and conditioner? Smart move. Better than showing up here, at the very least.",
 				#"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'long': [
+				"The Chosen One is said to have beautiful, long hair... Mmm... I should hurry."
 				#"Such long hair and such a short life... what a pity!",
 				#"Oooh, imagine the burning smell you'll do when I light you up!",
 				#"Be careful not to trip onto yourself...",
