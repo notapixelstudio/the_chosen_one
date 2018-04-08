@@ -60,6 +60,7 @@ color = Color( 0, 0, 0, 1 )
 [node name="BasicScreen" parent="." index="1" instance=ExtResource( 2 )]
 
 script = ExtResource( 3 )
+next_scene = "res://CharacterCreationRoom.tscn"
 
 [node name="Animator" parent="BasicScreen" index="0"]
 
