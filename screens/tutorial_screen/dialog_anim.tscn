@@ -64,7 +64,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = SubResource( 2 )
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_styles" ]
 __meta__ = {
 "_edit_group_": true
 }

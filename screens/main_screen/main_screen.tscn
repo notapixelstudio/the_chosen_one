@@ -8,7 +8,7 @@
 [node name="MainScreen" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-next_scene = "res://CharacterCreationRoom.tscn"
+next_scene = "res://screens/Setup.tscn"
 
 [node name="ColorRect" parent="Transition" index="0"]
 

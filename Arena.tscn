@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Arena.gd" type="Script" id=1]
 [ext_resource path="res://screens/basic_screen.tscn" type="PackedScene" id=2]
@@ -14,20 +14,14 @@
 [ext_resource path="res://FSM/states/PlayerDialogBox/PlayerDialogBox.tscn" type="PackedScene" id=12]
 [ext_resource path="res://FSM/states/GameOver/GameOver.tscn" type="PackedScene" id=13]
 [ext_resource path="res://FSM/states/YouWon/YouWon.tscn" type="PackedScene" id=14]
-[ext_resource path="res://FSM/states/Setup/Setup.tscn" type="PackedScene" id=15]
-[ext_resource path="res://FSM/states/Setup/Setup.gd" type="Script" id=16]
-[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=17]
-[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=18]
-[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=19]
-[ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=20]
-[ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=21]
-[ext_resource path="res://FSM/transitions/TheChosenOne/TheChosenOne.tscn" type="PackedScene" id=22]
-[ext_resource path="res://FSM/transitions/StartTransition/StartTransition.tscn" type="PackedScene" id=23]
-[ext_resource path="res://FSM/transitions/StartTransition/StartTransition.gd" type="Script" id=24]
-[ext_resource path="res://FSM/transitions/Restart/Restart.tscn" type="PackedScene" id=25]
-[ext_resource path="res://FSM/transitions/Restart/Restart.gd" type="Script" id=26]
+[ext_resource path="res://FSM/transitions/EnemyFinished/EnemyFinished.tscn" type="PackedScene" id=15]
+[ext_resource path="res://FSM/transitions/ResolveAction/ResolveAction.tscn" type="PackedScene" id=16]
+[ext_resource path="res://FSM/transitions/PlayerEnd/PlayerEnd.tscn" type="PackedScene" id=17]
+[ext_resource path="res://FSM/transitions/UselessAction/UselessAction.tscn" type="PackedScene" id=18]
+[ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=19]
+[ext_resource path="res://FSM/transitions/TheChosenOne/TheChosenOne.tscn" type="PackedScene" id=20]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -90,56 +84,56 @@ initManually = false
 updateMode = 1
 receiceSignalsOnly4ActiveStatesAndTransitions = true
 enableDebug = false
-"Initial state:" = "Setup"
+"Initial state:" = "EnemyTurn"
 "Create new:/Subdirectory for FSM nodes:" = "FSM"
 "Create new:/Create state with name:" = null
 "Create new:/Create transition with name:" = null
 GraphData = {
-"EnemyFinished": Vector2( 1057, 100 ),
-"EnemyFinished_": Vector2( 1057, 100 ),
-"EnemyFinished__": Vector2( 766, 125 ),
-"EnemyTurn": Vector2( 781, 162 ),
-"EnemyTurn_": Vector2( 781, 162 ),
-"EnemyTurn__": Vector2( 572, 113 ),
-"GameOver": Vector2( 248, 63 ),
-"GameOver_": Vector2( 248, 63 ),
-"GameOver__": Vector2( 70, 20 ),
+"EnemyFinished": Vector2( 1157, 102 ),
+"EnemyFinished_": Vector2( 1157, 102 ),
+"EnemyFinished__": Vector2( 1157, 102 ),
+"EnemyTurn": Vector2( 864, 156 ),
+"EnemyTurn_": Vector2( 864, 156 ),
+"EnemyTurn__": Vector2( 864, 156 ),
+"GameOver": Vector2( 432, 39 ),
+"GameOver_": Vector2( 432, 39 ),
+"GameOver__": Vector2( 432, 39 ),
 "Null": Vector2( 306, 238 ),
 "Null_": Vector2( 306, 238 ),
 "Null__": Vector2( 306, 238 ),
-"PlayerActionTurn": Vector2( 1051, 286 ),
-"PlayerActionTurn_": Vector2( 1051, 286 ),
-"PlayerActionTurn__": Vector2( 746, 286 ),
-"PlayerDialogBox": Vector2( 767, 500 ),
-"PlayerDialogBox_": Vector2( 767, 500 ),
-"PlayerDialogBox__": Vector2( 422, 514 ),
-"PlayerEnd": Vector2( 767, 307 ),
-"PlayerEnd_": Vector2( 767, 307 ),
-"PlayerEnd__": Vector2( 542, 296 ),
-"ResolveAction": Vector2( 1074, 515 ),
-"ResolveAction_": Vector2( 1074, 515 ),
-"ResolveAction__": Vector2( 767, 470 ),
+"PlayerActionTurn": Vector2( 1146, 264 ),
+"PlayerActionTurn_": Vector2( 1146, 264 ),
+"PlayerActionTurn__": Vector2( 1146, 264 ),
+"PlayerDialogBox": Vector2( 865, 498 ),
+"PlayerDialogBox_": Vector2( 865, 498 ),
+"PlayerDialogBox__": Vector2( 865, 498 ),
+"PlayerEnd": Vector2( 862, 321 ),
+"PlayerEnd_": Vector2( 862, 321 ),
+"PlayerEnd__": Vector2( 862, 321 ),
+"ResolveAction": Vector2( 1166, 509 ),
+"ResolveAction_": Vector2( 1166, 509 ),
+"ResolveAction__": Vector2( 1166, 509 ),
 "Restart": Vector2( 206, 284 ),
 "Restart_": Vector2( 206, 284 ),
-"Restart__": Vector2( 19, 278 ),
+"Restart__": Vector2( 206, 284 ),
 "Setup": Vector2( 433, 288 ),
 "Setup_": Vector2( 433, 288 ),
-"Setup__": Vector2( 239, 212 ),
+"Setup__": Vector2( 433, 288 ),
 "StartTransition": Vector2( 548, 163 ),
 "StartTransition_": Vector2( 548, 163 ),
-"StartTransition__": Vector2( 376, 115 ),
-"TheChosenOne": Vector2( 479, 462 ),
-"TheChosenOne_": Vector2( 479, 462 ),
-"TheChosenOne__": Vector2( 359, 385 ),
-"TurnsOver": Vector2( 643, 46 ),
-"TurnsOver_": Vector2( 643, 46 ),
-"TurnsOver__": Vector2( 458, 17 ),
-"UselessAction": Vector2( 971, 419 ),
-"UselessAction_": Vector2( 971, 419 ),
-"UselessAction__": Vector2( 635, 397 ),
-"YouWon": Vector2( 202, 451 ),
-"YouWon_": Vector2( 202, 451 ),
-"YouWon__": Vector2( 101, 444 )
+"StartTransition__": Vector2( 548, 163 ),
+"TheChosenOne": Vector2( 653, 425 ),
+"TheChosenOne_": Vector2( 653, 425 ),
+"TheChosenOne__": Vector2( 653, 425 ),
+"TurnsOver": Vector2( 693, 38 ),
+"TurnsOver_": Vector2( 693, 38 ),
+"TurnsOver__": Vector2( 693, 38 ),
+"UselessAction": Vector2( 1064, 418 ),
+"UselessAction_": Vector2( 1064, 418 ),
+"UselessAction__": Vector2( 1064, 418 ),
+"YouWon": Vector2( 362, 433 ),
+"YouWon_": Vector2( 362, 433 ),
+"YouWon__": Vector2( 362, 433 )
 }
 
 [node name="States" type="Control" parent="FSMControl" index="0"]
@@ -157,14 +151,11 @@ size_flags_vertical = 1
 
 [node name="EnemyTurn" parent="FSMControl/States" index="0" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-
 [node name="DialogScene" parent="FSMControl/States/EnemyTurn" index="0" instance=ExtResource( 9 )]
 
-visible = false
-next_scene = "res://FSM/transitions/PlayerDialog/PlayerDialog.tscn"
-
 [node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 10 )]
+
+editor/display_folded = true
 
 [node name="actionbox" parent="FSMControl/States/PlayerActionTurn" index="0" instance=ExtResource( 11 )]
 
@@ -174,6 +165,8 @@ _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme", "Visibility" ]
 
 [node name="PlayerDialogBox" parent="FSMControl/States" index="2" instance=ExtResource( 12 )]
 
+editor/display_folded = true
+
 [node name="DialogScene" parent="FSMControl/States/PlayerDialogBox" index="0" instance=ExtResource( 9 )]
 
 visible = false
@@ -181,10 +174,6 @@ visible = false
 [node name="GameOver" parent="FSMControl/States" index="3" instance=ExtResource( 13 )]
 
 [node name="YouWon" parent="FSMControl/States" index="4" instance=ExtResource( 14 )]
-
-[node name="Setup" type="Node" parent="FSMControl/States" index="5" instance=ExtResource( 15 )]
-
-script = ExtResource( 16 )
 
 [node name="Transitions" type="Control" parent="FSMControl" index="1"]
 
@@ -199,48 +188,34 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="EnemyFinished" parent="FSMControl/Transitions" index="0" instance=ExtResource( 17 )]
+[node name="EnemyFinished" parent="FSMControl/Transitions" index="0" instance=ExtResource( 15 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
 
-[node name="ResolveAction" parent="FSMControl/Transitions" index="1" instance=ExtResource( 18 )]
+[node name="ResolveAction" parent="FSMControl/Transitions" index="1" instance=ExtResource( 16 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerActionTurn") ]
 path2TargetState = NodePath("../../States/PlayerDialogBox")
 
-[node name="PlayerEnd" parent="FSMControl/Transitions" index="2" instance=ExtResource( 19 )]
+[node name="PlayerEnd" parent="FSMControl/Transitions" index="2" instance=ExtResource( 17 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/EnemyTurn")
 
-[node name="UselessAction" parent="FSMControl/Transitions" index="3" instance=ExtResource( 20 )]
+[node name="UselessAction" parent="FSMControl/Transitions" index="3" instance=ExtResource( 18 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/PlayerDialogBox") ]
 path2TargetState = NodePath("../../States/PlayerActionTurn")
 
-[node name="TurnsOver" parent="FSMControl/Transitions" index="4" instance=ExtResource( 21 )]
+[node name="TurnsOver" parent="FSMControl/Transitions" index="4" instance=ExtResource( 19 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
 path2TargetState = NodePath("../../States/GameOver")
 
-[node name="TheChosenOne" parent="FSMControl/Transitions" index="5" instance=ExtResource( 22 )]
+[node name="TheChosenOne" parent="FSMControl/Transitions" index="5" instance=ExtResource( 20 )]
 
 path2SourceStates = [ NodePath(""), NodePath("../../States/EnemyTurn") ]
 path2TargetState = NodePath("../../States/YouWon")
-
-[node name="StartTransition" type="Node" parent="FSMControl/Transitions" index="6" instance=ExtResource( 23 )]
-
-script = ExtResource( 24 )
-path2SourceStates = [ NodePath(""), NodePath("../../States/Setup") ]
-path2TargetState = NodePath("../../States/EnemyTurn")
-intervalBetweenChecks = -1.0
-
-[node name="Restart" type="Node" parent="FSMControl/Transitions" index="7" instance=ExtResource( 25 )]
-
-script = ExtResource( 26 )
-path2SourceStates = [ NodePath(""), NodePath("../../States/YouWon"), NodePath("../../States/GameOver") ]
-path2TargetState = NodePath("../../States/Setup")
-intervalBetweenChecks = -1.0
 
 

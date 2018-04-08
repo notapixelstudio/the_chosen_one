@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://FSM/states/GameOver/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://screens/basic_screen.tscn" type="PackedScene" id=2]
@@ -37,26 +37,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.939255 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-
-resource_name = "loading"
-length = 3.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("../HScrollBar:value")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8, 2.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 50.0, 100.0 ]
-}
-
-[node name="GameOver" type="Node" index="0"]
+[node name="GameOver" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -79,12 +60,10 @@ color = Color( 0, 0, 0, 1 )
 [node name="BasicScreen" parent="." index="1" instance=ExtResource( 2 )]
 
 script = ExtResource( 3 )
-next_scene = "res://CharacterCreationRoom.tscn"
 
 [node name="Animator" parent="BasicScreen" index="0"]
 
 anims/YOUDIED = SubResource( 1 )
-anims/loading = SubResource( 2 )
 
 [node name="ColorRect" parent="BasicScreen/Transition" index="0"]
 
