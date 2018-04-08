@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair|long_green.png-0efa92a472c80356c2afef98fa8f2f0b.stex"
+path="res://.import/house$Valenstone.png-72b4afc1590c3dff4615664b80d6a4a2.stex"
 
 [deps]
 
-source_file="res://assets/character/hair|long_green.png"
-source_md5="d8499d2c8e9198d065034755d1db9954"
+source_file="res://assets/character/house$Valenstone.png"
+source_md5="e3c6592c946fd4f70173b55d52d96b47"
 
-dest_files=[ "res://.import/hair|long_green.png-0efa92a472c80356c2afef98fa8f2f0b.stex" ]
-dest_md5="d77b5cdcb541a1310b78ad39a2272214"
+dest_files=[ "res://.import/house$Valenstone.png-72b4afc1590c3dff4615664b80d6a4a2.stex" ]
+dest_md5="b146c8e5c5e62acf5ce5cad26e499ba3"
 
 [params]
 

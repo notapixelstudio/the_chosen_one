@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair|long_black.png-8283c73f286e68fa09ba933d3a4c885b.stex"
+path="res://.import/house$Hollistar.png-e33f911b86311882c7508d734a35bdef.stex"
 
 [deps]
 
-source_file="res://assets/character/hair|long_black.png"
-source_md5="23800d830c016953722f355c9210b319"
+source_file="res://assets/character/house$Hollistar.png"
+source_md5="4b75173bbc46b6d35a16a5c5110486f8"
 
-dest_files=[ "res://.import/hair|long_black.png-8283c73f286e68fa09ba933d3a4c885b.stex" ]
-dest_md5="02f78329f48e207261ca92cf59665143"
+dest_files=[ "res://.import/house$Hollistar.png-e33f911b86311882c7508d734a35bdef.stex" ]
+dest_md5="3dcf6b7a5b6b3afdebe9b15f24f1debc"
 
 [params]
 
