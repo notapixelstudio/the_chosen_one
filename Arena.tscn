@@ -21,31 +21,31 @@
 [ext_resource path="res://FSM/transitions/TurnsOver/TurnsOver.tscn" type="PackedScene" id=19]
 [ext_resource path="res://FSM/transitions/TheChosenOne/TheChosenOne.tscn" type="PackedScene" id=20]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 0.239075, 0.48329, 0.606684, 0.994859 )
 colors = PoolColorArray( 1, 0.762097, 0.483871, 0.6, 0.992188, 0.375404, 0.00533434, 0.50502, 0.923301, 0.144214, 0.0203667, 0.36, 0.0703125, 0.0339441, 0.0281628, 0.41502, 0, 0, 0, 0.33 )
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture" id=2]
 
 flags = 4
-gradient = SubResource( 2 )
+gradient = SubResource( 1 )
 width = 2048
 
-[sub_resource type="Curve" id=4]
+[sub_resource type="Curve" id=3]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [ Vector2( 0, 0.119629 ), 0.0, 0.0, 0, 0, Vector2( 0.128738, 0.212402 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=5]
+[sub_resource type="CurveTexture" id=4]
 
 flags = 4
 width = 2048
-curve = SubResource( 4 )
+curve = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=5]
 
 render_priority = 0
 trail_divisor = 1
@@ -75,8 +75,8 @@ angle = 45.0
 angle_random = 0.0
 scale = 40.0
 scale_random = 0.0
-scale_curve = SubResource( 5 )
-color_ramp = SubResource( 3 )
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -116,8 +116,8 @@ angle = 45.0
 angle_random = 0.0
 scale = 30.0
 scale_random = 0.0
-scale_curve = SubResource( 5 )
-color_ramp = SubResource( 3 )
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -127,18 +127,18 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Scale", "Spread" ]
 
-[sub_resource type="Gradient" id=8]
+[sub_resource type="Gradient" id=7]
 
 offsets = PoolRealArray( 0, 0.159383, 0.321337, 0.627249, 0.938303, 0.994859 )
 colors = PoolColorArray( 1, 1, 1, 0.6, 1, 0.328125, 0, 0.588602, 0.992188, 0.375404, 0.00533434, 0.50502, 0.923301, 0.0203667, 0.0203667, 0.18502, 0.0703125, 0.0339441, 0.0281628, 0.13502, 0, 0, 0, 0.33 )
 
-[sub_resource type="GradientTexture" id=9]
+[sub_resource type="GradientTexture" id=8]
 
 flags = 4
-gradient = SubResource( 8 )
+gradient = SubResource( 7 )
 width = 2048
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=9]
 
 render_priority = 0
 trail_divisor = 1
@@ -168,8 +168,8 @@ angle = 25.0
 angle_random = 0.0
 scale = 80.0
 scale_random = 0.0
-scale_curve = SubResource( 5 )
-color_ramp = SubResource( 9 )
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 8 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -179,7 +179,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Linear Accel", "Scale", "Spread" ]
 
-[node name="Arena" type="Node" index="0"]
+[node name="Arena" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -235,7 +235,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 1 )
+process_material = SubResource( 5 )
 texture = null
 normal_map = null
 h_frames = 1
@@ -259,7 +259,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 1 )
+process_material = SubResource( 5 )
 texture = null
 normal_map = null
 h_frames = 1
@@ -308,7 +308,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 7 )
+process_material = SubResource( 9 )
 texture = null
 normal_map = null
 h_frames = 1
