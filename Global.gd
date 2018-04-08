@@ -9,7 +9,7 @@ var chosen_one_data
 var dragon_script
 var player_script
 
-const WRONG_FEATURES = 3
+const WRONG_FEATURES = 5
 var turns
 
 func _ready():
@@ -25,14 +25,14 @@ func _ready():
 	reset()
 
 func reset():
-	chosen_one_data = CharacterData.new()
+	player_character_data = CharacterData.new()
 
-	print(chosen_one_data.features)
-	
 	# this is to avoid starting the game with the chosen one by chanche
 	# at least WRONG_FEATURES features have to be wrong
-	while player_character_data == null or len(player_character_data.diff(chosen_one_data)['wrong']) < WRONG_FEATURES:
-		player_character_data = CharacterData.new()
+	while chosen_one_data == null or len(player_character_data.diff(chosen_one_data)['wrong']) < WRONG_FEATURES:
+		chosen_one_data = CharacterData.new()
+	
+	print(chosen_one_data.features)
 	
 	dragon_script = DragonScript.new(turns)
 	player_script = PlayerScript.new(turns)
