@@ -413,9 +413,9 @@ size_flags_vertical = 1
 
 [node name="DialogScene" parent="FSMControl/States/EnemyTurn" index="0" instance=ExtResource( 9 )]
 
-[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 10 )]
+_sections_unfolded = [ "Hint", "Theme" ]
 
-editor/display_folded = true
+[node name="PlayerActionTurn" parent="FSMControl/States" index="1" instance=ExtResource( 10 )]
 
 [node name="actionbox" parent="FSMControl/States/PlayerActionTurn" index="0" instance=ExtResource( 11 )]
 
@@ -428,6 +428,7 @@ _sections_unfolded = [ "Hint", "Rect", "Textures", "Theme", "Visibility" ]
 [node name="DialogScene" parent="FSMControl/States/PlayerDialogBox" index="0" instance=ExtResource( 9 )]
 
 visible = false
+_sections_unfolded = [ "Hint", "Theme" ]
 
 [node name="GameOver" parent="FSMControl/States" index="3" instance=ExtResource( 13 )]
 
