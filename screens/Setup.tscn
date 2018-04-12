@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://screens/basic_screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://screens/Setup.gd" type="Script" id=2]
+[ext_resource path="res://screens/ProgressText.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 
 resource_name = "progress"
-length = 4.0
+length = 6.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -16,22 +17,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7, 1.5, 2.2, 2.9, 3.2, 4 ),
+"times": PoolRealArray( 0, 0.7, 1.5, 2.2, 2.9, 4.4, 5.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 20.0, 40.0, 65.0, 90.0, 99.0, 100.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Panel/RichTextLabel:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "Computing Prophecy", "Calculating some weird combinations" ]
 }
 
 [node name="Setup" index="0" instance=ExtResource( 1 )]
@@ -130,6 +119,7 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
+script = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
 [connection signal="progress_finished" from="." to="." method="_on_Setup_progress_finished"]

@@ -145,20 +145,21 @@ class DragonScript:
 				"I'm allergic to wood! How did you know it? I'll never let you touch me with that..!"
 			],
 			'dagger': [
-				"Oh no... I remember something like that in The Prophecy... but it was in more capable hands.",
+				"Oh no... I remember a weapon like that in The Prophecy... but it was in more capable hands.",
 				"Damn! Your dagger is just about the right size to avoid my swordproof scales. Luckily for me, my firebreath is a ranged attack."
 			]
 		},
 		'haircut': {
 			'short': [
-				"You look like one of those heroic kids... Just like The Chosen One. But you will die right here."
+				"You look like one of those heroic kids... Just like The Chosen One. But you will die right here.",
+				"Even if you are not the Chosen One, well, something about your appearance is making me worried"
 				#"Do you cut your hair by yourself? With a knife?",
 				#"Humans should not send their children to fight dragons... Oh, it's just your haircut? Sorry.",
 				#"Want to save money on shampoo and conditioner? Smart move. Better than showing up here, at the very least.",
 				#"The Prophecy was wrong... The Chosen One is said to have beautiful, long hair. But wait... Prophecies are never wrong!"
 			],
 			'long': [
-				"The Chosen One is said to have beautiful, long hair... Mmm... I should hurry."
+				"The Chosen One is said to have beautiful, long hair... Mmm... I should hurry.",
 				#"Such long hair and such a short life... what a pity!",
 				#"Oooh, imagine the burning smell you'll do when I light you up!",
 				#"Be careful not to trip onto yourself...",
